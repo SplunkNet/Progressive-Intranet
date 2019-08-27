@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Announcements" max_length="40" name="x_prole_intranet_announcements" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="40" name="u_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Heading" max_length="40" name="u_heading" type="string"/>
+        <element attributes="encode_utf8=false" label="Requested By" max_length="32" name="u_requested_by" read_only="true" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="u_requested_by"/>
+        </index>
+    </element>
+</database>
