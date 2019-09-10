@@ -4,7 +4,7 @@
         <availability>on_desktop</availability>
         <billable>false</billable>
         <can_cancel>false</can_cancel>
-        <category display_value="Intranet">bfad215d1327bf80d9ff30ded144b07f</category>
+        <category display_value="Intranet">e1e290d613e33bc0d9ff30ded144b0ff</category>
         <cost>0</cost>
         <custom_cart/>
         <delivery_plan/>
@@ -26,7 +26,7 @@
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>Announcements</name>
+        <name>New Announcement</name>
         <no_attachment_v2>false</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
@@ -62,15 +62,15 @@
         <sys_created_on>2019-08-27 19:27:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5efa29d11327bf80d9ff30ded144b0d8</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Announcements</sys_name>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>New Announcement</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sc_cat_item_producer_5efa29d11327bf80d9ff30ded144b0d8</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-08-27 19:41:55</sys_updated_on>
+        <sys_updated_on>2019-08-30 15:38:54</sys_updated_on>
         <table_name>x_prole_intranet_announcements</table_name>
         <template/>
         <type>item</type>

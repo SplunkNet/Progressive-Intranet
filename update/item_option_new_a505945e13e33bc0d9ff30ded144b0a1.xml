@@ -2,14 +2,14 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="New Announcement">5efa29d11327bf80d9ff30ded144b0d8</cat_item>
+        <cat_item display_value="New Email Event">a300189e13a33bc0d9ff30ded144b001</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
         <choice_table/>
         <create_roles/>
         <default_html_value/>
-        <default_value>javascript:gs.getUserID();</default_value>
+        <default_value/>
         <delete_roles/>
         <delivery_plan/>
         <description/>
@@ -18,7 +18,7 @@
         <dynamic_default_value/>
         <dynamic_ref_qual/>
         <example_text/>
-        <field>u_requested_by</field>
+        <field>u_event_date</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
@@ -36,17 +36,17 @@
         <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>u_requested_by</name>
-        <order>100</order>
+        <name>u_event_date</name>
+        <order>300</order>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
-        <question_text>Requested By</question_text>
+        <question_text>Event Start Date</question_text>
         <read_roles/>
         <rec_lookup_price/>
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
-        <record_producer_table>x_prole_intranet_announcements</record_producer_table>
-        <reference>sys_user</reference>
+        <record_producer_table>x_prole_intranet_emails</record_producer_table>
+        <reference/>
         <reference_qual/>
         <reference_qual_condition/>
         <scale_max>5</scale_max>
@@ -57,21 +57,21 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>zachary.nicholson</sys_created_by>
-        <sys_created_on>2019-08-27 19:32:57</sys_created_on>
+        <sys_created_on>2019-08-30 15:45:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>a34be5151327bf80d9ff30ded144b0b9</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Requested By</sys_name>
+        <sys_id>a505945e13e33bc0d9ff30ded144b0a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Event Start Date</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
-        <sys_update_name>item_option_new_a34be5151327bf80d9ff30ded144b0b9</sys_update_name>
+        <sys_update_name>item_option_new_a505945e13e33bc0d9ff30ded144b0a1</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-08-27 19:44:40</sys_updated_on>
+        <sys_updated_on>2019-08-30 15:45:53</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>8</type>
+        <type>10</type>
         <ui_page/>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
@@ -86,22 +86,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=a34be5151327bf80d9ff30ded144b0b9"/>
-    <fx_price action="delete_multiple" query="id=a34be5151327bf80d9ff30ded144b0b9"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=a505945e13e33bc0d9ff30ded144b0a1"/>
+    <fx_price action="delete_multiple" query="id=a505945e13e33bc0d9ff30ded144b0a1"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>a34be5151327bf80d9ff30ded144b0b9</id>
+        <id>a505945e13e33bc0d9ff30ded144b0a1</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>zachary.nicholson</sys_created_by>
-        <sys_created_on>2019-08-27 19:32:57</sys_created_on>
-        <sys_id>b35c69d51327bf80d9ff30ded144b0b7</sys_id>
+        <sys_created_on>2019-08-30 15:45:53</sys_created_on>
+        <sys_id>7225d85e13e33bc0d9ff30ded144b067</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-08-27 19:32:57</sys_updated_on>
+        <sys_updated_on>2019-08-30 15:45:53</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -109,16 +109,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>a34be5151327bf80d9ff30ded144b0b9</id>
+        <id>a505945e13e33bc0d9ff30ded144b0a1</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>zachary.nicholson</sys_created_by>
-        <sys_created_on>2019-08-27 19:32:57</sys_created_on>
-        <sys_id>bf5c69d51327bf80d9ff30ded144b0b5</sys_id>
+        <sys_created_on>2019-08-30 15:45:53</sys_created_on>
+        <sys_id>7e25d85e13e33bc0d9ff30ded144b065</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-08-27 19:32:57</sys_updated_on>
+        <sys_updated_on>2019-08-30 15:45:53</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>

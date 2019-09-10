@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.flip-card {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: transparent;
+  width: 255px;
+  height: 255px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #00bbff;
+}
+
+.flip-card-back {
+  background-color: #00bbff;
+  transform: rotateY(180deg);
+}
+
+.form-group {
+  color: white; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.attachbutton {
+ padding: 10px 20px 0px 15px; 
+}
+
+.control-label {
+ text-align: center;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>intranet_-_ask_prog</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Intranet - Ask Prog</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-09-09 21:51:44</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2fc8412913f37b80ce8b7d576144b0b8</sys_id>
+        <sys_mod_count>151</sys_mod_count>
+        <sys_name>Intranet - Ask Prog</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_widget_2fc8412913f37b80ce8b7d576144b0b8</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-09-10 18:32:08</sys_updated_on>
+        <template><![CDATA[<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="askprog.jpg" alt="Ask Prog" class="responsive"  style="width:255px;height:255px;"/>
+    </div>
+    <div class="flip-card-back">
+      <form class="form-horizontal">
+<fieldset>
+
+<!-- File Button --> 
+<div class="form-group">
+  <div class="attachbutton">
+    <input id="attachbutton" name="attachbutton" class="input-file" type="file">
+  </div>
+      
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-12 control-label" for="selectbasic">Select Department</label>
+  <div class="col-md-12">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+      <option value="1">Talent &amp; Culture</option>
+      <option value="2">IT</option>
+      <option value="3">Sales</option>
+      <option value="4">Other</option>
+    </select>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-12 control-label" for="textinput">Question</label>  
+  <div class="col-md-12">
+  <input id="textinput" name="textinput" type="text" placeholder="Help is on the way" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+    <div class="submitbutton">
+      <button id="submitbutton" name="submitbutton" class="btn btn-success">Submit</button>
+    </div>
+  </div>
+
+</fieldset>
+</form>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

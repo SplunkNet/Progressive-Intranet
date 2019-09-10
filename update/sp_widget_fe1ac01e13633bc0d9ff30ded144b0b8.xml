@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function(spUtil,$scope,$timeout, spModal) {
+  /* widget controller */
+  var c = this;
+	
+	c.selectAg = function(record){
+		
+		//Set a property on the data object to identify the selected object
+		c.data.selectedAg = record.agValue;
+		spModal.open({
+				size: "lg",
+				title: record.agValue,
+				widget: 'iv2_attachment_clone',
+				shared: c.data
+			});
+		
+		//Send the data object to the server script
+		c.server.update();
+	}
+	
+	c.sortOrder=false;
+	
+	c.changeSortCol=function(key){
+		
+		if(key == c.orderCol)
+			c.sortOrder = !c.sortOrder;
+		else
+			c.sortOrder = false;
+		
+		c.orderCol = key;
+	}
+	
+	c.updatedFromServer = false;
+	
+	//Record watch functionality
+	//a flag to indicate if a live update has been triggered by the record watcher
+	spUtil.recordWatch($scope, c.data.table, '', function(updateObj)
+	{
+		spUtil.update($scope);
+		c.updatedFromServer = true;
+		if (!c.updatedRegs){
+			c.updatedRegs = {};
+		}
+	
+	c.updateRegs[updateObj.data.sys_id] = true;
+	$timeout(function(){
+					 c.updatedRegs[updateObj.data.sys_id] = false;
+					 }, 6000);
+	});
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>li {
+ color: black;
+  background-color: white;
+}
+
+#table-summary {
+  text-align: center;
+  font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+  background-color: white;
+  color: #0093c9;
+	letter-spacing:2px;
+  font-size: 20px;
+  font-weight: 100;
+  left: 50%;
+}
+
+#li-heading:hover {
+  background-color: #bde1ef;
+  color: black;
+}
+
+#li-heading .date{
+ 	float:right 
+}
+
+#li-heading .icon{
+ float:left 
+}
+
+#li-heading .subject {
+ display: inline-block;
+ margin: 0 0 0 2%;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+form:hover {
+ 	transform: translateY(-3px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .50);
+}
+
+@keyframes fadeIn{
+  0% {
+   opacity: 0;
+  }
+ 100% {
+   opacity: 1;
+  }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>intranet_-_events</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Intranet - Events</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function(spModal) {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+	
+	var c = this;
+	
+	if(!input){
+		data.summary = [];
+		data.table = 'x_prole_intranet_emails';
+		data.groupBy = 'u_subject';
+		data.date = 'u_event_date';
+		
+		var ga = new GlideAggregate(data.table);
+		ga.setGroup(true);
+		ga.groupBy(data.groupBy);
+		ga.groupBy(data.date);
+		ga.addAggregate('COUNT');
+		ga.query();
+
+		while(ga.next())
+		{
+			data.summary.push({
+				agName:ga[data.groupBy].getDisplayValue() || 'None',
+				agDate:ga[data.date].getDisplayValue() || 'None'
+			});
+		}
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-08-30 14:57:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fe1ac01e13633bc0d9ff30ded144b0b8</sys_id>
+        <sys_mod_count>92</sys_mod_count>
+        <sys_name>Intranet - Events</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_widget_fe1ac01e13633bc0d9ff30ded144b0b8</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-08-30 16:32:07</sys_updated_on>
+        <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<form>
+  <div class="panel panel-default">
+    <div id="table-summary" class="panel-heading">
+      <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>EVENTS</b></div>
+    
+    <ul class="list-group"> 
+      <li class="list-group-item" id="li-heading"
+      	ng-repeat="s in c.data.summary"
+          ng-click="c.selectAg(s)">
+        <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span><span class="subject">{{ s.agName }}</span><span class="date">{{ s.agDate }}</span>
+      </li>
+    </ul>
+  </div>
+  <!-- debugging code -- <pre>{{c.data.records | json}}</pre> -->
+</form>]]></template>
+    </sp_widget>
+</record_update>
