@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="title" label="Title" language="en" table="x_prole_intranet_peer_recognization">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>title</element>
+            <help/>
+            <hint/>
+            <label>Title</label>
+            <language>en</language>
+            <name>x_prole_intranet_peer_recognization</name>
+            <plural>Titles</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-09-10 19:19:46</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>9b9f697d133ffb80ce8b7d576144b0b3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Title</sys_name>
+            <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+            <sys_update_name>sys_documentation_x_prole_intranet_peer_recognization_title_en</sys_update_name>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-09-10 19:19:46</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

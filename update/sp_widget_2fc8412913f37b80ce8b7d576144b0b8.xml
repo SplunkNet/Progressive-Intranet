@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <client_script><![CDATA[function($scope) {
+  /* widget controller */
+  var c = this;
+	
+	$scope.submit = function()
+	{
+		c.data.submit = true;
+		c.server.update();
+	};
+}]]></client_script>
         <controller_as>c</controller_as>
         <css>.flip-card {
   margin-right: auto;
   margin-left: auto;
   background-color: transparent;
-  width: 255px;
+  width: 100%;
   height: 255px;
   perspective: 1000px;
 }
@@ -68,14 +77,31 @@
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+	if(!input)
+		{
+			data.submit = false;
+		}
+	
+	
+	if (input)
+		{
+			var gr = new GlideRecord('x_prole_intranet_ask_prog');
+			gr.initialize();
+			gr.insert();
+		}
+
+})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>zachary.nicholson</sys_created_by>
         <sys_created_on>2019-09-09 21:51:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2fc8412913f37b80ce8b7d576144b0b8</sys_id>
-        <sys_mod_count>151</sys_mod_count>
+        <sys_mod_count>181</sys_mod_count>
         <sys_name>Intranet - Ask Prog</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -83,11 +109,11 @@
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_2fc8412913f37b80ce8b7d576144b0b8</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-09-10 18:32:08</sys_updated_on>
+        <sys_updated_on>2019-09-13 17:40:38</sys_updated_on>
         <template><![CDATA[<div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="askprog.jpg" alt="Ask Prog" class="responsive"  style="width:255px;height:255px;"/>
+      <img src="ask_prog2.jpg" alt="Ask Prog" class="responsive"  style="height:255px;"/>
     </div>
     <div class="flip-card-back">
       <form class="form-horizontal">
@@ -126,7 +152,7 @@
 <!-- Button -->
 <div class="form-group">
     <div class="submitbutton">
-      <button id="submitbutton" name="submitbutton" class="btn btn-success">Submit</button>
+      <button  ng-click="submit()" id="submit" name="submit" class="btn btn-success">Submit</button>
     </div>
   </div>
 

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope , spUtil) {
+	/* widget controller */
+	var c = this;
+
+	
+
+	c.shouts = function (name){
+		c.data.cardinfo = name.action;
+		c.data.cardinfoname = name.name;
+		c.data.color = name.color;
+		c.data.recognize = false;
+		c.data.submit = false;
+		c.data.initials = name.initials;
+
+		$scope.server.update()
+
+	}
+
+	$scope.recognize = function (){
+		c.data.cardinfo = '';
+		c.data.recognize = true
+		$scope.server.update();
+	};
+
+	$scope.submit = function(){
+
+		if(c.data.reason == '' || c.data.name == '' || c.data.flavor == '' ){
+			c.data.submit = false;
+		}else{
+			c.data.submit = true;
+
+			c.server.update();
+		}
+	};
+	spUtil.recordWatch($scope, "x_prole_intranet_peer_recognization", "active=true", function(name, data) {
+		
+		spUtil.update($scope);
+	});
+	
+	
+	
+
+	
+	
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>:root {
+  --main-bg-color: #b37dee;
+  --main-txt-color: blue;  
+  --main-padding: 15px;  
+}
+
+
+/* from: https://davidwalsh.name/css-flip  */
+
+section {
+  &amp;.custom {
+    .up {
+      color: #fff;
+    }
+    .card {
+      text-align: center;
+      color: #2b3643;
+      width: 100%;
+      height: 300px;
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+      background-color: #fff;
+    }
+    .flipper {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-bottom: 10px;
+      perspective: 1000px;
+    }
+    /* flip the pane when hovered */
+    .flipper.flip .card {
+      transform: rotateY(180deg);
+    }
+    .front,
+    .back {
+      width: 100%;
+      padding: 5px;
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    /* front pane, placed above back */
+    .front {
+      z-index: 2;
+      /* for firefox 31 */
+      transform: rotateY(0deg);
+      height: 100%;
+    }
+    /* back, initially hidden pane */
+    .back {
+      transform: rotateY(180deg);
+      height: 100%;
+    }
+    .goback {
+      position: absolute;
+      bottom: 0px;
+      padding-left: 20px;
+      left: 0px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.initials {
+  position: relative;
+  top: 25px; /* 25% of parent */
+  font-size: 50px; /* 50% of parent */
+  line-height: 50px; /* 50% of parent */
+  color: #fff;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
+
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  background-color:#31a7d4 ;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+
+--------------------------------------------------------------
+
+
+
+.form-group {
+  color: white; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.attachbutton {
+ padding: 10px 20px 0px 15px; 
+}
+
+.control-label {
+ text-align: center;
+}
+
+
+li {
+ color: black;
+  background-color: white;
+}
+
+#table-summary {
+  text-align: center;
+  font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+  background-color: white;
+  color: #0093c9;
+	letter-spacing:2px;
+  font-size: 20px;
+  font-weight: 100;
+  left: 50%;
+}
+
+#li-heading:hover {
+  background-color: #bde1ef;
+  color: black;
+}
+
+#li-heading .date{
+ 	float:right 
+}
+
+#li-heading .icon{
+ float:left 
+}
+
+#li-heading .subject {
+ display: inline-block;
+ margin: 0 0 0 2%;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+form:hover {
+ 	transform: translateY(-3px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .50);
+}
+
+@keyframes fadeIn{
+  0% {
+   opacity: 0;
+  }
+ 100% {
+   opacity: 1;
+  }
+}
+
+label{
+  
+   font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+   color: #0093c9;
+	letter-spacing:2px;
+  font-size: 20px;
+  font-weight: 700;
+  left: 50%;
+}
+form.something{
+  //background-color: blue;
+  
+}
+back{
+  
+}
+[data-letters]:before {
+  content:attr(data-letters);
+  display:inline-block;
+  font-size:2.5em;
+  width:2em;
+  height:2em;
+  line-height:2em;
+  text-align:center;
+  border-radius:50%;
+  background: var(--color);
+  vertical-align:middle;
+  margin-right:1em;
+  color:white;
+  }
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>intranet_-_peer_recognition</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Intranet - peer recognition</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+	var badges = ['red','blue','yellow','#b37dee' ];
+	var x = 0;
+	var gr = new GlideRecord('x_prole_intranet_peer_recognization');
+
+	function randoColor (){
+		var randomItem = badges[Math.floor(Math.random()*badges.length)];
+		return randomItem;
+
+	}
+
+	data.shouts = [];
+	data.reason = '';
+	data.flavor = '';
+	data.name = '';
+	data.recognize = '';
+
+	gr.setLimit(5);
+	gr.addActiveQuery();
+	gr.orderByDesc('sys_created_on')
+	gr.query();
+
+
+	while (gr.next()) {
+
+		if(x == 4){
+			x = 0;
+		}
+
+		var name = gr.getDisplayValue('recognized_employee');
+		var initials = name.match(/\b\w/g) || [];
+		initials = ((initials.shift() || '') + (initials.pop() || '')).toUpperCase();
+		//console.log(initials);
+
+		data.shouts.push({
+			sys_id: gr.sys_id.getDisplayValue(),
+			name: gr.getDisplayValue('recognized_employee'),
+			action: gr.getDisplayValue('details'),
+			title: gr.getDisplayValue('title'),
+			color: badges[x],
+			initials: initials.toString()
+		});
+
+		x++
+	}
+	//console.log(data.shouts)
+
+
+	if(input){
+		if(input.cardinfo){
+			//console.log("in the return " +  input.cardinfo)
+			data.cardinfo = input.cardinfo;
+			data.cardinfoname = input.cardinfoname;
+			data.int = "DY"
+			data.recognize = false;
+			data.color = input.color;
+			data.initials = input.initals;
+		}else{
+			data.cardinfo = '';
+			data.recognize = false;
+		}
+		if(input.recognize){
+			data.recognize = true;
+		}
+		if(input.submit){
+
+			gr.initialize();
+			gr.details = input.reason;
+			gr.recognized_employee = input.name;
+			gr.title = input.flavor;
+			gr.active = true;
+			gr.insert();
+
+			data.name = "";
+			data.flavor = "";
+			data.reason = "";
+			data.submit = false;
+
+		}
+	}
+
+
+
+
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-09-10 19:25:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>52f07131137ffb80ce8b7d576144b0b8</sys_id>
+        <sys_mod_count>306</sys_mod_count>
+        <sys_name>Intranet - peer recognition</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_widget_52f07131137ffb80ce8b7d576144b0b8</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-09-13 21:52:13</sys_updated_on>
+        <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<section class="custom">
+  <div class="container">
+    <div class="row">
+      <div class="flipper col-sm-4">
+        <div class="card" >
+          <div class="front">
+
+            <form>
+              <div class="panel panel-default">
+                <div id="table-summary" class="panel-heading">
+                  <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>EMPLOYEE RECOGNITION</b></div>
+
+                <ul class="list-group"> 
+                  <li class="list-group-item" id="li-heading" ng-repeat="s in c.data.shouts track by $index" tabindex="0" ng-click="c.shouts(s)">
+                    <span class="icon">{{s.name}}</span><span class="subject"></span><span class="date">{{s.title}}</span>
+                  </li>
+                </ul>
+
+                <button type="button" class="btn btn-primary" ng-click="recognize()">Recognize a peer!</button>
+              </div>
+
+
+            </form>
+          </div>
+          <div class="back">
+            <div ng-if="c.data.recognize">
+              <form class="something">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Employee Name</label>
+                  <input type="text" class="form-control" ng-model="c.data.name"  id="formGroupExampleInput" placeholder="Joe Smith">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Flavor Text</label>
+                  <input type="text" class="form-control" ng-model="c.data.flavor" id="formGroupExampleInput2" placeholder="Joe went above and beyond!">
+                </div>
+             
+              <div class="form-group ">
+
+                <label for="exampleFormControlTextarea1">Reason for the recoginition</label>
+                <textarea class="form-control textbox form-control " ng-model="c.data.reason" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <button type="button" class="btn btn-success" ng-click="submit()">Submit</button>
+              </form>
+                </div>
+            <div ng-if="!c.data.cardinfo && !c.data.recognize">
+              <img src="prog.ico" width="110" height="110"/>
+            </div>
+            <div ng-if="c.data.cardinfo">
+              <p style="vertical-align:middle" >
+                {{c.data.cardinfoname}}
+              </p>
+              <p data-letters="{{c.data.initials}}" style=" --color: {{c.data.color}}" ></p>
+              <p>
+                {{c.data.cardinfo}}
+              </p> 
+              <div>
+
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<script>
+  $(".flipper").click(function() {
+    var target = $( event.target );
+    if ( target.is("input.form-control") || target.is("textarea.form-control" || target.is("span.fa-bolt")) )  {
+      //follow that link
+      return true;
+    } else {
+      $(this).toggleClass("flip");
+    }
+    return false;
+  });
+
+
+  
+
+</script>
+
+
+
+
+
+<!-----
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+
+<div id='rcorners1'>
+<div>
+
+Recognize a Peer
+
+
+
+
+
+<div class='form-group container-fluid'>
+<div class="card" style="width: 100%">
+<ul class="list-group list-group-flush" ng-if="data.shouts">
+
+<li class="list-group-item" ng-repeat=" shouts in data.shouts">
+
+
+<i class="material-icons md-48 {{shouts.color}}">account_circle</i>
+
+
+<p style="float: right">
+
+{{shouts.name}}
+
+
+</p>
+<br>
+{{shouts.action}}
+
+
+</li>
+
+
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img src="askprog.jpg" alt="Ask Prog" class="responsive"  style="width:255px;height:255px;"/>
+</div>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<form>
+<div class="panel panel-default">
+<div id="table-summary" class="panel-heading">
+<span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>EVENTS</b></div>
+
+<ul class="list-group"> 
+<li class="list-group-item" id="li-heading"
+ng-repeat="s in c.data.shouts"
+ng-click="c.selectAg(s)">
+<span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span><span class="subject">{{ s.name }}</span><span class="date">{{ s.agDate }}</span>
+</li>
+</ul>
+</div>
+<div class="flip-card-back">
+<form class="form-horizontal">
+<fieldset>
+
+<!-- File Button 
+<div class="form-group">
+<div class="attachbutton">
+<input id="attachbutton" name="attachbutton" class="input-file" type="file">
+</div>
+
+</div>
+
+<!-- Select Basic 
+<div class="form-group">
+<label class="col-md-12 control-label" for="selectbasic">Select Department</label>
+<div class="col-md-12">
+<select id="selectbasic" name="selectbasic" class="form-control">
+<option value="1">Talent &amp; Culture</option>
+<option value="2">IT</option>
+<option value="3">Sales</option>
+<option value="4">Other</option>
+</select>
+</div>
+</div>
+
+<!-- Textarea 
+<div class="form-group">
+<label class="col-md-12 control-label" for="textinput">Question</label>  
+<div class="col-md-12">
+<input id="textinput" name="textinput" type="text" placeholder="Help is on the way" class="form-control input-md" required="">
+
+</div>
+</div>
+
+
+<!-- debugging code -- <pre>{{c.data.records | json}}</pre> 
+</form>
+<!-- Button 
+<div class="form-group">
+<div class="submitbutton">
+<button  ng-click="checkin()" id="submitbutton" name="submitbutton" class="btn btn-success">Submit</button>
+</div>
+</div>
+
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+
+
+---->
+
+
+
+]]></template>
+    </sp_widget>
+</record_update>

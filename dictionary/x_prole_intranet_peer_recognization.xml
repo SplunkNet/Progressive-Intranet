@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Peer Recognization" max_length="40" name="x_prole_intranet_peer_recognization" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Date Recognized" max_length="40" name="date_recognized" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Details" max_length="1000" name="details" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element attributes="encode_utf8=false" label="Recognized Employee" max_length="32" name="recognized_employee" reference="sys_user" type="reference"/>
+        <element attributes="encode_utf8=false" label="Submitted By" max_length="32" name="submitted_by" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Title" max_length="40" name="title" type="string"/>
+        <index name="index">
+            <element name="submitted_by"/>
+        </index>
+        <index name="index2">
+            <element name="recognized_employee"/>
+        </index>
+    </element>
+</database>
