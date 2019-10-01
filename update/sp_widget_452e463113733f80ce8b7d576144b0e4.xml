@@ -3,20 +3,32 @@
         <category>custom</category>
         <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
         <controller_as>c</controller_as>
-        <css>* {
-  box-sizing: border-box;
+        <css>img {
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
 }
 
-.column {
- float: left;
-  width: 33.33%;
-  padding 5px;
+img:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .50);
 }
 
-.row::after {
- 	conent: "";
-  clear: both;
-  display: table;
+.text-center {
+  font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+ 	background-color: #4A4F54; 
+ 	color: white;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.row {
+ padding: 20px 50px 60px 50px; 
+}
+
+.title {
+ padding: 20px; 
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -38,7 +50,7 @@
         <sys_created_on>2019-09-10 21:33:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>452e463113733f80ce8b7d576144b0e4</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>90</sys_mod_count>
         <sys_name>Intranet - Quick Links</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -46,19 +58,31 @@
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_452e463113733f80ce8b7d576144b0e4</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-09-13 20:29:45</sys_updated_on>
-        <template><![CDATA[<div class="row">
-  <div class="column">
-    <img src="adplink.png" alt="adp link" style="width:512" height="512px">
-  </div>
-  <div class="column">
-    <img src = "slacklogo2.jpg" alt="slack logo" style="width:100%">
-  </div>
-  <div class="column">
-    <img src = "zoomlogo.jpg" alt="zoom logo" style="width:100%">
-  </div>
- 
-<!-- your widget template -->
-</div>]]></template>
+        <sys_updated_on>2019-09-27 18:03:04</sys_updated_on>
+        <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+<div class="text-center">
+        <div class="col-md-12 title">QUICK LINKS</div>
+        <div class="row">
+      		<div class="col-md-2" id="tile">
+            	<a href="https://progleasing.okta.com/home/adp/0oa9n03zgOK9bqRr1356/aln17xch9l1z7jaUw0g8?fromHome=true" target="_blank"><img src="ADPLogo.png" alt="ADP Link"></a>
+        	</div>
+          <div class="col-md-2">
+            	<a href="https://zoom.us" target="_blank"><img src="ZoomLogo2.png" alt="Zoom Link"></a>
+        	</div>
+          <div class="col-md-2">
+            	<a href="https://progleasing.okta.com/home/slack/0oa9mmx1tm7g48wUs356/19411?fromHome=true" target="_blank"><img src="SlackLogo.png" alt="Slack Link"></a>
+        	</div>
+        	<div class="col-md-2">
+          		<a href="https://progleasing.okta.com/home/progleasing_standout_2/0oaanw9f0HXvoTRpo356/alnanxl9bxsbq0kF8356?fromHome=true" target="_blank"><img src="StandOutLogo.png" alt="Stand Out Link"></a>
+        	</div>
+          <div class="col-md-2">
+          		<a href="https://progleasing.okta.com/home/progleasing_developmeproduction_1/0oa12szk33ddWicem357/aln12t3xdc2rHGTCS357?fromHome=true" target="_blank"><img src="DevelopMeLogo.png" alt="Develop.Me Link"></a>
+        	</div>
+          <div class="col-md-2">
+          		<a href="https://progleasing.okta.com/home/servicenow_ud/0oa9lck63qiF1DFfM356/aln1all8x9odDrJND0g8?fromHome=true" target="_blank"><img src="ServiceNowLogo.png" alt="ServiceNow Link"></a>
+        	</div>
+      	</div>
+    </div>]]></template>
     </sp_widget>
 </record_update>

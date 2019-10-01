@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
+    <sp_theme action="DELETE">
+        <css_variables/>
+        <footer/>
+        <footer_fixed>false</footer_fixed>
+        <header display_value="Stock Header">bf5ec2f2cb10120000f8d856634c9c0c</header>
+        <name>Progressive Intranet</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-09-13 21:59:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b190f1be13f337c0ce8b7d576144b09c</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Progressive Intranet</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_theme_b190f1be13f337c0ce8b7d576144b09c</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-09-23 23:09:32</sys_updated_on>
+    </sp_theme>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>19bdb3e34f289e4094ac220f0310c748</instance_id>
+        <instance_name>devprogleasing</instance_name>
+        <name>sp_theme_b190f1be13f337c0ce8b7d576144b09c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme"><sp_theme action="INSERT_OR_UPDATE"><css_variables/><footer/><footer_fixed>false</footer_fixed><header display_value="Stock Header">bf5ec2f2cb10120000f8d856634c9c0c</header><name>Progressive Intranet</name><navbar_fixed>true</navbar_fixed><sys_class_name>sp_theme</sys_class_name><sys_created_by>zachary.nicholson</sys_created_by><sys_created_on>2019-09-13 21:59:10</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>b190f1be13f337c0ce8b7d576144b09c</sys_id><sys_mod_count>22</sys_mod_count><sys_name>Progressive Intranet</sys_name><sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope><sys_update_name>sp_theme_b190f1be13f337c0ce8b7d576144b09c</sys_update_name><sys_updated_by>zachary.nicholson</sys_updated_by><sys_updated_on>2019-09-23 23:09:32</sys_updated_on></sp_theme></record_update>]]></payload>
+        <payload_hash>-1803079977</payload_hash>
+        <record_name>Progressive Intranet</record_name>
+        <reverted_from/>
+        <source>1b76ad7513fbfb80ce8b7d576144b0da</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-09-23 23:09:32</sys_created_on>
+        <sys_id>ffd0298213804454ce8b7d576144b075</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16d606321880000001</sys_recorded_at>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-09-23 23:09:32</sys_updated_on>
+        <type>Theme</type>
+        <update_guid>b7d02982db804454c44a32d1f95e3775</update_guid>
+        <update_guid_history>b7d02982db804454c44a32d1f95e3775:-1803079977,409021c2bc8044543efc9a23bd8b0bfd:-2145617272,efa85986d2044c106a6371ec57e882fa:594552617,855d8d0685404c1020e7a75c82585579:-975426508,aa6a49c689004c10bd9f53835053b6b3:279130779,6a3a898632004c10ae99a588b638a2c9:-865677013,632a8586db004c10f0bd1c6f5ff29377:72560371,b71a41462d004c104a20f500d0066d66:-865677013,b079c106c6004c105d4cd57b6297d84e:-357827628,4bd8cd42c4004c108ac0e5c1597b6bea:890913879,c766c50a70cc0c10ba0eeb3beeb323c0:1886818270,c4664d86c3cc0c1087ca8656d9b8a936:-857179777,8d56818601cc0c10f7bf491f47e21af7:531279166,98d4494264cc0c10758f90eeb5d740e4:759082375,69848d8a868c0c1040b4fd3564f93817:-1851492812,31d28d46b78c0c10e66eecddb2a554d0:47412626,10c24106c48c0c10fa3ceb2be0762c9b:-1723998578,1f24bfdbf6b77bc01f6564dfa107891b:1318563469,43c337d3e6b77bc0a840e4fa6073af60:-949155308,b626b17e903737c06c6e7d8dcb2643b7:1318563469,d2167d3ea23737c0e32724d36b621609:-1821322666,cf237d76ee3737c0e24d0345b3d47f89:1318563469,5fd0f9fe76f337c066117427b897c5fa:-1821322666</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-09-23 23:09:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_theme">sp_theme</sys_db_object>
+        <sys_id>259f53d26dfb4281b3dae62aa4a922a1</sys_id>
+        <sys_metadata>b190f1be13f337c0ce8b7d576144b09c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Progressive Intranet</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sp_theme_b190f1be13f337c0ce8b7d576144b09c</sys_update_name>
+        <sys_update_version display_value="sp_theme_b190f1be13f337c0ce8b7d576144b09c">ffd0298213804454ce8b7d576144b075</sys_update_version>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-09-23 23:09:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

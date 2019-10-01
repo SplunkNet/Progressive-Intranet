@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item">
+    <sp_rectangle_menu_item action="DELETE">
+        <active>true</active>
+        <color>default</color>
+        <condition/>
+        <display_1/>
+        <display_2/>
+        <display_date/>
+        <filter/>
+        <glyph>empty</glyph>
+        <hint/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <label>Customer Service</label>
+        <order>100</order>
+        <record_script/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <sp_page display_value="intranet_home">795ddd76137337c0ce8b7d576144b045</sp_page>
+        <sp_rectangle_menu/>
+        <sp_rectangle_menu_item display_value="Operations">bf4e30e413d4c490d9ff30ded144b01d</sp_rectangle_menu_item>
+        <sys_class_name>sp_rectangle_menu_item</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-01 15:12:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c250cda813d4c490d9ff30ded144b0a4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Customer Service</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_rectangle_menu_item_c250cda813d4c490d9ff30ded144b0a4</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-01 15:14:35</sys_updated_on>
+        <table/>
+        <type>page</type>
+        <url/>
+        <url_target/>
+    </sp_rectangle_menu_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=c250cda813d4c490d9ff30ded144b0a4"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>19bdb3e34f289e4094ac220f0310c748</instance_id>
+        <instance_name>devprogleasing</instance_name>
+        <name>sp_rectangle_menu_item_c250cda813d4c490d9ff30ded144b0a4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item"><sp_rectangle_menu_item action="INSERT_OR_UPDATE"><active>true</active><color>default</color><condition/><display_1/><display_2/><display_date/><filter/><glyph>empty</glyph><hint/><kb_article/><kb_category/><kb_topic/><label>Customer Service</label><order>100</order><record_script/><sc_cat_item/><sc_category/><short_description/><sp_page display_value="intranet_home">795ddd76137337c0ce8b7d576144b045</sp_page><sp_rectangle_menu/><sp_rectangle_menu_item display_value="Operations">bf4e30e413d4c490d9ff30ded144b01d</sp_rectangle_menu_item><sys_class_name>sp_rectangle_menu_item</sys_class_name><sys_created_by>zachary.nicholson</sys_created_by><sys_created_on>2019-10-01 15:12:14</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>c250cda813d4c490d9ff30ded144b0a4</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Customer Service</sys_name><sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope><sys_update_name>sp_rectangle_menu_item_c250cda813d4c490d9ff30ded144b0a4</sys_update_name><sys_updated_by>zachary.nicholson</sys_updated_by><sys_updated_on>2019-10-01 15:14:35</sys_updated_on><table/><type>page</type><url/><url_target/></sp_rectangle_menu_item><sys_translated_text action="delete_multiple" query="documentkey=c250cda813d4c490d9ff30ded144b0a4"/></record_update>]]></payload>
+        <payload_hash>-1392337908</payload_hash>
+        <record_name>Customer Service</record_name>
+        <reverted_from/>
+        <source>1b76ad7513fbfb80ce8b7d576144b0da</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-01 15:14:35</sys_created_on>
+        <sys_id>a0e08da813d4c490d9ff30ded144b075</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16d87e32eb00000001</sys_recorded_at>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-01 15:14:35</sys_updated_on>
+        <type>Menu Item</type>
+        <update_guid>68e08da824d4c4907fd326c69aeea974</update_guid>
+        <update_guid_history>68e08da824d4c4907fd326c69aeea974:-1392337908,39604da879d4c49083dff7694ce3984a:-848653718,ce50c1e862d4c490e632da1eee8c9c24:-625582054</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 10-01-2019 10:08:54">405d4d641358c490d9ff30ded144b0d2</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-01 16:08:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_rectangle_menu_item">sp_rectangle_menu_item</sys_db_object>
+        <sys_id>0ed04b3abf904dd59ac16027fe1df8a1</sys_id>
+        <sys_metadata>c250cda813d4c490d9ff30ded144b0a4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Customer Service</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sp_rectangle_menu_item_c250cda813d4c490d9ff30ded144b0a4</sys_update_name>
+        <sys_update_version display_value="sp_rectangle_menu_item_c250cda813d4c490d9ff30ded144b0a4">a0e08da813d4c490d9ff30ded144b075</sys_update_version>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-01 16:08:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

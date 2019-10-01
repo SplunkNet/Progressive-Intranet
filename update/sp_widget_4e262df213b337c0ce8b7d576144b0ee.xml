@@ -3,8 +3,16 @@
         <category>custom</category>
         <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
         <controller_as>c</controller_as>
-        <css>.sp-tagline-color {
-	color: $sp-tagline-color;
+        <css>#homepage-search {
+ width: 100%;
+}
+
+#text {
+	font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+  color: #0093c9;
+	letter-spacing:2px;
+  font-size: 20px;
+  font-weight: 100;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -19,28 +27,64 @@
         <option_schema>[{"name":"typeahead_search","default_value":"{title: 'How can we help?', size: 'lg', color: 'default'}","section":"Presentation","label":"Typeahead Search","type":"string"}]</option_schema>
         <public>true</public>
         <roles/>
-        <script><![CDATA[data.typeAheadSearch = $sp.getWidget('typeahead-search', options.typeahead_search);]]></script>
+        <script><![CDATA[data.typeAheadSearch = $sp.getWidget('typeahead-search', options.typeahead_search);
+
+var name = gs.getUserDisplayName();
+var parseName = name.split(' ');
+
+data.user = parseName[0];
+
+
+var today = new GlideDateTime().getDisplayValue();   
+
+var user = gs.getUser().getDisplayName();
+
+var hours = today.substring(11 , 13);
+
+
+if (hours < 12) {   
+
+
+   data.greeting = 'Good Morning';   
+
+
+} else if (hours < 17) {   
+
+
+   data.greeting = 'Good Afternoon';   
+
+
+} else {   
+
+
+   data.greeting = 'Good Evening';   
+
+
+} 
+]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>zachary.nicholson</sys_created_by>
         <sys_created_on>2019-09-13 21:12:23</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4e262df213b337c0ce8b7d576144b0ee</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>Intranet - HomePageSearch</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_4e262df213b337c0ce8b7d576144b0ee</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-09-13 21:25:21</sys_updated_on>
-        <template><![CDATA[<div id="homepage-search" class="hidden-xs wrapper-xl">
-  <div class="wrapper-xl">
-  	<h2 class="text-center text-4x m-b-lg sp-tagline-color" style="color: white">Hello, Zachary Nicholson</h2>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-09-24 16:54:02</sys_updated_on>
+        <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+<div id="homepage-search" class="hidden-xs">
+  
+  	<h2 id="text" class="text-center" style="color: #0093c9">{{data.greeting}}, {{data.user}}</h2>
   	<div ng-if="options.short_description" class="text-center h4 m-b-lg sp-tagline-color" ng-bind="options.short_description"></div>
   	<sp-widget widget="data.typeAheadSearch" />
-  </div>
+
 </div>]]></template>
     </sp_widget>
 </record_update>

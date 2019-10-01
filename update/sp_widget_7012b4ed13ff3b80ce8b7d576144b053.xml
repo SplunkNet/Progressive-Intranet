@@ -43,8 +43,10 @@
 	
 ]]></client_script>
         <controller_as>c</controller_as>
-        <css>
-</css>
+        <css>img {
+ width: 100%;
+  height: 200px;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -100,7 +102,7 @@ console.log(data)
         <sys_created_on>2019-09-09 20:12:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7012b4ed13ff3b80ce8b7d576144b053</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>Intranet - Image Carousel</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -108,26 +110,11 @@ console.log(data)
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_7012b4ed13ff3b80ce8b7d576144b053</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-09-09 20:19:15</sys_updated_on>
-        <template><![CDATA[<!DOCTYPE html>
-
-  
-<body>
-  <button type="button" class="btn btn-primary" ng-if="c.isAdmin" ng-click="c.editContent()">Edit</button>
-
-  
-</body>
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" ng-if="data.image">
-      <img class="d-block w-100" src={{data.image[0]}} alt={{data.image[0]}} width="100%" height="250" align:"center" style="padding: 20px">
+        <sys_updated_on>2019-09-23 22:31:48</sys_updated_on>
+        <template><![CDATA[<div class="row">
+  <div class="col-md-12">
+        <img src="vision_values_mission.jpg">
     </div>
-    <div class="carousel-item" ng-repeat="x in data.nonactiveimages">
-      <img class="d-block w-100" src={{x}} alt={{x}} width="100%" height="250" align:"center" style="padding: 20px">
-    </div>
-  
-  </div>
-</div>]]></template>
+  </div>]]></template>
     </sp_widget>
 </record_update>

@@ -13,11 +13,9 @@
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>.flip-card {
-  margin-right: auto;
-  margin-left: auto;
   background-color: transparent;
   width: 100%;
-  height: 255px;
+  height: 203px;
   perspective: 1000px;
 }
 
@@ -28,7 +26,6 @@
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -43,26 +40,38 @@
 }
 
 .flip-card-front {
-  background-color: #00bbff;
+  background-color: white;
+  color: black;
 }
 
 .flip-card-back {
-  background-color: #00bbff;
+  background-color: #2980b9;
+  color: white;
   transform: rotateY(180deg);
 }
 
-.form-group {
-  color: white; 
-  margin-left: auto;
-  margin-right: auto;
+#table-summary {
+  text-align: center;
+  font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+  background-color: white;
+  color: #0093c9;
+	letter-spacing:2px;
+  font-size: 20px;
+  font-weight: 100;
 }
 
-.attachbutton {
- padding: 10px 20px 0px 15px; 
+
+img {
+ width: 100%; 
 }
 
-.control-label {
- text-align: center;
+
+#text_area{
+ margin: 20px; 
+}
+
+textarea {
+ resize: none; 
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -101,7 +110,7 @@
         <sys_created_on>2019-09-09 21:51:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2fc8412913f37b80ce8b7d576144b0b8</sys_id>
-        <sys_mod_count>181</sys_mod_count>
+        <sys_mod_count>277</sys_mod_count>
         <sys_name>Intranet - Ask Prog</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -109,52 +118,34 @@
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_2fc8412913f37b80ce8b7d576144b0b8</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-09-13 17:40:38</sys_updated_on>
-        <template><![CDATA[<div class="flip-card">
+        <sys_updated_on>2019-09-30 20:17:10</sys_updated_on>
+        <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<form>
+  <div class="panel panel-default">
+    <div id="table-summary" class="panel-heading">
+      <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>QUESTIONS?</b></div>
+    
+<div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="ask_prog2.jpg" alt="Ask Prog" class="responsive"  style="height:255px;"/>
+      <img src="askprogfinal.jpg" alt="Avatar" style="height:203px;">
     </div>
     <div class="flip-card-back">
       <form class="form-horizontal">
 <fieldset>
 
-<!-- File Button --> 
-<div class="form-group">
-  <div class="attachbutton">
-    <input id="attachbutton" name="attachbutton" class="input-file" type="file">
-  </div>
-      
-</div>
-
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-12 control-label" for="selectbasic">Select Department</label>
-  <div class="col-md-12">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="1">Talent &amp; Culture</option>
-      <option value="2">IT</option>
-      <option value="3">Sales</option>
-      <option value="4">Other</option>
-    </select>
-  </div>
-</div>
-
-<!-- Textarea -->
-<div class="form-group">
-  <label class="col-md-12 control-label" for="textinput">Question</label>  
-  <div class="col-md-12">
-  <input id="textinput" name="textinput" type="text" placeholder="Help is on the way" class="form-control input-md" required="">
-    
-  </div>
+<!-- Text input-->
+<div class="form-group" id="text_area">  
+  <textarea class="form-control" rows="5" placeholder="How can we help?"></textarea>
 </div>
 
 <!-- Button -->
 <div class="form-group">
-    <div class="submitbutton">
-      <button  ng-click="submit()" id="submit" name="submit" class="btn btn-success">Submit</button>
-    </div>
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-success">Submit</button>
   </div>
+</div>
 
 </fieldset>
 </form>
