@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function ($rootScope, spModal, $scope, snRecordWatcher, spUtil, $location, $uibModal, cabrillo, $timeout, $window, $http) {
+	var c = this;
+
+	c.work_tables = [];
+	c.job_title = "";
+	c.tasks = [];
+	c.approvals = [];
+	c.requests = [];
+	c.reports = [];
+	c.assigned_to_string = "";
+	
+	updateUserTasks();
+	
+	//API CALLS FOR RECORDS
+	
+	//Gets job title with logged in user sys_id
+	$http.get('/api/now/table/sys_user?sysparm_query=sys_id%3D' + $scope.user.sys_id).then(function(response){
+		c.job_title = response.data.result[0].u_jt_string;
+		c.work_tables.push(response.data.result[0].u_work_tables);
+	});
+	
+	//Gets scrum tasks of logged in user
+	function updateUserTasks()
+	{
+		$http.get('/api/now/table/rm_scrum_task?sysparm_query=assigned_to%3D' + $scope.user.sys_id + '%5Eactive%3Dtrue').then(function(response){
+		for(var i = 0; i < response.data.result.length; i++)
+		{
+			c.tasks.push({number: response.data.result[i].number, short_description: response.data.result[i].short_description, sys_id: response.data.result[i].sys_id, table: response.data.result[i].sys_class_name});
+		}
+	});
+	}
+	
+		
+	
+	//Gets incidents of logged in user
+	
+	$http.get('/api/now/table/incident?sysparm_query=assigned_to%3D' + $scope.user.sys_id + '%5Eactive%3Dtrue%5EstateNOT%20IN6%2C7').then(function(response){
+		for(var i = 0; i < response.data.result.length; i++)
+		{
+			c.tasks.push({number: response.data.result[i].number, short_description: response.data.result[i].short_description, sys_id: response.data.result[i].sys_id, table: 'incident'});
+		}
+	});
+	
+	//Gets sc_tasks of logged in user
+	$http.get('/api/now/table/sc_task?sysparm_query=assigned_to%3D' + $scope.user.sys_id + '%5Eactive%3Dtrue%5EstateNOT%20IN3%2C4').then(function(response){
+		for(var i = 0; i < response.data.result.length; i++)
+		{
+			c.tasks.push({number: response.data.result[i].number, short_description: response.data.result[i].short_description, sys_id: response.data.result[i].sys_id, table: 'sc_task'});
+		}
+	});
+	
+	
+	//Get approvals for logged in user
+	
+	$http.get('/api/now/table/sysapproval_approver?sysparm_query=approver%3D' + $scope.user.sys_id + '%5Estate%3Drequested').then(function(response){
+		for(var i=0; i < response.data.result.length; i++)
+			{
+				c.approvals.push({sys_id: response.data.result[i].sys_id, for_user: response.data.result[i].sys_created_by, table: 'sysapproval_approver', approval_for: response.data.result[i].u_approval_for_string});
+			}
+	});
+	
+	
+	//Gets open service catalog request for user
+	$http.get('/api/now/table/sc_req_item?sysparm_query=u_requested_for%3D' + $scope.user.sys_id + '%5Eactive%3Dtrue').then(function(response){ 
+		for(var i=0; i < response.data.result.length; i++)
+			{
+				c.requests.push({number: response.data.result[i].number, short_description: response.data.result[i].short_description, sys_id: response.data.result[i].sys_id, table: 'sc_req_item'});
+			}
+	});
+	
+	//Get user reports
+	$http.get('/api/now/table/sys_report?sysparm_query=user%3D' + $scope.user.sys_id).then(function(response){
+		for(var i=0; i < response.data.result.length; i++)
+			{
+				c.reports.push({name: response.data.result[i].sys_name, sys_id: response.data.result[i].sys_id, table: 'sys_report_template',
+											  url: 'https://progleasing.service-now.com/nav_to.do?uri=%2Fsys_report_template.do%3Fjvar_report_id%3D' + 
+																		response.data.result[i].sys_id + '%26jvar_selected_tab%3DallReports%26jvar_list_order_by%3D%26jvar_list_sort_direction%3D%26sysparm_reportquery%3D%26jvar_search_created_by%3D%26jvar_search_table%3D%26jvar_search_report_sys_id%3D%26jvar_report_home_query%3D'});
+			}
+	});
+	
+	
+	//RECORD AND BUTTON FUNCTIONS
+	
+	c.updateApproval = function(approvals)
+	{
+		spModal.open({
+			widget: 'portal_form',
+			size: 'lg',
+			widgetInput: {sys_id: approvals.sys_id, table: approvals.table}
+		});
+	}
+	
+	c.updateTask = function(task)
+	{
+			spModal.open({
+			widget: 'portal_form',
+			size: 'lg',
+			widgetInput: {sys_id: task.sys_id, table: task.table}
+		});	
+	}	
+	
+	c.updateRequest = function(requests)
+	{
+			spModal.open({
+			widget: 'portal_form',
+			size: 'lg',
+			widgetInput: {sys_id: requests.sys_id, table: requests.table}
+		});	
+	}	
+	
+	
+	
+	//RECORD WATCHERS
+	c.updatedFromServer = false;
+	
+	spUtil.recordWatch($scope, 'rm_scrum_task', 'assigned_to=' + $scope.user.sys_id, function(updateObj){
+		spUtil.update($scope);
+		c.updatedFromServer = true;
+		console.log("RECORD WATCHER STARTED");
+		updateUserTasks();
+		console.log(updateObj);
+	});
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>@keyframes swing {&#13;
+  0% {&#13;
+    transform: rotate(0deg);&#13;
+  }&#13;
+  10% {&#13;
+    transform: rotate(10deg);&#13;
+  }&#13;
+  30% {&#13;
+    transform: rotate(0deg);&#13;
+  }&#13;
+  40% {&#13;
+    transform: rotate(-10deg);&#13;
+  }&#13;
+  50% {&#13;
+    transform: rotate(0deg);&#13;
+  }&#13;
+  60% {&#13;
+    transform: rotate(5deg);&#13;
+  }&#13;
+  70% {&#13;
+    transform: rotate(0deg);&#13;
+  }&#13;
+  80% {&#13;
+    transform: rotate(-5deg);&#13;
+  }&#13;
+  100% {&#13;
+    transform: rotate(0deg);&#13;
+  }&#13;
+}&#13;
+&#13;
+@keyframes sonar {&#13;
+  0% {&#13;
+    transform: scale(0.9);&#13;
+    opacity: 1;&#13;
+  }&#13;
+  100% {&#13;
+    transform: scale(2);&#13;
+    opacity: 0;&#13;
+  }&#13;
+}&#13;
+body {&#13;
+  font-size: 0.9rem;&#13;
+}&#13;
+.page-wrapper .sidebar-wrapper,&#13;
+.sidebar-wrapper .sidebar-brand &gt; a,&#13;
+.sidebar-wrapper .sidebar-dropdown &gt; a:after,&#13;
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before,&#13;
+.sidebar-wrapper ul li a i,&#13;
+.page-wrapper .page-content,&#13;
+.sidebar-wrapper .sidebar-search input.search-menu,&#13;
+.sidebar-wrapper .sidebar-search .input-group-text,&#13;
+.sidebar-wrapper .sidebar-menu ul li a,&#13;
+#show-sidebar,&#13;
+#close-sidebar {&#13;
+  -webkit-transition: all 0.3s ease;&#13;
+  -moz-transition: all 0.3s ease;&#13;
+  -ms-transition: all 0.3s ease;&#13;
+  -o-transition: all 0.3s ease;&#13;
+  transition: all 0.3s ease;&#13;
+}&#13;
+&#13;
+/*----------------page-wrapper----------------*/&#13;
+&#13;
+&#13;
+&#13;
+/*----------------toggeled sidebar----------------*/&#13;
+&#13;
+.page-wrapper.toggled .sidebar-wrapper {&#13;
+  left: 0px;&#13;
+}&#13;
+&#13;
+@media screen and (min-width: 768px) {&#13;
+  .page-wrapper.toggled .page-content {&#13;
+    padding-left: 300px;&#13;
+  }&#13;
+}&#13;
+/*----------------show sidebar button----------------*/&#13;
+#show-sidebar {&#13;
+  position: fixed;&#13;
+  left: 0;&#13;
+  top: 10px;&#13;
+  border-radius: 0 4px 4px 0px;&#13;
+  width: 35px;&#13;
+  transition-delay: 0.3s;&#13;
+}&#13;
+.page-wrapper.toggled #show-sidebar {&#13;
+  left: -40px;&#13;
+}&#13;
+/*----------------sidebar-wrapper----------------*/&#13;
+&#13;
+.sidebar-wrapper {&#13;
+  width: 260px;&#13;
+  height: 100%;&#13;
+  max-height: 100%;&#13;
+  position: fixed;&#13;
+  top: 0;&#13;
+  left: -300px;&#13;
+  z-index: 999;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper ul {&#13;
+  list-style-type: none;&#13;
+  padding: 0;&#13;
+  margin: 0;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper a {&#13;
+  text-decoration: none;&#13;
+}&#13;
+&#13;
+/*----------------sidebar-content----------------*/&#13;
+&#13;
+.sidebar-content {&#13;
+  max-height: calc(100% - 30px);&#13;
+  height: calc(100% - 30px);&#13;
+  overflow-y: auto;&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+.sidebar-content.desktop {&#13;
+  overflow-y: hidden;&#13;
+}&#13;
+&#13;
+/*--------------------sidebar-brand----------------------*/&#13;
+&#13;
+.sidebar-wrapper .sidebar-brand {&#13;
+  padding: 10px 20px;&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-brand &gt; a {&#13;
+  text-transform: uppercase;&#13;
+  font-weight: bold;&#13;
+  flex-grow: 1;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-brand #close-sidebar {&#13;
+  cursor: pointer;&#13;
+  font-size: 20px;&#13;
+}&#13;
+/*--------------------sidebar-header----------------------*/&#13;
+&#13;
+.sidebar-wrapper .sidebar-header {&#13;
+  padding: 20px;&#13;
+  overflow: hidden;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-header .user-pic {&#13;
+  float: left;&#13;
+  width: 60px;&#13;
+  padding: 2px;&#13;
+  border-radius: 12px;&#13;
+  margin-right: 15px;&#13;
+  overflow: hidden;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-header .user-pic img {&#13;
+  object-fit: cover;&#13;
+  height: 100%;&#13;
+  width: 100%;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-header .user-info {&#13;
+  float: left;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-header .user-info &gt; span {&#13;
+  display: block;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-header .user-info .user-role {&#13;
+  font-size: 12px;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-header .user-info .user-status {&#13;
+  font-size: 11px;&#13;
+  margin-top: 4px;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-header .user-info .user-status i {&#13;
+  font-size: 8px;&#13;
+  margin-right: 4px;&#13;
+  color: #5cb85c;&#13;
+}&#13;
+&#13;
+/*-----------------------sidebar-search------------------------*/&#13;
+&#13;
+.sidebar-wrapper .sidebar-search &gt; div {&#13;
+  padding: 10px 35px 10px 10px;&#13;
+}&#13;
+&#13;
+/*----------------------sidebar-menu-------------------------*/&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu {&#13;
+  padding-bottom: 10px;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu .header-menu span {&#13;
+  font-weight: bold;&#13;
+  font-size: 14px;&#13;
+  padding: 15px 20px 5px 20px;&#13;
+  display: inline-block;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu ul li a {&#13;
+  display: inline-block;&#13;
+  width: 100%;&#13;
+  text-decoration: none;&#13;
+  position: relative;&#13;
+  padding: 8px 30px 8px 20px;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu ul li a i {&#13;
+  margin-right: 10px;&#13;
+  font-size: 12px;&#13;
+  width: 30px;&#13;
+  height: 30px;&#13;
+  line-height: 30px;&#13;
+  text-align: center;&#13;
+  border-radius: 4px;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu ul li a:hover &gt; i::before {&#13;
+  display: inline-block;&#13;
+  animation: swing ease-in-out 0.5s 1 alternate;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown &gt; a:after {&#13;
+  font-family: "Font Awesome 5 Free";&#13;
+  font-weight: 900;&#13;
+  content: "\f105";&#13;
+  font-style: normal;&#13;
+  display: inline-block;&#13;
+  font-style: normal;&#13;
+  font-variant: normal;&#13;
+  text-rendering: auto;&#13;
+  -webkit-font-smoothing: antialiased;&#13;
+  -moz-osx-font-smoothing: grayscale;&#13;
+  text-align: center;&#13;
+  background: 0 0;&#13;
+  position: absolute;&#13;
+  right: 15px;&#13;
+  top: 14px;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu ul {&#13;
+  padding: 5px 0;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li {&#13;
+  padding-left: 25px;&#13;
+  font-size: 13px;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {&#13;
+  content: "\f111";&#13;
+  font-family: "Font Awesome 5 Free";&#13;
+  font-weight: 400;&#13;
+  font-style: normal;&#13;
+  display: inline-block;&#13;
+  text-align: center;&#13;
+  text-decoration: none;&#13;
+  -webkit-font-smoothing: antialiased;&#13;
+  -moz-osx-font-smoothing: grayscale;&#13;
+  margin-right: 10px;&#13;
+  font-size: 8px;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu ul li a span.label,&#13;
+.sidebar-wrapper .sidebar-menu ul li a span.badge {&#13;
+  float: right;&#13;
+  margin-top: 8px;&#13;
+  margin-left: 5px;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a .badge,&#13;
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a .label {&#13;
+  float: right;&#13;
+  margin-top: 0px;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu .sidebar-submenu {&#13;
+  display: none;&#13;
+}&#13;
+&#13;
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown.active &gt; a:after {&#13;
+  transform: rotate(90deg);&#13;
+  right: 17px;&#13;
+}&#13;
+&#13;
+/*--------------------------side-footer------------------------------*/&#13;
+&#13;
+.sidebar-footer {&#13;
+  position: absolute;&#13;
+  width: 100%;&#13;
+  bottom: 0;&#13;
+  display: flex;&#13;
+}&#13;
+&#13;
+.sidebar-footer &gt; a {&#13;
+  flex-grow: 1;&#13;
+  text-align: center;&#13;
+  height: 30px;&#13;
+  line-height: 30px;&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+.sidebar-footer &gt; a .notification {&#13;
+  position: absolute;&#13;
+  top: 0;&#13;
+}&#13;
+&#13;
+.badge-sonar {&#13;
+  display: inline-block;&#13;
+  background: #980303;&#13;
+  border-radius: 50%;&#13;
+  height: 8px;&#13;
+  width: 8px;&#13;
+  position: absolute;&#13;
+  top: 0;&#13;
+}&#13;
+&#13;
+.badge-sonar:after {&#13;
+  content: "";&#13;
+  position: absolute;&#13;
+  top: 0;&#13;
+  left: 0;&#13;
+  border: 2px solid #980303;&#13;
+  opacity: 0;&#13;
+  border-radius: 50%;&#13;
+  width: 100%;&#13;
+  height: 100%;&#13;
+  animation: sonar 1.5s infinite;&#13;
+}&#13;
+&#13;
+/*------scroll bar---------------------*/&#13;
+&#13;
+::-webkit-scrollbar {&#13;
+  width: 5px;&#13;
+  height: 7px;&#13;
+}&#13;
+::-webkit-scrollbar-button {&#13;
+  width: 0px;&#13;
+  height: 0px;&#13;
+}&#13;
+::-webkit-scrollbar-thumb {&#13;
+  background: #525965;&#13;
+  border: 0px none #ffffff;&#13;
+  border-radius: 0px;&#13;
+}&#13;
+::-webkit-scrollbar-thumb:hover {&#13;
+  background: #525965;&#13;
+}&#13;
+::-webkit-scrollbar-thumb:active {&#13;
+  background: #525965;&#13;
+}&#13;
+::-webkit-scrollbar-track {&#13;
+  background: transparent;&#13;
+  border: 0px none #ffffff;&#13;
+  border-radius: 50px;&#13;
+}&#13;
+::-webkit-scrollbar-track:hover {&#13;
+  background: transparent;&#13;
+}&#13;
+::-webkit-scrollbar-track:active {&#13;
+  background: transparent;&#13;
+}&#13;
+::-webkit-scrollbar-corner {&#13;
+  background: transparent;&#13;
+}&#13;
+&#13;
+&#13;
+/*-----------------------------chiller-theme-------------------------------------------------*/&#13;
+&#13;
+.chiller-theme .sidebar-wrapper {&#13;
+    background: #31353D;&#13;
+}&#13;
+&#13;
+.chiller-theme .sidebar-wrapper .sidebar-header,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-search,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-menu {&#13;
+    border-top: 1px solid #3a3f48;&#13;
+}&#13;
+&#13;
+.chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-search .input-group-text {&#13;
+    border-color: transparent;&#13;
+    box-shadow: none;&#13;
+}&#13;
+&#13;
+.chiller-theme .sidebar-wrapper .sidebar-header .user-info .user-role,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-header .user-info .user-status,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-search .input-group-text,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-brand&gt;a,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-menu ul li a,&#13;
+.chiller-theme .sidebar-footer&gt;a {&#13;
+    color: #818896;&#13;
+}&#13;
+&#13;
+.chiller-theme .sidebar-wrapper .sidebar-menu ul li:hover&gt;a,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown.active&gt;a,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-header .user-info,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-brand&gt;a:hover,&#13;
+.chiller-theme .sidebar-footer&gt;a:hover i {&#13;
+    color: #b8bfce;&#13;
+}&#13;
+&#13;
+.page-wrapper.chiller-theme.toggled #close-sidebar {&#13;
+    color: #bdbdbd;&#13;
+}&#13;
+&#13;
+.page-wrapper.chiller-theme.toggled #close-sidebar:hover {&#13;
+    color: #ffffff;&#13;
+}&#13;
+&#13;
+.chiller-theme .sidebar-wrapper ul li:hover a i,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-dropdown .sidebar-submenu li a:hover:before,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-search input.search-menu:focus+span,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown.active a i {&#13;
+    color: #16c7ff;&#13;
+    text-shadow:0px 0px 10px rgba(22, 199, 255, 0.5);&#13;
+}&#13;
+&#13;
+.chiller-theme .sidebar-wrapper .sidebar-menu ul li a i,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown div,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,&#13;
+.chiller-theme .sidebar-wrapper .sidebar-search .input-group-text {&#13;
+    background: #3a3f48;&#13;
+}&#13;
+&#13;
+.chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {&#13;
+    color: #6c7b88;&#13;
+}&#13;
+&#13;
+.chiller-theme .sidebar-footer {&#13;
+    background: #3a3f48;&#13;
+    box-shadow: 0px -1px 5px #282c33;&#13;
+    border-top: 1px solid #464a52;&#13;
+}&#13;
+&#13;
+.chiller-theme .sidebar-footer&gt;a:first-child {&#13;
+    border-left: none;&#13;
+}&#13;
+&#13;
+.chiller-theme .sidebar-footer&gt;a:last-child {&#13;
+    border-right: none;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) { 
+
+ }]]></link>
+        <name>Intranet SideNav</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+data.typeAheadSearch = $sp.getWidget('typeahead-search', options.typeahead_search);
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-17 18:48:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d8fa083113ac8890ce8b7d576144b0b2</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Intranet SideNav</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_header_footer_d8fa083113ac8890ce8b7d576144b0b2</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-17 19:14:31</sys_updated_on>
+        <template><![CDATA[<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+       <a href="#"> <img ng-src="{{::portal.logo}}" style="height: 100px; width: 200px;"></a>
+        <div id="close-sidebar">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="sidebar-header">
+       <!-- <div class="user-pic">
+          <img class="img-responsive img-rounded" src='{{::user.photo}}'
+            alt="User picture">
+        </div> -->
+        <div class="user-info">
+          <span class="user-name"><strong>{{::user.name}}</strong>
+          </span>
+          <span class="user-role">{{c.job_title}}</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+      <!-- sidebar-header  -->
+      <div class="sidebar-search">
+              <sp-widget widget="data.typeAheadSearch" />
+      </div>
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>My Work</span>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-tachometer-alt"></i>
+              <span>Tasks</span>
+              <span class="fa fa-bolt"
+                    ng-show="c.updatedFromServer"></span>
+              <!-- <span class="badge badge-pill badge-warning">New</span> -->
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li ng-repeat="tasks in c.tasks"
+                    ng-click="c.updateTask(tasks)">
+                  <a href="#"\>{{tasks.number + ' - ' + tasks.short_description}}</a>
+                </li> 
+              </ul>
+            </div>
+          </li>
+          
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="far fa-gem"></i>
+              <span>Approvals</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li ng-repeat="approvals in c.approvals"
+                    ng-click="c.updateApproval(approvals)">
+                  <a href="#">{{approvals.for_user + ' - ' + approvals.approval_for}}</a>
+                </li> 
+              </ul>
+            </div>
+          </li>
+          
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-shopping-cart"></i>
+              <span>Requests</span>
+              <!-- <span class="badge badge-pill badge-danger">3</span> -->
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li ng-repeat="requests in c.requests"
+                    ng-click="c.updateRequest(requests)">
+                  <a href="#">{{requests.number + ' - ' + requests.short_description}}</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          
+          
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-chart-line"></i>
+              <span>Reports</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li ng-repeat="reports in c.reports">
+                  <a href={{reports.url}} target="_blank">{{reports.name}}</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-globe"></i>
+              <span>Departments</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Finance</a>
+                </li>
+                <li>
+                  <a href="#">Facilities</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="header-menu">
+            <span>Extra</span>
+          </li>
+          <li>
+            <a href="https://progleasing.service-now.com/sp" target="_blank">
+              <i class="fa fa-globe"></i>
+              <span>Service Portal</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://progleasing.service-now.com/sp?id=kb_view2&kb_id=dfc19531bf2021003f07e2c1ac0739ab" target="_blank">
+              <i class="fa fa-book"></i>
+              <span>Knowledge Base</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a href="https://progleasing.okta.com/home/adp/0oa9n03zgOK9bqRr1356/aln17xch9l1z7jaUw0g8?fromHome=true" target="_blank">
+        <p>ADP</p>
+      </a>
+      <a href="https://progleasing.okta.com/home/progleasing_developmeproduction_1/0oa12szk33ddWicem357/aln12t3xdc2rHGTCS357?fromHome=true" target="_blank">
+        <p>DEVELOP.ME</p>
+      </a>
+      <a href="https://progleasing.okta.com/home/office365/0oaee1td6lEjQJ1Om356/2161?fromHome=true" target="_blank">
+        <p>O365</p>
+      </a>
+      <a href="https://progleasing.okta.com/app/UserHome" target="_blank">
+        <p>OKTA</p>
+      </a>
+    </div>
+  </nav>
+  
+  <script>   
+    jQuery(function ($) {
+
+      $(".sidebar-dropdown > a").click(function() {
+        $(".sidebar-submenu").slideUp(200);
+        if (
+          $(this)
+          .parent()
+          .hasClass("active")
+        ) {
+          $(".sidebar-dropdown").removeClass("active");
+          $(this)
+            .parent()
+            .removeClass("active");
+        } else {
+          $(".sidebar-dropdown").removeClass("active");
+          $(this)
+            .next(".sidebar-submenu")
+            .slideDown(200);
+          $(this)
+            .parent()
+            .addClass("active");
+        }
+      });
+      
+      
+
+      $("#close-sidebar").click(function() {
+        $(".page-wrapper").removeClass("toggled");
+      });
+      $("#show-sidebar").click(function() {
+        $(".page-wrapper").addClass("toggled");
+      });
+
+
+    });
+    
+    
+  </script>]]></template>
+    </sp_header_footer>
+</record_update>

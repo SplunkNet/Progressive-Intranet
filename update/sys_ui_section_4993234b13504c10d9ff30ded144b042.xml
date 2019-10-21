@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="4993234b13504c10d9ff30ded144b042" sys_domain="global" table="x_prole_intranet_emails" version="3" view="sp">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_subject</element>
+            <position>0</position>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-10-09 21:30:39</sys_created_on>
+            <sys_id>47a3e78b13504c10d9ff30ded144b074</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_emails" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">4993234b13504c10d9ff30ded144b042</sys_ui_section>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:30:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_event_date</element>
+            <position>1</position>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-10-09 21:30:39</sys_created_on>
+            <sys_id>cba3e78b13504c10d9ff30ded144b074</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_emails" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">4993234b13504c10d9ff30ded144b042</sys_ui_section>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:30:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>REL.x_prole_intranet_emails.REL:b9edf0ca0a0a0b010035de2d6b579a03</element>
+            <position>2</position>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-10-09 21:30:39</sys_created_on>
+            <sys_id>cfa3afcb13504c10d9ff30ded144b0df</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_emails" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">4993234b13504c10d9ff30ded144b042</sys_ui_section>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:30:39</sys_updated_on>
+            <sys_user/>
+            <type>list</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_prole_intranet_emails</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-10-09 21:30:14</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4993234b13504c10d9ff30ded144b042</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_prole_intranet_emails</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+            <sys_update_name>sys_ui_section_4993234b13504c10d9ff30ded144b042</sys_update_name>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-10-09 21:30:14</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Service Portal" name="sp">ec2daaf9d7523100a9ad1e173e24d4ea</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

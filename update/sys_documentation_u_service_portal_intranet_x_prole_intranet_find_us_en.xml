@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="x_prole_intranet_find_us" label="find us" language="en" table="u_service_portal_intranet">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_prole_intranet_find_us</element>
+            <help/>
+            <hint/>
+            <label>find us</label>
+            <language>en</language>
+            <name>u_service_portal_intranet</name>
+            <plural>find us</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-10-08 23:08:27</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>8a70b2b213948810d9ff30ded144b0fc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>find us</sys_name>
+            <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+            <sys_update_name>sys_documentation_u_service_portal_intranet_x_prole_intranet_find_us_en</sys_update_name>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-10-08 23:08:27</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

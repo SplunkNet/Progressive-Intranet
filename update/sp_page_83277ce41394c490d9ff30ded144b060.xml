@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
     <sp_page action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <css>section.page, main.body {&#13;
-  padding-top: 0px !important;&#13;
-}&#13;
-&#13;
-body {&#13;
- background-color: #e6e8ea;&#13;
+        <css>section.page, main.body {
+  padding-top: 0px !important;
+}
+
+body {
+ background-color: #e6e8ea;
 }</css>
         <draft>false</draft>
         <dynamic_title_structure/>
@@ -20,7 +20,7 @@ body {&#13;
         <sys_created_on>2019-10-01 14:32:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>83277ce41394c490d9ff30ded144b060</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>intranet_facilities</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -28,7 +28,7 @@ body {&#13;
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_page_83277ce41394c490d9ff30ded144b060</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-01 14:32:34</sys_updated_on>
+        <sys_updated_on>2019-10-01 19:37:23</sys_updated_on>
         <title>Facilities</title>
     </sp_page>
     <sys_translated_text action="delete_multiple" query="documentkey=83277ce41394c490d9ff30ded144b060"/>

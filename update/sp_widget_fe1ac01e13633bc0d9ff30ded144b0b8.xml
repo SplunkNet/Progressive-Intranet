@@ -2,54 +2,70 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[function(spUtil,$scope,$timeout, spModal) {
-  /* widget controller */
-  var c = this;
-	
+	/* widget controller */
+	var c = this;
+
 	c.selectAg = function(record){
-		
+		//console.log(record)
+
+		var widgetInput = {
+			table: c.data.table,
+			view: 'sp',
+			sys_id: record.agSys_id
+
+		};
+
 		//Set a property on the data object to identify the selected object
 		c.data.selectedAg = record.agValue;
+
+
 		spModal.open({
-				size: "lg",
-				title: record.agValue,
-				widget: 'iv2_attachment_clone',
-				shared: c.data
-			});
-		
+			size: "lg",
+			title: record.agValue,
+			widget: 'widget-form',
+			shared: c.data,
+			widgetInput: widgetInput
+			
+		}).then(function(){
+			spUtil.update($scope);	
+
+		});
+
 		//Send the data object to the server script
-		c.server.update();
+
 	}
-	
+
 	c.sortOrder=false;
-	
+
 	c.changeSortCol=function(key){
-		
+
 		if(key == c.orderCol)
 			c.sortOrder = !c.sortOrder;
 		else
 			c.sortOrder = false;
-		
+
 		c.orderCol = key;
 	}
-	
+
 	c.updatedFromServer = false;
-	
+
 	//Record watch functionality
 	//a flag to indicate if a live update has been triggered by the record watcher
-	spUtil.recordWatch($scope, c.data.table, '', function(updateObj)
-	{
-		spUtil.update($scope);
+	spUtil.recordWatch($scope, c.data.table, 'active=true', function(updateObj)
+										 {
+		//spUtil.update($scope);
 		c.updatedFromServer = true;
 		if (!c.updatedRegs){
 			c.updatedRegs = {};
 		}
-	
-	c.updateRegs[updateObj.data.sys_id] = true;
-	$timeout(function(){
-					 c.updatedRegs[updateObj.data.sys_id] = false;
-					 }, 6000);
+		console.log(updateObj)
+		c.updateRegs[updateObj.data.sys_id] = true;
+		//spUtil.update($scope);
+		$timeout(function(){
+			c.updatedRegs[updateObj.data.sys_id] = false;
+		}, 6000);
 	});
-	
+
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>li {
@@ -130,19 +146,20 @@ form:hover {
 		data.table = 'x_prole_intranet_emails';
 		data.groupBy = 'u_subject';
 		data.date = 'u_event_date';
+		data.sys_id = '';
 		
-		var ga = new GlideAggregate(data.table);
-		ga.setGroup(true);
-		ga.groupBy(data.groupBy);
-		ga.groupBy(data.date);
-		ga.addAggregate('COUNT');
+		var ga = new GlideRecord(data.table);
+		//ga.addQuery('active' , 'true');
+		ga.orderByDesc(data.date);
+		
 		ga.query();
 
 		while(ga.next())
 		{
 			data.summary.push({
 				agName:ga[data.groupBy].getDisplayValue() || 'None',
-				agDate:ga[data.date].getDisplayValue() || 'None'
+				agDate:ga[data.date].getDisplayValue() || 'None',
+				agSys_id: ga.sys_id.getDisplayValue()
 			});
 		}
 	}
@@ -154,15 +171,15 @@ form:hover {
         <sys_created_on>2019-08-30 14:57:33</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fe1ac01e13633bc0d9ff30ded144b0b8</sys_id>
-        <sys_mod_count>92</sys_mod_count>
+        <sys_mod_count>129</sys_mod_count>
         <sys_name>Intranet - Events</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_fe1ac01e13633bc0d9ff30ded144b0b8</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-08-30 16:32:07</sys_updated_on>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-10-09 21:31:00</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <form>
   <div class="panel panel-default">

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="INSERT_OR_UPDATE">
+        <sp_dependency display_value="dialog-polyfill">2eaf31f30b301200b0b02c6317673a84</sp_dependency>
+        <sp_widget display_value="Intranet attachment clone">b778a60513e44090d9ff30ded144b004</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-10-15 22:19:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3b78a60513e44090d9ff30ded144b007</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>dialog-polyfill.Intranet attachment clone</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_3b78a60513e44090d9ff30ded144b007</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-10-15 22:19:57</sys_updated_on>
+    </m2m_sp_widget_dependency>
+</record_update>

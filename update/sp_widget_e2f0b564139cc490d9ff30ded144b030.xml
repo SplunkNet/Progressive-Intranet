@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, spModal) {
+  /* widget controller */
+  var c = this;
+	
+	
+		
+	c.editContent = function(){
+		
+			var widgetInput = {
+			table: $scope.data.table,
+			sys_id: c.data.sys_id
+		};
+		
+		spModal.open({
+			size: "lg",
+			title: "Edit",
+			widget: 'intranet_attachment_clone',
+			shared: c.data,
+			widgetInput: widgetInput,
+			
+			buttons: [
+				{
+					label: "Submit",
+					primary: true
+				}
+			]
+			}).then(function(){
+
+			c.server.update();
+			
+		});
+
+		
+	}
+
+	
+	
+	
+	
+	
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--bg);
+    background-attachment: fixed;
+  	background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+section .box {
+    position: relative;
+    max-width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    overflow: hidden;
+    color: white;
+}
+
+section .box:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-image: var(--bg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+     -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+section .box h1 {
+    text-align: center;
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0;
+    text-transform: uppercase;
+    z-index: 2;
+    font-size: 48px;
+}
+
+section .box h2 {
+    text-align: center;
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0;
+    text-transform: uppercase;
+    z-index: 2;
+    font-size: 20px;
+}
+
+section .box button {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding: 10px;
+    z-index: 2;
+}
+
+section .box button:hover {
+ 	transform: translateY(-3px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .50); 
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>intranet_-_departments_-_hero_image</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Intranet - Departments - Hero Image</name>
+        <option_schema>[{"name":"department","section":"Data","default_value":"facilites","label":"Department","type":"string","choices":[{"label":"hero","value":"hero"},{"label":"departments -  what we do","value":"departments -  what we do"}]},{"hint":"The containing content record","name":"record_sys_id","section":"Data","default_value":"909f4ee0139040d4ce8b7d576144b024","label":"Record sys_id","type":"string"},{"name":"subtext","section":"Data","default_value":"Subtext!","label":"Subtext","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	var department = options.department ;
+	var widget_type =  'hero' || options.type.toLowerCase();
+	var image = [];
+	var subtext = '';
+	var recordsys_id =  options.record_sys_id;
+	data.subtext = options.subtext;
+
+	
+	var gr = new GlideRecord('u_service_portal_intranet');
+/*
+	gr.addQuery('u_portal_page', department);
+	gr.addQuery('u_widget' , widget_type);
+	gr.query();
+	console.log(gr.getRowCount())
+*/
+	gr.get(recordsys_id)
+	
+		//data.sys_id = gr.sys_id.getDisplayValue();
+		//data.subtext = gr.u_department_subtext.getDisplayValue();
+		data.image2 = gr.u_new_image.getDisplayValue();
+	
+	
+	
+	var grdb = new GlideRecord('sys_attachment');
+	
+	
+	grdb.addQuery('table_sys_id' , recordsys_id);
+	//grdb.orderBy('created');
+	grdb.query();
+	
+	
+if (grdb.next()){
+	
+
+		data.image = 'sys_attachment.do?sys_id='+ grdb.sys_id;
+		
+	}
+
+	data.sys_id = recordsys_id;
+	//data.widget_options = options.widget_parameters;
+	data.department = department.toUpperCase();
+	console.log(data);
+	//console.log(options.widget_parameters)
+	//console.log(department + ", " + widget_type)
+	
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-01 18:44:43</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e2f0b564139cc490d9ff30ded144b030</sys_id>
+        <sys_mod_count>155</sys_mod_count>
+        <sys_name>Intranet - Departments - Hero Image</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_widget_e2f0b564139cc490d9ff30ded144b030</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-10-17 21:04:09</sys_updated_on>
+        <template><![CDATA[<section style=" --bg: url({{c.data.image2}})">
+	<div class="box">
+   	<h1>{{c.data.department}}</h1>
+    <h2>{{c.data.subtext}}</h2>
+    <button type="button" class="btn btn-primary">Contact Us</button>
+    <br>
+   <!--- <button type="button" class="btn btn-primary" ng-click="c.editContent()" >Edit</button> --->
+  </div>
+</section>]]></template>
+    </sp_widget>
+</record_update>

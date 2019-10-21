@@ -11,7 +11,7 @@
 		c.data.selectedAg = record.agValue;
 		spModal.open({
 				size: "lg",
-				title: record.agValue,
+				title: record.agName,
 				widget: 'iv2_attachment_clone',
 				shared: c.data
 			});
@@ -158,28 +158,48 @@ body {font-family: Arial;}
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
 	
-	var c = this;
+	
 	
 	if(!input){
+		data.utah = [];
+		data.az = [];
+		data.nation = [];
 		data.summary = [];
-		data.table = 'x_prole_intranet_announcements';
-		data.groupBy = 'u_heading';
-		data.fields = 'u_description';
-		var ga = new GlideAggregate(data.table);
-		ga.setGroup(true);
-		ga.groupBy(data.groupBy);
-		ga.addAggregate('COUNT');
-		ga.query();
+		data.table = 'x_prole_intranet_intranet_jobs';
+		//data.groupBy = 'u_heading';
+		//data.fields = 'u_description';
+		var gr = new GlideRecord(data.table);
+		gr.query();
 
-		while(ga.next())
-		{
-			data.summary.push({
-				agName:ga[data.groupBy].getDisplayValue() || 'None',
-				agValue:ga[data.groupBy].toString(),
-				agCount:ga.getAggregate('COUNT')
+		while(gr.next()){
+			
+			if(gr.location.getDisplayValue() == 'Draper'){
+				data.utah.push({
+					agName:gr.title.getDisplayValue() || 'None',
+				agValue:gr.html_ref.toString()
+					
+				})
+				
+				
+			}
+			
+			else if(gr.location.getDisplayValue() == 'Glendale'){
+			data.az.push({
+					agName:gr.title.getDisplayValue() || 'None',
+				agValue:gr.html_ref.toString()
+					
+				})
+		}
+		
+			else if(gr.location.getDisplayValue() == 'Nationwide')
+			data.nation.push({
+				agName:gr.title.getDisplayValue() || 'None',
+				agValue:gr.html_ref.toString()
+				
 			});
 		}
 	}
+	//console.log(data);
 
 })();]]></script>
         <servicenow>false</servicenow>
@@ -188,15 +208,15 @@ body {font-family: Arial;}
         <sys_created_on>2019-09-25 13:41:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7a02fd2e13c40450d9ff30ded144b019</sys_id>
-        <sys_mod_count>86</sys_mod_count>
+        <sys_mod_count>115</sys_mod_count>
         <sys_name>Intranet - Hot Jobs</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_7a02fd2e13c40450d9ff30ded144b019</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-09-30 19:42:24</sys_updated_on>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-10-16 21:04:05</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <form>
   <div class="panel panel-default">
@@ -204,17 +224,17 @@ body {font-family: Arial;}
       <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>HOT JOBS</b>
     </div>
     <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Utah')">Utah</button>
+  <button class="tablinks active" onclick="openCity(event, 'Utah')">Utah</button>
   <button class="tablinks" onclick="openCity(event, 'Arizona')">Arizona</button>
   <button class="tablinks" onclick="openCity(event, 'Remote')">Remote</button>
 </div>
 
-<div id="Utah" class="tabcontent">
+<div id="Utah" class="tabcontent" style="display:block" >
    <div class="card-body">
            <ul class="list-group">
             <li class="list-group-item" id="li-heading"
-              ng-repeat="s in c.data.summary"
-                ng-click="c.selectAg(s)">{{ s.agName }}
+              ng-repeat="s in c.data.utah">
+                <a href="{{s.agValue}}" target="_blank">{{s.agName}}</a> 
             </li>
            </ul>
           </div>
@@ -224,8 +244,8 @@ body {font-family: Arial;}
   <div class="card-body">
            <ul class="list-group">
             <li class="list-group-item" id="li-heading"
-              ng-repeat="s in c.data.summary"
-                ng-click="c.selectAg(s)">{{ s.agName }}
+              ng-repeat="s in c.data.az">
+                <a href="{{s.agValue}}" target="_blank">{{s.agName}}</a>
             </li>
            </ul>
           </div>
@@ -235,8 +255,8 @@ body {font-family: Arial;}
   <div class="card-body">
            <ul class="list-group">
             <li class="list-group-item" id="li-heading"
-              ng-repeat="s in c.data.summary"
-                ng-click="c.selectAg(s)">{{ s.agName }}
+              ng-repeat="s in c.data.nation">
+               <a href="{{s.agValue}}" target="_blank">{{s.agName}}</a>
             </li>
            </ul>
           </div>

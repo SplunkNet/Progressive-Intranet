@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Intranet jobs" max_length="40" name="x_prole_intranet_intranet_jobs" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="HTML Ref" max_length="255" name="html_ref" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="draper" label="Location" max_length="40" name="location" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Draper" sequence="0" value="draper"/>
+                <element inactive_on_update="false" label="Glendale" sequence="1" value="glendale"/>
+                <element inactive_on_update="false" label="Nationwide" sequence="2" value="nationwide"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Title" max_length="75" name="title" type="string"/>
+    </element>
+</database>

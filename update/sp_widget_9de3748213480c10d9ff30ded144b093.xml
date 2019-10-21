@@ -24,7 +24,7 @@
         <sys_created_on>2019-09-23 19:53:02</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9de3748213480c10d9ff30ded144b093</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>Intranet - Org Chart</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -32,9 +32,9 @@
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_9de3748213480c10d9ff30ded144b093</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-09-26 17:55:12</sys_updated_on>
+        <sys_updated_on>2019-10-18 17:22:51</sys_updated_on>
         <template><![CDATA[<div>
-<iframe width=360 height=250 src="https://web.powerapps.com/webplayer/iframeapp?source=iframe&amp;appId=/providers/Microsoft.PowerApps/apps/adcc985d-739b-4f5e-8606-20f6561333a6&amp;LeadMail=ryan.woodley@progleasing.com"></iframe>
+<iframe width=360 height=318 src="https://web.powerapps.com/webplayer/iframeapp?source=iframe&amp;appId=/providers/Microsoft.PowerApps/apps/adcc985d-739b-4f5e-8606-20f6561333a6&amp;LeadMail=ryan.woodley@progleasing.com"></iframe>
 </div>
 ]]></template>
     </sp_widget>

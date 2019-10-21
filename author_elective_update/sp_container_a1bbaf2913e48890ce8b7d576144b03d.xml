@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color>#343d47</background_color>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name>padding-top-20</container_class_name>
+        <name>Legal - Container 1</name>
+        <order>1</order>
+        <sp_page display_value="copy_of_intranet_finance_1">e9bbebe113e48890ce8b7d576144b000</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-17 16:30:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a1bbaf2913e48890ce8b7d576144b03d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Legal - Container 1</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_container_a1bbaf2913e48890ce8b7d576144b03d</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-17 16:31:05</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>19bdb3e34f289e4094ac220f0310c748</instance_id>
+        <instance_name>devprogleasing</instance_name>
+        <name>sp_container_a1bbaf2913e48890ce8b7d576144b03d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color>#343d47</background_color><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name>padding-top-20</container_class_name><name>Legal - Container 1</name><order>1</order><sp_page display_value="copy_of_intranet_finance_1">e9bbebe113e48890ce8b7d576144b000</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>zachary.nicholson</sys_created_by><sys_created_on>2019-10-17 16:30:34</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>a1bbaf2913e48890ce8b7d576144b03d</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Legal - Container 1</sys_name><sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope><sys_update_name>sp_container_a1bbaf2913e48890ce8b7d576144b03d</sys_update_name><sys_updated_by>zachary.nicholson</sys_updated_by><sys_updated_on>2019-10-17 16:31:05</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-1354111121</payload_hash>
+        <record_name>Legal - Container 1</record_name>
+        <reverted_from/>
+        <source>1b76ad7513fbfb80ce8b7d576144b0da</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-17 16:31:05</sys_created_on>
+        <sys_id>0ddbef2913e48890ce8b7d576144b008</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16dda8ef75c0000001</sys_recorded_at>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-17 16:31:05</sys_updated_on>
+        <type>Container</type>
+        <update_guid>c1dbef2980e48890fd3e15bacfed4a08</update_guid>
+        <update_guid_history>c1dbef2980e48890fd3e15bacfed4a08:-1354111121,65bbaf29b8e48890014323eea6ac413e:-1637602801</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 10-17-2019 12:54:20">1f9c087513ac8890ce8b7d576144b038</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-17 18:54:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>07c8b63816c24a9cb86bfb57b4af3e90</sys_id>
+        <sys_metadata>a1bbaf2913e48890ce8b7d576144b03d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Legal - Container 1</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sp_container_a1bbaf2913e48890ce8b7d576144b03d</sys_update_name>
+        <sys_update_version display_value="sp_container_a1bbaf2913e48890ce8b7d576144b03d">0ddbef2913e48890ce8b7d576144b008</sys_update_version>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-17 18:54:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

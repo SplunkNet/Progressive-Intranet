@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Service Portal Intranet" max_length="40" name="u_service_portal_intranet" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Department Subtext" max_length="100" name="x_prole_intranet_department_subtext" type="string"/>
+        <element label="find us" max_length="65536" name="x_prole_intranet_find_us" type="html"/>
+        <element attributes="edge_encryption_enabled=true" label="Name" max_length="100" name="x_prole_intranet_name" type="string"/>
+        <element label="what we do" max_length="65536" name="x_prole_intranet_what_we_do" type="html"/>
+    </element>
+</database>

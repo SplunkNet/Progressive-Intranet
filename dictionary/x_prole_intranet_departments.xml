@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Departments" max_length="40" name="x_prole_intranet_departments" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Which Department" max_length="40" name="u_which_department" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Facilities" sequence="0" value="facilities"/>
+                <element inactive_on_update="false" label="Finance" sequence="1" value="finance"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Marketing" sequence="3" value="marketing"/>
+                <element inactive_on_update="false" label="Operations" sequence="4" value="operations"/>
+                <element inactive_on_update="false" label="Product" sequence="5" value="product"/>
+                <element inactive_on_update="false" label="Sales" sequence="6" value="sales"/>
+                <element inactive_on_update="false" label="Tech" sequence="7" value="tech"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Widget Name" max_length="40" name="u_widget_name" type="string"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>
