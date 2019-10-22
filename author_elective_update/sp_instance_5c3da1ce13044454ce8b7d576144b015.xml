@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="3">412ded8e13044454ce8b7d576144b07b</sp_column>
+        <sp_widget display_value="Intranet - Org Chart">9de3748213480c10d9ff30ded144b093</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-09-24 00:03:22</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5c3da1ce13044454ce8b7d576144b015</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_instance_5c3da1ce13044454ce8b7d576144b015</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-09-24 00:03:22</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=5c3da1ce13044454ce8b7d576144b015"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>19bdb3e34f289e4094ac220f0310c748</instance_id>
+        <instance_name>devprogleasing</instance_name>
+        <name>sp_instance_5c3da1ce13044454ce8b7d576144b015</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="3">412ded8e13044454ce8b7d576144b07b</sp_column><sp_widget display_value="Intranet - Org Chart">9de3748213480c10d9ff30ded144b093</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>zachary.nicholson</sys_created_by><sys_created_on>2019-09-24 00:03:22</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>5c3da1ce13044454ce8b7d576144b015</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope><sys_update_name>sp_instance_5c3da1ce13044454ce8b7d576144b015</sys_update_name><sys_updated_by>zachary.nicholson</sys_updated_by><sys_updated_on>2019-09-24 00:03:22</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=5c3da1ce13044454ce8b7d576144b015"/></record_update>]]></payload>
+        <payload_hash>695954263</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>1b76ad7513fbfb80ce8b7d576144b0da</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-09-24 00:03:22</sys_created_on>
+        <sys_id>983da1ce13044454ce8b7d576144b017</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16d60946b0c0000001</sys_recorded_at>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-09-24 00:03:22</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>903da1cec504445426e58da0a545f517</update_guid>
+        <update_guid_history>903da1cec504445426e58da0a545f517:695954263</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 10-21-2019 14:00:36">4d22058b13a4c4d0ce8b7d576144b080</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-21 20:00:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>a4a1538b38a7479087be67b6005614b9</sys_id>
+        <sys_metadata>5c3da1ce13044454ce8b7d576144b015</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sp_instance_5c3da1ce13044454ce8b7d576144b015</sys_update_name>
+        <sys_update_version display_value="sp_instance_5c3da1ce13044454ce8b7d576144b015">983da1ce13044454ce8b7d576144b017</sys_update_version>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-21 20:00:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
