@@ -4,13 +4,13 @@
             <element>title</element>
             <position>0</position>
             <sys_created_by>derek.young</sys_created_by>
-            <sys_created_on>2019-10-09 21:54:02</sys_created_on>
-            <sys_id>b909af0f13904c10d9ff30ded144b041</sys_id>
+            <sys_created_on>2019-10-24 22:44:16</sys_created_on>
+            <sys_id>3754c5041338c414d9ff30ded144b03c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_intranet_jobs" sys_domain="global" view="Default view">a1186f4b13904c10d9ff30ded144b05b</sys_ui_section>
             <sys_updated_by>derek.young</sys_updated_by>
-            <sys_updated_on>2019-10-09 21:54:02</sys_updated_on>
+            <sys_updated_on>2019-10-24 22:44:16</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>number</element>
             <position>1</position>
             <sys_created_by>derek.young</sys_created_by>
-            <sys_created_on>2019-10-09 21:54:02</sys_created_on>
-            <sys_id>3109af0f13904c10d9ff30ded144b042</sys_id>
+            <sys_created_on>2019-10-24 22:44:16</sys_created_on>
+            <sys_id>bb54c5041338c414d9ff30ded144b03c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_intranet_jobs" sys_domain="global" view="Default view">a1186f4b13904c10d9ff30ded144b05b</sys_ui_section>
             <sys_updated_by>derek.young</sys_updated_by>
-            <sys_updated_on>2019-10-09 21:54:02</sys_updated_on>
+            <sys_updated_on>2019-10-24 22:44:16</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>html_ref</element>
             <position>2</position>
             <sys_created_by>derek.young</sys_created_by>
-            <sys_created_on>2019-10-09 21:54:02</sys_created_on>
-            <sys_id>b509af0f13904c10d9ff30ded144b042</sys_id>
+            <sys_created_on>2019-10-24 22:44:16</sys_created_on>
+            <sys_id>3354c5041338c414d9ff30ded144b03d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_intranet_jobs" sys_domain="global" view="Default view">a1186f4b13904c10d9ff30ded144b05b</sys_ui_section>
             <sys_updated_by>derek.young</sys_updated_by>
-            <sys_updated_on>2019-10-09 21:54:02</sys_updated_on>
+            <sys_updated_on>2019-10-24 22:44:16</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,69 @@
             <element>location</element>
             <position>3</position>
             <sys_created_by>derek.young</sys_created_by>
-            <sys_created_on>2019-10-09 21:54:02</sys_created_on>
-            <sys_id>3d09af0f13904c10d9ff30ded144b042</sys_id>
+            <sys_created_on>2019-10-24 22:44:16</sys_created_on>
+            <sys_id>b754c5041338c414d9ff30ded144b03d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_intranet_jobs" sys_domain="global" view="Default view">a1186f4b13904c10d9ff30ded144b05b</sys_ui_section>
             <sys_updated_by>derek.young</sys_updated_by>
-            <sys_updated_on>2019-10-09 21:54:02</sys_updated_on>
+            <sys_updated_on>2019-10-24 22:44:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>icims_id</element>
+            <position>4</position>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-10-24 22:44:16</sys_created_on>
+            <sys_id>3f54c5041338c414d9ff30ded144b03d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_intranet_jobs" sys_domain="global" view="Default view">a1186f4b13904c10d9ff30ded144b05b</sys_ui_section>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-10-24 22:44:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>rest_results</element>
+            <position>5</position>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-10-24 22:44:16</sys_created_on>
+            <sys_id>b354c5041338c414d9ff30ded144b03e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_intranet_jobs" sys_domain="global" view="Default view">a1186f4b13904c10d9ff30ded144b05b</sys_ui_section>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-10-24 22:44:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>location_value</element>
+            <position>6</position>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-10-24 22:44:16</sys_created_on>
+            <sys_id>3b54c5041338c414d9ff30ded144b03e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_intranet_jobs" sys_domain="global" view="Default view">a1186f4b13904c10d9ff30ded144b05b</sys_ui_section>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-10-24 22:44:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>location_id</element>
+            <position>7</position>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-10-24 22:44:16</sys_created_on>
+            <sys_id>bf54c5041338c414d9ff30ded144b03e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_intranet_jobs" sys_domain="global" view="Default view">a1186f4b13904c10d9ff30ded144b05b</sys_ui_section>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-10-24 22:44:16</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

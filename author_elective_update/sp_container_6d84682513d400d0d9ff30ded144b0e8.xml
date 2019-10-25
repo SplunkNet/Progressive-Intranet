@@ -53,7 +53,7 @@
         <update_guid_history>5522058bd1a4c4d0e1b9ee0cd210f1ab:599278050,1c22c18b27a4c4d010ec851529d5a3c6:-446671583,ff12c18bdba4c4d05f3a6c9fb90b4f32:-1492621216,7612418bcfa4c4d0074a6253289756cc:1756396447,4212418b62a4c4d0d02fb9feb3568b35:710446814,31b009828cec4c9028dbb835b7f0cfeb:-335502819,07a241bb43d00850d6afa5955f86c578:-1616266562,91d6e4e550d400d01e0ac93b22b530ed:-335502819,4bb5e4e5c5d400d072b4445e258880e7:423249810,e984682571d400d0141a8dde349398ea:1320975228</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 10-21-2019 14:00:40">7522458b13a4c4d0ce8b7d576144b0d2</sys_audit_delete>
+        <sys_audit_delete display_value="Record deleted 10/21/2019 14:00:40">7522458b13a4c4d0ce8b7d576144b0d2</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>zachary.nicholson</sys_created_by>
         <sys_created_on>2019-10-21 20:00:40</sys_created_on>

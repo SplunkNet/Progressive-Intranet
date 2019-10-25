@@ -64,7 +64,7 @@ body {&#13;
         <update_guid_history>e25734283894c49023cdc933b748e096:11458650,bd4770287494c490c857c276dfaa77d7:-403121131</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 10-17-2019 10:24:30">585aeb2513e48890ce8b7d576144b051</sys_audit_delete>
+        <sys_audit_delete display_value="Record deleted 10/17/2019 10:24:30">585aeb2513e48890ce8b7d576144b051</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>zachary.nicholson</sys_created_by>
         <sys_created_on>2019-10-17 16:24:30</sys_created_on>
