@@ -25,15 +25,15 @@
         <sys_created_by>zachary.nicholson</sys_created_by>
         <sys_created_on>2019-08-27 18:42:00</sys_created_on>
         <sys_id>5db0a1d91363bf80d9ff30ded144b0b4</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-28 21:22:49</sys_updated_on>
+        <sys_updated_on>2019-10-28 21:26:15</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </sys_app>
     <sys_attachment action="INSERT_OR_UPDATE">
         <average_image_color/>
