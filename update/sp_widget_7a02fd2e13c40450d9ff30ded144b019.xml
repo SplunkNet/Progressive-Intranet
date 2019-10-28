@@ -59,6 +59,14 @@
   
 }
 
+.list-group{
+    max-height: 300px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+
 #table-summary {
   text-align: center;
   font-family: 'Montserrat', Impact, Charcoal, sans-serif;
@@ -208,7 +216,7 @@ body {font-family: Arial;}
         <sys_created_on>2019-09-25 13:41:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7a02fd2e13c40450d9ff30ded144b019</sys_id>
-        <sys_mod_count>115</sys_mod_count>
+        <sys_mod_count>125</sys_mod_count>
         <sys_name>Intranet - Hot Jobs</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -216,7 +224,7 @@ body {font-family: Arial;}
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_7a02fd2e13c40450d9ff30ded144b019</sys_update_name>
         <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2019-10-16 21:04:05</sys_updated_on>
+        <sys_updated_on>2019-10-28 21:14:18</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <form>
   <div class="panel panel-default">
@@ -232,10 +240,10 @@ body {font-family: Arial;}
 <div id="Utah" class="tabcontent" style="display:block" >
    <div class="card-body">
            <ul class="list-group">
-            <li class="list-group-item" id="li-heading"
-              ng-repeat="s in c.data.utah">
+            <li class="list-group-item list-group-item-action" id="li-heading"
+              ng-repeat="s in c.data.utah" >
                 <a href="{{s.agValue}}" target="_blank">{{s.agName}}</a> 
-            </li>
+             </li>
            </ul>
           </div>
 </div>

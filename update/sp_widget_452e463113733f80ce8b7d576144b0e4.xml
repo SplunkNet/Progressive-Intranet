@@ -16,8 +16,8 @@ img:hover {
 
 .text-center {
   font-family: 'Montserrat', Impact, Charcoal, sans-serif;
- 	background-color: #4A4F54; 
- 	color: white;
+ 	background-color: #54CEC3; 
+ 	color: #4A4F54;
   letter-spacing: 2px;
   font-size: 20px;
   font-weight: 100;
@@ -50,7 +50,7 @@ img:hover {
         <sys_created_on>2019-09-10 21:33:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>452e463113733f80ce8b7d576144b0e4</sys_id>
-        <sys_mod_count>94</sys_mod_count>
+        <sys_mod_count>95</sys_mod_count>
         <sys_name>Intranet - Quick Links</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -58,7 +58,7 @@ img:hover {
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_452e463113733f80ce8b7d576144b0e4</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-11 17:48:24</sys_updated_on>
+        <sys_updated_on>2019-10-28 21:18:48</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
 <div class="text-center">

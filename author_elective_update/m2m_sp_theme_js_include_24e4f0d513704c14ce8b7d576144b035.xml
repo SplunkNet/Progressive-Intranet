@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_theme_js_include">
+    <m2m_sp_theme_js_include action="DELETE">
+        <order/>
+        <sp_js_include display_value="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">6dd4fc5513704c14ce8b7d576144b0f2</sp_js_include>
+        <sp_theme display_value="Progressive Nation">b190f1be13f337c0ce8b7d576144b09c</sp_theme>
+        <sys_class_name>m2m_sp_theme_js_include</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-28 18:49:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>24e4f0d513704c14ce8b7d576144b035</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js.Progressive Nation</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>m2m_sp_theme_js_include_24e4f0d513704c14ce8b7d576144b035</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-28 18:49:00</sys_updated_on>
+    </m2m_sp_theme_js_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>19bdb3e34f289e4094ac220f0310c748</instance_id>
+        <instance_name>devprogleasing</instance_name>
+        <name>m2m_sp_theme_js_include_24e4f0d513704c14ce8b7d576144b035</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_theme_js_include"><m2m_sp_theme_js_include action="INSERT_OR_UPDATE"><order/><sp_js_include display_value="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">6dd4fc5513704c14ce8b7d576144b0f2</sp_js_include><sp_theme display_value="Progressive Nation">b190f1be13f337c0ce8b7d576144b09c</sp_theme><sys_class_name>m2m_sp_theme_js_include</sys_class_name><sys_created_by>zachary.nicholson</sys_created_by><sys_created_on>2019-10-28 18:49:00</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>24e4f0d513704c14ce8b7d576144b035</sys_id><sys_mod_count>0</sys_mod_count><sys_name>https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js.Progressive Nation</sys_name><sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope><sys_update_name>m2m_sp_theme_js_include_24e4f0d513704c14ce8b7d576144b035</sys_update_name><sys_updated_by>zachary.nicholson</sys_updated_by><sys_updated_on>2019-10-28 18:49:00</sys_updated_on></m2m_sp_theme_js_include></record_update>]]></payload>
+        <payload_hash>2111331509</payload_hash>
+        <record_name>https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js.Progressive Nation</record_name>
+        <reverted_from/>
+        <source>1b76ad7513fbfb80ce8b7d576144b0da</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-28 18:49:00</sys_created_on>
+        <sys_id>ece4f0d513704c14ce8b7d576144b036</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e13b331240000001</sys_recorded_at>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-28 18:49:00</sys_updated_on>
+        <type>JS Includes</type>
+        <update_guid>e4e4f0d522704c146044ec1f94ead136</update_guid>
+        <update_guid_history>e4e4f0d522704c146044ec1f94ead136:2111331509</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 10-28-2019 12:51:26">4075f41913704c14ce8b7d576144b0a0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-28 18:51:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="m2m_sp_theme_js_include">m2m_sp_theme_js_include</sys_db_object>
+        <sys_id>08fab330768449ac8115b0f97b246a59</sys_id>
+        <sys_metadata>24e4f0d513704c14ce8b7d576144b035</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js.Progressive Nation</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>m2m_sp_theme_js_include_24e4f0d513704c14ce8b7d576144b035</sys_update_name>
+        <sys_update_version display_value="m2m_sp_theme_js_include_24e4f0d513704c14ce8b7d576144b035">ece4f0d513704c14ce8b7d576144b036</sys_update_version>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-28 18:51:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

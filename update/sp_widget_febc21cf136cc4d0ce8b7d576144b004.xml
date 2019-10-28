@@ -7,15 +7,15 @@
 	c.phone = true;
 	c.email = true;
 	c.users = [];
+	console.log($scope.widget_parameters.api_encoded_query_string);
 	
-	$http.get(c.options.api_encoded_query_string).then(function(response){
+	$http.get($scope.widget_parameters.api_encoded_query_string).then(function(response){
 		for(var i = 0; i < response.data.result.length; i++)
 			{
-				c.users.push({name: response.data.result[i].name, phone: response.data.result[i].phone, email: response.data.result[i].email, photo: response.data.result[i].photo + '.iix', job_title: response.data.result[i].u_jt_string});
+				c.users.push({name: response.data.result[i].name, phone: response.data.result[i].phone, email: response.data.result[i].email, photo: response.data.result[i].photo + '.iix', job_title: response.data.result[i].u_jt_string,
+										 delv_string: "https://progleasing-my.sharepoint.com/Person.aspx?accountname=i%3A0%23%2Ef%7Cmembership%7C" + response.data.result[i].email,
+										 order_number: response.data.result[i].u_org_chart_number});
 			}		
-		
-		console.log(response.data.result[0].photo);
-		console.log($scope.user.photo);
 	});
 }]]></client_script>
         <controller_as>c</controller_as>
@@ -73,16 +73,14 @@ form:hover {
 
 .user-pic {
   float: left;
-  width: 60px;
+  width: 40px;
   height: 40px;
   margin-right: 10px;
   overflow: hidden;
 }
 
 .user-pic img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
+  object-fit: contain;
 }
 
 .job-title {
@@ -108,7 +106,7 @@ form:hover {
         <sys_created_on>2019-10-21 23:06:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>febc21cf136cc4d0ce8b7d576144b004</sys_id>
-        <sys_mod_count>142</sys_mod_count>
+        <sys_mod_count>143</sys_mod_count>
         <sys_name>Intranet - My Team</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -116,39 +114,42 @@ form:hover {
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_febc21cf136cc4d0ce8b7d576144b004</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-22 19:23:48</sys_updated_on>
+        <sys_updated_on>2019-10-28 21:15:54</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <form>
   <div class="panel panel-default">
     <div id="table-summary" class="panel-heading">
-      <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>ORG CHART</b></div>
+    <b>ORG CHART</b></div>
     
     <ul class="list-group">
+      
       <li class="list-group-item" id="li-heading"
-          ng-repeat="users in c.users">
+          ng-repeat="users in c.users | orderBy: 'order_number'">
         <div class="user-pic">
-          <img class="img-responsive img-rounded" src='{{users.photo}}'
+          <a href="{{users.delv_string}}" +  target="_blank">
+          <img class="img-responsive img-circle" src='{{users.photo}}'
             alt="No Photo">
+            </a>
         </div>
         <div class="name">
           {{ users.name }}
         </div>
         <div class="job-title">
           {{ users.job_title }}
-          
+        
         <div class="right-mail"
              ng-if='user.email != ""'>
           <a href="mailto:{{users.email}}">
         <fa name="envelope" size="1"></fa></a>
         </div>
-        <div class="right-phone"
+        <!--<div class="right-phone"
              ng-if='users.phone != ""'>
           <a href="tel:{{users.phone}}" alt="{{users.phone}}">
         <fa name="phone" size="1"></fa></a>
+        </div> -->
         </div>
-        </div>
-
       </li>
+      
     </ul>
   </div>
   <!-- debugging code -- <pre>{{c.data.records | json}}</pre> -->
