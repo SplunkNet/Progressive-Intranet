@@ -8,7 +8,7 @@
         <container_class_name>padding-top-20</container_class_name>
         <name>Sales - Container 3</name>
         <order>3</order>
-        <sp_page display_value="intranet_sales">743ce76913e48890ce8b7d576144b0c8</sp_page>
+        <sp_page display_value="sales">743ce76913e48890ce8b7d576144b0c8</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>zachary.nicholson</sys_created_by>

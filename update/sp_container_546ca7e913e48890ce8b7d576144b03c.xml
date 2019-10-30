@@ -8,7 +8,7 @@
         <container_class_name/>
         <name>Technology - Container 4</name>
         <order>4</order>
-        <sp_page display_value="intranet_tech">d06ce76913e48890ce8b7d576144b0be</sp_page>
+        <sp_page display_value="technology">d06ce76913e48890ce8b7d576144b0be</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>zachary.nicholson</sys_created_by>

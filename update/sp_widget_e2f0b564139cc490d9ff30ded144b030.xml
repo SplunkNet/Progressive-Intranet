@@ -62,7 +62,7 @@ section .box {
     padding: 50px;
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
     overflow: hidden;
-    color: white;
+    color: #54CEC3;
 }
 
 section .box:before {
@@ -72,15 +72,16 @@ section .box:before {
     left: -20px;
     right: -20px;
     bottom: -20px;
-    background-image: var(--bg);
+  	background: rgba(74,79,84,.7);
+    //background-image: var(--bg);
   background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-     -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+     -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
 }
 section .box h1 {
     text-align: center;
@@ -181,7 +182,7 @@ if (grdb.next()){
         <sys_created_on>2019-10-01 18:44:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e2f0b564139cc490d9ff30ded144b030</sys_id>
-        <sys_mod_count>157</sys_mod_count>
+        <sys_mod_count>190</sys_mod_count>
         <sys_name>Intranet - Departments - Hero Image</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -189,7 +190,7 @@ if (grdb.next()){
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_e2f0b564139cc490d9ff30ded144b030</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-22 19:58:57</sys_updated_on>
+        <sys_updated_on>2019-10-30 13:59:49</sys_updated_on>
         <template><![CDATA[<section style=" --bg: url({{c.data.image2}})">
 	<div class="box">
    	<h1>{{c.data.department}}</h1>

@@ -18,7 +18,7 @@
         <sc_cat_item/>
         <sc_category/>
         <short_description/>
-        <sp_page display_value="intranet_operations">1e1cab6913e48890ce8b7d576144b071</sp_page>
+        <sp_page display_value="operations">1e1cab6913e48890ce8b7d576144b071</sp_page>
         <sp_rectangle_menu/>
         <sp_rectangle_menu_item display_value="Departments">b3a6f1be133737c0ce8b7d576144b08d</sp_rectangle_menu_item>
         <sys_class_name>sp_rectangle_menu_item</sys_class_name>

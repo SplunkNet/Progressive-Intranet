@@ -10,7 +10,7 @@ body {
 }</css>
         <draft>false</draft>
         <dynamic_title_structure/>
-        <id>intranet_product</id>
+        <id>product</id>
         <internal>false</internal>
         <public>false</public>
         <roles/>
@@ -20,15 +20,15 @@ body {
         <sys_created_on>2019-10-17 16:33:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>db4c23e913e48890ce8b7d576144b0dd</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>intranet_product</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>product</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_page_db4c23e913e48890ce8b7d576144b0dd</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-17 16:34:40</sys_updated_on>
+        <sys_updated_on>2019-10-30 13:11:06</sys_updated_on>
         <title>Product</title>
     </sp_page>
     <sys_translated_text action="delete_multiple" query="documentkey=db4c23e913e48890ce8b7d576144b0dd"/>
