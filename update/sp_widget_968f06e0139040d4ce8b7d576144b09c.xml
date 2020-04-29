@@ -11,43 +11,8 @@
   var slides = $scope.slides = [];
   var currIndex = 0;
 
-  $scope.addSlide = function() {
-    var newWidth = 600 + slides.length + 1;
-    slides.push({
-			
-      image: 'https://picsum.photos/' + newWidth + '/500',
-      text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
-      id: currIndex++
-    });
-  };
-	//console.log(slides)
-
-  $scope.randomize = function() {
-    var indexes = generateIndexesArray();
-    assignNewIndexesToSlides(indexes);
-	
-  };
-
-  for (var i = 0; i < c.data.att_count; i++) {
-    $scope.addSlide();
-  }
-
-  // Randomize logic below
-
-  function assignNewIndexesToSlides(indexes) {
-    for (var i = 0, l = slides.length; i < l; i++) {
-      slides[i].id = indexes.pop();
-    }
-  }
-
-  function generateIndexesArray() {
-    var indexes = [];
-    for (var i = 0; i < currIndex; ++i) {
-      indexes[i] = i;
-    }
-    return shuffle(indexes);
-  }
-	
+ 
+	//console.log(slides)	
 	
 c.editContent = function(){
 		
@@ -75,21 +40,8 @@ c.editContent = function(){
 	}
 	
 
-  // http://stackoverflow.com/questions/962802#962890
-  function shuffle(array) {
-    var tmp, current, top = array.length;
 
-    if (top) {
-      while (--top) {
-        current = Math.floor(Math.random() * (top + 1));
-        tmp = array[current];
-        array[current] = array[top];
-        array[top] = tmp;
-      }
-    }
-
-    return array;
-  }
+  
 
 	
 	
@@ -110,9 +62,18 @@ c.editContent = function(){
         <has_preview>true</has_preview>
         <id>intranet_-_departments_-_find_us_image</id>
         <internal>false</internal>
-        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <link><![CDATA[function link(scope, element, attrs, controller) { 
+
+
+	
+
+
+}
+
+
+]]></link>
         <name>Intranet - Departments - Find Us Image</name>
-        <option_schema>[{"name":"department","section":"Data","label":"Department","type":"string"},{"hint":"Milliseconds","name":"interval","section":"Behavior","default_value":"5000","label":"Interval","type":"string"},{"name":"record_sys_id","section":"Data","default_value":"c31f994113280090d9ff30ded144b0c1","label":"Record sys id","type":"string"}]</option_schema>
+        <option_schema>[{"name":"department","section":"Data","label":"Department","type":"string"},{"hint":"Milliseconds","name":"interval","section":"Behavior","default_value":"10000","label":"Interval","type":"string"},{"name":"record_sys_id","section":"Data","default_value":"c31f994113280090d9ff30ded144b0c1","label":"Record sys id","type":"string"}]</option_schema>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
@@ -125,12 +86,14 @@ c.editContent = function(){
 	data.table =  'u_service_portal_intranet'
 	data.image = '';
 	data.att_count = '' ;
+	data.inAdminGroup = gs.getUser().isMemberOf('Intranet Admins')
 		
 	var grdb = new GlideRecord('sys_attachment');
 	
 	
 	grdb.addQuery('table_sys_id' , data.sys_id);
-	grdb.orderBy('sys_created_on');
+	grdb.orderBy('size_bytes');
+	grdb.setLimit(5)
 	grdb.query();
 data.att_count = grdb.getRowCount() 
 	
@@ -142,7 +105,7 @@ while (grdb.next()){
 	
 	
 	data.image = image;
-	//console.log(data.image)
+	//console.log(data)
 	
 })();]]></script>
         <servicenow>false</servicenow>
@@ -151,7 +114,7 @@ while (grdb.next()){
         <sys_created_on>2019-10-01 20:58:14</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>968f06e0139040d4ce8b7d576144b09c</sys_id>
-        <sys_mod_count>101</sys_mod_count>
+        <sys_mod_count>135</sys_mod_count>
         <sys_name>Intranet - Departments - Find Us Image</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -159,7 +122,7 @@ while (grdb.next()){
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_968f06e0139040d4ce8b7d576144b09c</sys_update_name>
         <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2019-10-21 20:11:36</sys_updated_on>
+        <sys_updated_on>2020-01-06 18:25:02</sys_updated_on>
         <template><![CDATA[
 
 
@@ -167,7 +130,7 @@ while (grdb.next()){
   
   <div style="height: 505px">
     <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-      <div uib-slide ng-repeat="slide in data.image" >
+      <div class="item" uib-slide ng-repeat="slide in data.image" >
         <img ng-src="{{slide}}" style="width: auto; height: 461px ; margin: auto">
         <div class="carousel-caption">
           
@@ -178,8 +141,12 @@ while (grdb.next()){
         </div>
       </div>
     </div>
-    <button type="button" class="btn btn-primary" ng-click="c.editContent()" >Edit</button>
-  </div>
+    <div ng-if="data.inAdminGroup">
+           <button type="button" class="btn btn-primary"  ng-click="c.editContent()" >Edit</button>
+
+    </div>
+
+</div>
   
   <!---  The controls
   <div class="row">

@@ -48,7 +48,7 @@
         <update_guid_history>8134e1b217b337c0dfeb4405fa565990:1316444223</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 09-13-2019 15:13:55">2086653a13b337c0ce8b7d576144b046</sys_audit_delete>
+        <sys_audit_delete display_value="">2086653a13b337c0ce8b7d576144b046</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>zachary.nicholson</sys_created_by>
         <sys_created_on>2019-09-13 21:13:55</sys_created_on>

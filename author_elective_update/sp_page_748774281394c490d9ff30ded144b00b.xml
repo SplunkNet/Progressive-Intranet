@@ -31,7 +31,7 @@ body {&#13;
         <sys_updated_on>2019-10-01 15:13:25</sys_updated_on>
         <title>Operations</title>
     </sp_page>
-    <sys_translated_text action="delete_multiple" query="documentkey=748774281394c490d9ff30ded144b00b"/>
+    <sys_translated_text action="DELETE" query="documentkey=748774281394c490d9ff30ded144b00b"/>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
         <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
@@ -64,7 +64,7 @@ body {&#13;
         <update_guid_history>9b90c9e82ad4c490a09215e7ba1a4e2b:1814636756,368778283194c490ce8b673c81f732d2:1175221298,308738286d94c490bd2d65110efc7ebe:350395880</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 10-17-2019 10:24:28">005aab2513e48890ce8b7d576144b07c</sys_audit_delete>
+        <sys_audit_delete display_value="">005aab2513e48890ce8b7d576144b07c</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>zachary.nicholson</sys_created_by>
         <sys_created_on>2019-10-17 16:24:28</sys_created_on>

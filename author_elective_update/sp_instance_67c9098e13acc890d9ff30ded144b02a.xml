@@ -30,7 +30,7 @@
         <url/>
         <widget_parameters/>
     </sp_instance>
-    <sys_translated_text action="delete_multiple" query="documentkey=67c9098e13acc890d9ff30ded144b02a"/>
+    <sys_translated_text action="DELETE" query="documentkey=67c9098e13acc890d9ff30ded144b02a"/>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
         <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
@@ -57,7 +57,7 @@
         <update_guid_history>23c9098e3facc890d8383e74c373c62c:-270700155</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 10-18-2019 12:02:18">fe4a414e13acc890d9ff30ded144b0ca</sys_audit_delete>
+        <sys_audit_delete display_value="">fe4a414e13acc890d9ff30ded144b0ca</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>derek.young</sys_created_by>
         <sys_created_on>2019-10-18 18:02:18</sys_created_on>

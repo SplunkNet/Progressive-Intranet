@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function ($rootScope, spModal, $scope, snRecordWatcher, spUtil, $location, $uibModal, cabrillo, $timeout, $window, $http) {
+	var c = this;
+	
+	c.phone = true;
+	c.email = true;
+	c.users = [];
+	console.log($scope.widget_parameters.api_encoded_query_string);
+	
+	$http.get($scope.widget_parameters.api_encoded_query_string).then(function(response){
+		for(var i = 0; i < response.data.result.length; i++)
+			{
+				c.users.push({name: response.data.result[i].name, phone: response.data.result[i].phone, email: response.data.result[i].email, photo: response.data.result[i].photo + '.iix', job_title: response.data.result[i].u_jt_string,
+										 delv_string: "https://progleasing-my.sharepoint.com/Person.aspx?accountname=i%3A0%23%2Ef%7Cmembership%7C" + response.data.result[i].email,
+										 order_number: response.data.result[i].u_org_chart_number});
+			}		
+	});
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>li {
+    color: black;
+     background-color: white;
+   }
+   
+   #table-summary {
+     text-align: center;
+     font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+     background-color: white;
+     color: #0093c9;
+       letter-spacing:2px;
+     font-size: 20px;
+     font-weight: 100;
+   }
+   
+   #li-heading:hover {
+     background-color: #bde1ef;
+     color: black;
+   }
+   
+   form {
+     //margin: 0;
+     //padding: 20 0 0 0;
+     animation-name: fadeIn;
+     animation-duration: 1s;
+   }
+   
+   form:hover {
+        transform: translateY(-3px); 
+     box-shadow: 0 10px 20px rgba(0, 0, 0, .50);
+   }
+   
+   @keyframes fadeIn{
+     0% {
+      opacity: 0;
+     }
+    100% {
+      opacity: 1;
+     }
+   }
+   
+   .right-mail {
+       text-align: right;
+       float: right;
+   }
+   
+   .right-phone {
+        text-align: right;
+     float: right;
+     padding: 0 20px 0 0;
+   }
+   
+   .user-pic {
+     float: left;
+     width: 40px;
+     height: 40px;
+     margin-right: 10px;
+     overflow: hidden;
+   }
+   
+   .user-pic img {
+     object-fit: contain;
+   }
+   
+   .job-title {
+    font-size: 12px; 
+   }
+   
+   #view-all:hover {
+     background-color: #bde1ef;
+     color: #0093c9;
+   }
+   
+   #view-all {
+     font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+     background-color: white;
+     color: #0093c9;
+       letter-spacing:2px;
+     font-size: 15px;
+     font-weight: 100;
+     text-align: center;
+     list-style-position:outside;
+     border: 1px solid lightgrey;
+     height: 55px;
+     vertical-align: middle;
+   }</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>intranet_-_department_org_chart</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Intranet - Department Org Chart</name>
+        <option_schema>[{"name":"api_encoded_query_string","section":"other","default_value":"/api/now/table/sys_user?sysparm_query=user_name%3Dryan.woodley%5EORuser_name%3Dcurt%5EORuser_name%3Dblake.wakefield%5EORuser_name%3Dben.hawksworth%5EORuser_name%3Dmichelle.parker%5EORuser_name%3Dbrian.garner%5EORuser_name%3Dmarvin.fentress","label":"API encoded query string","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-11-07 17:01:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3c3c3b9013054050b24730ded144b0ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Intranet - Department Org Chart</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_widget_3c3c3b9013054050b24730ded144b0ea</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-11-07 17:01:36</sys_updated_on>
+        <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<form>
+  <div class="panel panel-default">
+    <div id="table-summary" class="panel-heading">
+    <b>ORG CHART</b></div>
+    
+    <ul class="list-group">
+      
+      <li class="list-group-item" id="li-heading"
+          ng-repeat="users in c.users | orderBy: 'order_number'">
+        <div class="user-pic">
+          <a href="{{users.delv_string}}" +  target="_blank">
+          <img class="img-responsive img-circle" src='{{users.photo}}'
+            alt="No Photo">
+            </a>
+        </div>
+        <div class="name">
+          {{ users.name }}
+        </div>
+        <div class="job-title">
+          {{ users.job_title }}
+        
+        <div class="right-mail"
+             ng-if='user.email != ""'>
+          <a href="mailto:{{users.email}}">
+        <fa name="envelope" size="1"></fa></a>
+        </div>
+        <!--<div class="right-phone"
+             ng-if='users.phone != ""'>
+          <a href="tel:{{users.phone}}" alt="{{users.phone}}">
+        <fa name="phone" size="1"></fa></a>
+        </div> -->
+        </div>
+      </li> 
+      <a href="https://progleasing-my.sharepoint.com/Person.aspx?accountname=i%3A0%23%2Ef%7Cmembership%7Cryan.woodley@progleasing.com" target="_blank"><li class="list-group-item" id="view-all">
+      	View All
+      </li>
+      </a>
+    </ul>
+  </div>
+  <!-- debugging code -- <pre>{{c.data.records | json}}</pre> -->
+</form>]]></template>
+    </sp_widget>
+</record_update>

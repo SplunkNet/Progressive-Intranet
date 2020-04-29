@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">d80cc98613ecc890d9ff30ded144b045</sp_column>
+        <sp_widget display_value="Intranet - Departments - What We Do">2771426813dc00d4ce8b7d576144b0c2</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-17 16:29:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a07befe513e48890ce8b7d576144b048</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_instance_a07befe513e48890ce8b7d576144b048</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-11-11 17:32:17</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"content_page": {
+		"value": "2872b7e913288890ce8b7d576144b017",
+		"displayValue": "2872b7e913288890ce8b7d576144b017"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=a07befe513e48890ce8b7d576144b048"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>15adf7eb6f6456804c327b2f5d3ee479</instance_id>
+        <instance_name>progleasing</instance_name>
+        <name>sp_instance_a07befe513e48890ce8b7d576144b048</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;d80cc98613ecc890d9ff30ded144b045&lt;/sp_column&gt;&lt;sp_widget display_value="Intranet - Departments - What We Do"&gt;2771426813dc00d4ce8b7d576144b0c2&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;zachary.nicholson&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-17 16:29:26&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;a07befe513e48890ce8b7d576144b048&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Progressive Intranet" source="x_prole_intranet"&gt;5db0a1d91363bf80d9ff30ded144b0b4&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Progressive Intranet"&gt;5db0a1d91363bf80d9ff30ded144b0b4&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_a07befe513e48890ce8b7d576144b048&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;derek.young&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-11-11 17:32:17&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"content_page": {
+		"value": "2872b7e913288890ce8b7d576144b017",
+		"displayValue": "2872b7e913288890ce8b7d576144b017"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=a07befe513e48890ce8b7d576144b048"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-688699527</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>f6b2fe97132040508242335fd144b094</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-11-11 17:32:17</sys_created_on>
+        <sys_id>4d99ec75130d8010b24730ded144b002</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e5b85fbbf0000001</sys_recorded_at>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-11-11 17:32:17</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>8199ec75e50d8010b60087b216cca302</update_guid>
+        <update_guid_history>8199ec75e50d8010b60087b216cca302:-688699527,4dbd545e6ebc0c10a9c6099acb12c930:-1565678885,09bd545e79bc0c108d23a1b85bb9f52f:-909847204</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">3d217e4e134d0810b24730ded144b0a0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-11-12 22:03:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>d306e074912a459cbed3738e2a38dac9</sys_id>
+        <sys_metadata>a07befe513e48890ce8b7d576144b048</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sp_instance_a07befe513e48890ce8b7d576144b048</sys_update_name>
+        <sys_update_version display_value="sp_instance_a07befe513e48890ce8b7d576144b048">4d99ec75130d8010b24730ded144b002</sys_update_version>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-11-12 22:03:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

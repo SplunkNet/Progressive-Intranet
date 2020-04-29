@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
     <sp_container action="INSERT_OR_UPDATE">
-        <background_color>#bdc0c4</background_color>
+        <background_color>#e6e8ea</background_color>
         <background_image/>
         <background_style>cover</background_style>
         <bootstrap_alt>false</bootstrap_alt>
@@ -15,7 +15,7 @@
         <sys_created_on>2019-10-01 14:32:10</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4b277ce41394c490d9ff30ded144b071</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Facilities - Container 1</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -23,7 +23,7 @@
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_container_4b277ce41394c490d9ff30ded144b071</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-22 19:55:05</sys_updated_on>
+        <sys_updated_on>2019-11-07 16:24:31</sys_updated_on>
         <title/>
         <width>container-fluid</width>
     </sp_container>

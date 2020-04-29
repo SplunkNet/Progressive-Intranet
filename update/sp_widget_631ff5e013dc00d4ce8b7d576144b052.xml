@@ -10,10 +10,13 @@
 		//Set a property on the data object to identify the selected object
 		c.data.selectedAg = record.agValue;
 		spModal.open({
+				view: 'sp',
 				size: "lg",
+				sys_id: record.agSys_id,
+				table: c.data.table,
 				title: record.agValue,
-				widget: 'iv2_attachment_clone',
-				shared: c.data
+				widget: 'intranet_announcements_modal',
+				shared: record
 			});
 		
 		//Send the data object to the server script
@@ -57,11 +60,17 @@
   background-color: white;
 }
 
+.list-group{
+ overflow:auto;
+  height:205px;
+}
+
 #table-summary {
   text-align: center;
   font-family: 'Montserrat', Impact, Charcoal, sans-serif;
   background-color: white;
   color: #0093c9;
+ 	
 	letter-spacing:2px;
   font-size: 20px;
   font-weight: 100;
@@ -75,6 +84,9 @@
 form {
   //margin: 0;
   //padding: 20 0 0 0;
+  //background-color: white;
+	//height:180px
+  
   animation-name: fadeIn;
   animation-duration: 1s;
 }
@@ -102,32 +114,60 @@ form:hover {
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>Intranet - Departments - Announcements</name>
-        <option_schema/>
+        <option_schema>[{"name":"department","section":"Data","default_value":"Main","label":"Department","type":"choice","choices":[{"label":"Facilities","value":"Facilities"},{"label":"Finance","value":"Finance"},{"label":"Marketing","value":"Marketing"},{"label":"Operations","value":"Operations"},{"label":"Product","value":"Product"},{"label":"Sales","value":"Sales"},{"label":"Technology","value":"Technology"},{"label":"Main","value":"Main"},{"label":"TC","value":"TC"},{"label":"Leader","value":"Leader"},{"label":"Legal","value":"Legal"},{"label":"Managers Meetings","value":"Managers Meetings"}]},{"hint":"how many items will be returned","name":"limit","section":"Data","default_value":"5","label":"Max returns","type":"integer"},{"name":"title","section":"Presentation","default_value":"important info","label":"Title","type":"string"}]</option_schema>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function(spModal) {
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
+	var user = gs.getUserID();
+	var location;
 	
 	var c = this;
 	
 	if(!input){
+		data.title = options.title.toUpperCase();
 		data.summary = [];
+		data.limit = options.limit;
 		data.table = 'x_prole_intranet_announcements';
+		data.department = options.department;
 		data.groupBy = 'u_heading';
 		data.fields = 'u_description';
-		var ga = new GlideAggregate(data.table);
-		ga.setGroup(true);
-		ga.groupBy(data.groupBy);
-		ga.addAggregate('COUNT');
+		
+		var gr_user = new GlideRecord('sys_user');
+		gr_user.addQuery('sys_id', user);
+		gr_user.query();
+		while(gr_user.next())
+			{
+				location = gr_user.location.state.getDisplayValue();
+				//console.log(location);
+			}		
+		
+		
+		
+		var ga = new GlideRecord(data.table);
+		
+		ga.orderByDesc('number');
+		ga.addQuery('u_active', true);
+		if(location != ''){
+			ga.addQuery('u_location', location);
+		}
+		
+		ga.addQuery('u_department', data.department);
+		ga.setLimit(data.limit);
 		ga.query();
+		
+
+		
+		//console.log(data.department + ', ' + ga.getRowCount() + ', ' + location);
 
 		while(ga.next())
 		{
 			data.summary.push({
 				agName:ga[data.groupBy].getDisplayValue() || 'None',
 				agValue:ga[data.groupBy].toString(),
-				agCount:ga.getAggregate('COUNT')
+				agSys_id: ga.sys_id,
+				agContent: ga.u_content.getDisplayValue()
 			});
 		}
 	}
@@ -139,25 +179,27 @@ form:hover {
         <sys_created_on>2019-10-01 19:46:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>631ff5e013dc00d4ce8b7d576144b052</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>Intranet - Departments - Announcements</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_631ff5e013dc00d4ce8b7d576144b052</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-01 19:46:30</sys_updated_on>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-02-20 18:18:30</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 <form>
   <div class="panel panel-default">
     <div id="table-summary" class="panel-heading">
-      <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>ANNOUNCEMENTS</b></div>
+       <span class="fa fa-bolt"  ng-show="c.updatedFromServer"></span><b>{{c.data.title}}</b></div>
     
     <ul class="list-group">
       <li class="list-group-item" id="li-heading"
       	ng-repeat="s in c.data.summary"
-          ng-click="c.selectAg(s)">{{ s.agName }}
+          ng-click="c.selectAg(s)"><i class="material-icons">rss_feed</i>{{ s.agName }}
       </li>
     </ul>
   </div>

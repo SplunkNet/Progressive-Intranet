@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_prole_intranet.leaders_lounge" name="x_prole_intranet.leaders_lounge">cd3175f61b468410881332231b4bcb89</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2020-01-03 18:22:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f041353a1b468410881332231b4bcbd7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cd3175f61b468410881332231b4bcb89</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sys_embedded_help_role_f041353a1b468410881332231b4bcbd7</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-01-03 18:22:11</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

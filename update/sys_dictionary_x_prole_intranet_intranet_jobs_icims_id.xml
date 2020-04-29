@@ -49,16 +49,16 @@
         <sys_created_by>derek.young</sys_created_by>
         <sys_created_on>2019-10-24 22:40:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>487309401338c414d9ff30ded144b049</sys_id>
+        <sys_id>0d79d9d113fc4010b24730ded144b086</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Icims ID</sys_name>
+        <sys_name>x_prole_intranet_intranet_jobs</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sys_dictionary_x_prole_intranet_intranet_jobs_icims_id</sys_update_name>
-        <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2019-10-24 22:40:11</sys_updated_on>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-30 14:36:12</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

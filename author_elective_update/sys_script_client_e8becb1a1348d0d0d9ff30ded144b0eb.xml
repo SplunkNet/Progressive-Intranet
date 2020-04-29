@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>remove location field filters</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === 'Arizona' || newValue === 'Utah') {
+        g_form.showRelatedList('question_choice');
+    } else {
+        g_form.hideRelatedList('question_choice');
+    }
+    return;
+}
+
+//Type appropriate comment here, and begin script below
+
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>david.derby</sys_created_by>
+        <sys_created_on>2020-04-10 22:04:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e8becb1a1348d0d0d9ff30ded144b0eb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>remove location field filters</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sys_script_client_e8becb1a1348d0d0d9ff30ded144b0eb</sys_update_name>
+        <sys_updated_by>david.derby</sys_updated_by>
+        <sys_updated_on>2020-04-10 22:11:00</sys_updated_on>
+        <table>item_option_new</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>19bdb3e34f289e4094ac220f0310c748</instance_id>
+        <instance_name>devprogleasing</instance_name>
+        <name>sys_script_client_e8becb1a1348d0d0d9ff30ded144b0eb</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;active&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;remove location field filters&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === 'Arizona' || newValue === 'Utah') {
+        g_form.showRelatedList('question_choice');
+    } else {
+        g_form.hideRelatedList('question_choice');
+    }
+    return;
+}
+
+//Type appropriate comment here, and begin script below
+
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;david.derby&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-10 22:04:50&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;e8becb1a1348d0d0d9ff30ded144b0eb&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;remove location field filters&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Progressive Intranet" source="x_prole_intranet"&gt;5db0a1d91363bf80d9ff30ded144b0b4&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Progressive Intranet"&gt;5db0a1d91363bf80d9ff30ded144b0b4&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_e8becb1a1348d0d0d9ff30ded144b0eb&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;david.derby&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-10 22:11:00&lt;/sys_updated_on&gt;&lt;table&gt;item_option_new&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1766623094</payload_hash>
+        <record_name>remove location field filters</record_name>
+        <reverted_from/>
+        <source>abeda65613c0d0d0d9ff30ded144b089</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>david.derby</sys_created_by>
+        <sys_created_on>2020-04-10 22:11:00</sys_created_on>
+        <sys_id>94719fd21388d0d0d9ff30ded144b0df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17166256cd40000001</sys_recorded_at>
+        <sys_updated_by>david.derby</sys_updated_by>
+        <sys_updated_on>2020-04-10 22:11:00</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>d8719fd29788d0d0d06106f16bb0afde</update_guid>
+        <update_guid_history>d8719fd29788d0d0d06106f16bb0afde:1766623094,4e005fde0a48d0d07c1e2f54c5f8cd40:701411460</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>david.derby</sys_created_by>
+        <sys_created_on>2020-04-10 22:12:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>450ae84443c449dcbf4c86e714a7d641</sys_id>
+        <sys_metadata>e8becb1a1348d0d0d9ff30ded144b0eb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>remove location field filters</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent display_value="Item Option New">e26688f3132012000b7ababed144b00f</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sys_script_client_e8becb1a1348d0d0d9ff30ded144b0eb</sys_update_name>
+        <sys_update_version display_value="sys_script_client_e8becb1a1348d0d0d9ff30ded144b0eb">94719fd21388d0d0d9ff30ded144b0df</sys_update_version>
+        <sys_updated_by>david.derby</sys_updated_by>
+        <sys_updated_on>2020-04-10 22:12:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

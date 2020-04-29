@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_department" table="x_prole_intranet_emails" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Facilities</label>
+            <language>en</language>
+            <name>x_prole_intranet_emails</name>
+            <sequence>0</sequence>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-11-01 03:47:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1adc4e161370cc108242335fd144b0f9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-11-01 03:47:41</sys_updated_on>
+            <value>facilities</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Finance</label>
+            <language>en</language>
+            <name>x_prole_intranet_emails</name>
+            <sequence>1</sequence>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-11-01 03:47:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dedc4e161370cc108242335fd144b0fa</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-11-01 03:47:47</sys_updated_on>
+            <value>finance</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Compliance &amp; Legal</label>
+            <language>en</language>
+            <name>x_prole_intranet_emails</name>
+            <sequence>2</sequence>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-11-01 03:47:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9edc4e161370cc108242335fd144b0fb</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2020-01-03 22:49:57</sys_updated_on>
+            <value>legal</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Technology</label>
+            <language>en</language>
+            <name>x_prole_intranet_emails</name>
+            <sequence>3</sequence>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-11-01 03:47:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5edc4e161370cc108242335fd144b0fc</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-11-01 03:47:56</sys_updated_on>
+            <value>technology</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Main</label>
+            <language>en</language>
+            <name>x_prole_intranet_emails</name>
+            <sequence>4</sequence>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-11-01 03:47:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1edc4e161370cc108242335fd144b0fd</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-11-01 03:48:01</sys_updated_on>
+            <value>main</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Marketing</label>
+            <language>en</language>
+            <name>x_prole_intranet_emails</name>
+            <sequence>5</sequence>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-11-01 03:47:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dadc4e161370cc108242335fd144b0fe</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-11-01 03:48:05</sys_updated_on>
+            <value>marketing</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Operations</label>
+            <language>en</language>
+            <name>x_prole_intranet_emails</name>
+            <sequence>6</sequence>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-11-01 04:08:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e1a1165a13b0cc108242335fd144b065</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-11-01 04:08:28</sys_updated_on>
+            <value>operations</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Talent &amp; Culture</label>
+            <language>en</language>
+            <name>x_prole_intranet_emails</name>
+            <sequence>7</sequence>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-12-02 21:13:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9885e16c1bed8c5081761f861a4bcbe7</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-12-02 21:13:41</sys_updated_on>
+            <value>tc</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Leaders</label>
+            <language>en</language>
+            <name>x_prole_intranet_emails</name>
+            <sequence>8</sequence>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-12-12 20:03:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>be75f83f1b218010c2fccb392a4bcb6a</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-12-12 20:04:14</sys_updated_on>
+            <value>leaders</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_department</element>
+            <name>x_prole_intranet_emails</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2019-11-01 03:47:15</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>d2dc4e161370cc108242335fd144b0fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_department</sys_name>
+            <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+            <sys_update_name>sys_choice_x_prole_intranet_emails_u_department</sys_update_name>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2019-11-01 03:47:15</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

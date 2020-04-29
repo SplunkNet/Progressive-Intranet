@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_group_mtom">
+    <sc_cat_item_group_mtom action="INSERT_OR_UPDATE">
+        <sc_avail_group display_value="Intranet Admins" name="Intranet Admins">3dba282313304010b24730ded144b0f7</sc_avail_group>
+        <sc_cat_item display_value="New Event">a300189e13a33bc0d9ff30ded144b001</sc_cat_item>
+        <sys_class_name>sc_cat_item_group_mtom</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-11-04 17:56:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e5fb64e713704010b24730ded144b03e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New Email Event.Intranet Admins</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sc_cat_item_group_mtom_e5fb64e713704010b24730ded144b03e</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-11-04 17:56:21</sys_updated_on>
+    </sc_cat_item_group_mtom>
+</record_update>

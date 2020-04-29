@@ -12,7 +12,7 @@
 		spModal.open({
 				size: "lg",
 				title: record.agValue,
-				widget: 'iv2_attachment_clone',
+				widget: 'intranet_announcements_modal',
 				shared: c.data
 			});
 		
@@ -105,29 +105,40 @@ form:hover {
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function(spModal) {
+        <script><![CDATA[(function() {
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
 	
 	var c = this;
+	var user = gs.getUserID();
+	var location;
 	
 	if(!input){
 		data.summary = [];
 		data.table = 'x_prole_intranet_announcements';
 		data.groupBy = 'u_heading';
 		data.fields = 'u_description';
-		var ga = new GlideAggregate(data.table);
-		ga.setGroup(true);
-		ga.groupBy(data.groupBy);
-		ga.addAggregate('COUNT');
-		ga.query();
+		
+		var gr_user = new GlideRecord('sys_user');
+		gr_user.addQuery('sys_id', user);
+		gr_user.query();
+		while(gr_user.next())
+			{
+				location = gr_user.location.state.getDisplayValue();
+				console.log(location);
+			}
+		
+		var gr = new GlideRecord(data.table);
+		gr.orderByDesc('number');
+		gr.addQuery('u_location', 'CONTAINS', location);
+		gr.query();
 
-		while(ga.next())
+		while(gr.next())
 		{
 			data.summary.push({
-				agName:ga[data.groupBy].getDisplayValue() || 'None',
-				agValue:ga[data.groupBy].toString(),
-				agCount:ga.getAggregate('COUNT')
+				agName: gr.u_heading.getDisplayValue() || 'None',
+				agValue:gr.sys_id.getDisplayValue(),
+				agData:gr.sys_id.getDisplayValue()
 			});
 		}
 	}
@@ -139,7 +150,7 @@ form:hover {
         <sys_created_on>2019-08-27 20:24:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e53871dd13e7bf80d9ff30ded144b06b</sys_id>
-        <sys_mod_count>63</sys_mod_count>
+        <sys_mod_count>91</sys_mod_count>
         <sys_name>Intranet - Announcements</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -147,7 +158,7 @@ form:hover {
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_e53871dd13e7bf80d9ff30ded144b06b</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-22 19:23:25</sys_updated_on>
+        <sys_updated_on>2020-01-03 15:14:39</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <form>
   <div class="panel panel-default">

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
+    <sp_theme action="DELETE">
+        <css_variables>.padding-top-20 {&#13;
+	padding-top: 20px !important;&#13;
+}</css_variables>
+        <footer/>
+        <footer_fixed>false</footer_fixed>
+        <header/>
+        <name>Prognet</name>
+        <navbar_fixed>false</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-22 22:56:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>31d3be5f132040508242335fd144b0a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Prognet</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_theme_31d3be5f132040508242335fd144b0a7</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-22 22:56:39</sys_updated_on>
+    </sp_theme>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>15adf7eb6f6456804c327b2f5d3ee479</instance_id>
+        <instance_name>progleasing</instance_name>
+        <name>sp_theme_31d3be5f132040508242335fd144b0a7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme"><sp_theme action="INSERT_OR_UPDATE"><css_variables>.padding-top-20 {&#13;
+	padding-top: 20px !important;&#13;
+}</css_variables><footer/><footer_fixed>false</footer_fixed><header/><name>Prognet</name><navbar_fixed>false</navbar_fixed><sys_class_name>sp_theme</sys_class_name><sys_created_by>zachary.nicholson</sys_created_by><sys_created_on>2019-10-22 22:56:39</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>31d3be5f132040508242335fd144b0a7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Prognet</sys_name><sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope><sys_update_name>sp_theme_31d3be5f132040508242335fd144b0a7</sys_update_name><sys_updated_by>zachary.nicholson</sys_updated_by><sys_updated_on>2019-10-22 22:56:39</sys_updated_on></sp_theme></record_update>]]></payload>
+        <payload_hash>2052082712</payload_hash>
+        <record_name>Prognet</record_name>
+        <reverted_from/>
+        <source>f6b2fe97132040508242335fd144b094</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-22 22:56:39</sys_created_on>
+        <sys_id>f1047e9f132040508242335fd144b08e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16df5afc40c0000001</sys_recorded_at>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-22 22:56:39</sys_updated_on>
+        <type>Theme</type>
+        <update_guid>f9047e9f2c204050c82c8129560bdd8d</update_guid>
+        <update_guid_history>f9047e9f2c204050c82c8129560bdd8d:2052082712</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">ec14369f132040508242335fd144b0af</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-22 22:56:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_theme">sp_theme</sys_db_object>
+        <sys_id>03eca283b4534c3cbc78dad6d9285790</sys_id>
+        <sys_metadata>31d3be5f132040508242335fd144b0a7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Prognet</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sp_theme_31d3be5f132040508242335fd144b0a7</sys_update_name>
+        <sys_update_version display_value="sp_theme_31d3be5f132040508242335fd144b0a7">f1047e9f132040508242335fd144b08e</sys_update_version>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-10-22 22:56:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

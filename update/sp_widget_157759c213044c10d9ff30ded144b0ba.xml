@@ -28,29 +28,29 @@
         <sys_created_on>2019-09-23 22:28:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>157759c213044c10d9ff30ded144b0ba</sys_id>
-        <sys_mod_count>53</sys_mod_count>
+        <sys_mod_count>67</sys_mod_count>
         <sys_name>Intranet - DraperHomeCarousel</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_157759c213044c10d9ff30ded144b0ba</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-04 15:45:06</sys_updated_on>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-11-12 23:13:02</sys_updated_on>
         <template><![CDATA[<div class="container">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div id="myCarousel" class="carousel slide"  data-ride="carousel" data-interval="5000">
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="progbanneryellow.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="vision_values_mission.jpg" style="width:100%;">
+      </div>
+      
+      <div class="item">
+        <img src="progbanneryellow.jpg" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="progbannerfoursplit.jpg" alt="Chicago" style="width:100%;">
-      </div>
-    
-      <div class="item">
-        <img src="vision_values_mission.jpg" alt="New york" style="width:100%;">
+        <img src="progbannerfoursplit.jpg" style="width:100%;">
       </div>
     </div>
 

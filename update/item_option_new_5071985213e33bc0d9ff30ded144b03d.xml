@@ -2,7 +2,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="New Email Event">a300189e13a33bc0d9ff30ded144b001</cat_item>
+        <cat_item display_value="New Event">a300189e13a33bc0d9ff30ded144b001</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
@@ -32,12 +32,12 @@
         <lookup_unique>false</lookup_unique>
         <lookup_value/>
         <macro/>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>u_subject</name>
-        <order>200</order>
+        <order>250</order>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <question_text>Subject</question_text>
@@ -60,15 +60,15 @@
         <sys_created_on>2019-08-30 15:31:07</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5071985213e33bc0d9ff30ded144b03d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Subject</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>item_option_new_5071985213e33bc0d9ff30ded144b03d</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-08-30 15:31:07</sys_updated_on>
+        <sys_updated_by>david.derby</sys_updated_by>
+        <sys_updated_on>2020-04-11 00:12:12</sys_updated_on>
         <table/>
         <tooltip/>
         <type>6</type>

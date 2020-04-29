@@ -17,18 +17,31 @@
         <sys_created_on>2019-10-17 16:31:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7deb6b6913e48890ce8b7d576144b054</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_instance_7deb6b6913e48890ce8b7d576144b054</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-17 16:31:25</sys_updated_on>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-11-08 20:11:11</sys_updated_on>
         <title/>
         <url/>
-        <widget_parameters/>
+        <widget_parameters><![CDATA[{
+	"department": {
+		"value": "",
+		"displayValue": ""
+	},
+	"interval": {
+		"value": "",
+		"displayValue": ""
+	},
+	"record_sys_id": {
+		"value": "008c487513680890d9ff30ded144b007",
+		"displayValue": "008c487513680890d9ff30ded144b007"
+	}
+}]]></widget_parameters>
     </sp_instance>
     <sys_translated_text action="delete_multiple" query="documentkey=7deb6b6913e48890ce8b7d576144b054"/>
 </record_update>

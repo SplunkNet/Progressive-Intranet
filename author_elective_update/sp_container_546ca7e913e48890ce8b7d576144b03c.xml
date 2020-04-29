@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color>#e6e8ea</background_color>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Technology - Container 3</name>
+        <order>3</order>
+        <sp_page display_value="technology">d06ce76913e48890ce8b7d576144b0be</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-17 16:33:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>546ca7e913e48890ce8b7d576144b03c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Technology - Container 3</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_container_546ca7e913e48890ce8b7d576144b03c</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-11-25 23:23:59</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>15adf7eb6f6456804c327b2f5d3ee479</instance_id>
+        <instance_name>progleasing</instance_name>
+        <name>sp_container_546ca7e913e48890ce8b7d576144b03c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color>#e6e8ea</background_color><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>Technology - Container 3</name><order>3</order><sp_page display_value="technology">d06ce76913e48890ce8b7d576144b0be</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>zachary.nicholson</sys_created_by><sys_created_on>2019-10-17 16:33:30</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>546ca7e913e48890ce8b7d576144b03c</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Technology - Container 3</sys_name><sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope><sys_update_name>sp_container_546ca7e913e48890ce8b7d576144b03c</sys_update_name><sys_updated_by>zachary.nicholson</sys_updated_by><sys_updated_on>2019-11-25 23:23:59</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>2001773054</payload_hash>
+        <record_name>Technology - Container 3</record_name>
+        <reverted_from/>
+        <source>f6b2fe97132040508242335fd144b094</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-11-25 23:23:59</sys_created_on>
+        <sys_id>6550c69e1b91c01081761f861a4bcb28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16ea4e1008c0000001</sys_recorded_at>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-11-25 23:23:59</sys_updated_on>
+        <type>Container</type>
+        <update_guid>2d50c69ede91c010c24475ffea91f627</update_guid>
+        <update_guid_history>2d50c69ede91c010c24475ffea91f627:2001773054,a405ff589c014050fac2440b230b0210:-1887374083,5c3736df9f60405069dc8b322bb6293d:165584276</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">64608a9e1b91c01081761f861a4bcbd6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-11-25 23:24:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>23622036056d47569e0a5e4dcafd2ae4</sys_id>
+        <sys_metadata>546ca7e913e48890ce8b7d576144b03c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Technology - Container 3</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sp_container_546ca7e913e48890ce8b7d576144b03c</sys_update_name>
+        <sys_update_version display_value="sp_container_546ca7e913e48890ce8b7d576144b03c">6550c69e1b91c01081761f861a4bcb28</sys_update_version>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-11-25 23:24:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

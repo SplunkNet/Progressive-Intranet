@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function( $scope) {
+  /* widget controller */
+	
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>intranet_footer</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Intranet Footer</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  var state = '';
+	data.footer ='';
+	/* e.g., data.table = $sp.getValue('table'); */
+	var gr = new GlideRecord('sys_user');
+	gr.get(gs.getUserID());
+	 state = gr.location.state.getDisplayValue();
+	
+if (state == 'Utah'){
+	data.footer = 'footer_ut_ver_2.jpg';
+}
+else if (state == 'Arizona'){
+	data.footer = 'footer_az_ver_2.jpg';
+} else{
+	data.footer = 'footer_remote_ver_2.jpg';
+}
+	
+
+//data.location = gr.location.state.getDisplayValue()
+	//console.log(data)
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-11-08 17:42:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>871fc9fc13c98450b24730ded144b093</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>Intranet Footer</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_widget_871fc9fc13c98450b24730ded144b093</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-01-08 18:30:24</sys_updated_on>
+        <template><![CDATA[<div>
+<img src="{{data.footer}}" width="1140" height="150"/>
+</div>]]></template>
+    </sp_widget>
+</record_update>

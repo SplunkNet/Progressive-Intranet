@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="DELETE">
+        <operation>read</operation>
+        <source_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-11-25 17:40:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5991bc561b95401081761f861a4bcbd8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>cmn_location</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sys_scope_privilege_5991bc561b95401081761f861a4bcbd8</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-11-25 17:40:21</sys_updated_on>
+        <target_name>cmn_location</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>15adf7eb6f6456804c327b2f5d3ee479</instance_id>
+        <instance_name>progleasing</instance_name>
+        <name>sys_scope_privilege_5991bc561b95401081761f861a4bcbd8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>read</operation><source_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>zachary.nicholson</sys_created_by><sys_created_on>2019-11-25 17:40:08</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>5991bc561b95401081761f861a4bcbd8</sys_id><sys_mod_count>1</sys_mod_count><sys_name>cmn_location</sys_name><sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope><sys_update_name>sys_scope_privilege_5991bc561b95401081761f861a4bcbd8</sys_update_name><sys_updated_by>zachary.nicholson</sys_updated_by><sys_updated_on>2019-11-25 17:40:21</sys_updated_on><target_name>cmn_location</target_name><target_scope display_value="Global">global</target_scope><target_type>sys_db_object</target_type></sys_scope_privilege></record_update>]]></payload>
+        <payload_hash>-1255508647</payload_hash>
+        <record_name>cmn_location</record_name>
+        <reverted_from/>
+        <source>f6b2fe97132040508242335fd144b094</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-11-25 17:40:21</sys_created_on>
+        <sys_id>b7a1f8961b95401081761f861a4bcbac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16ea3a6658d0000001</sys_recorded_at>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-11-25 17:40:21</sys_updated_on>
+        <type>Cross scope privilege</type>
+        <update_guid>fba1f89627954010ed67f952a74fecab</update_guid>
+        <update_guid_history>fba1f89627954010ed67f952a74fecab:-1255508647,6ca1f096f69540104e046f39f86adbe6:-1810864033</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-11-25 17:46:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_scope_privilege">sys_scope_privilege</sys_db_object>
+        <sys_id>08607cf4882f4b6680602fc97c819424</sys_id>
+        <sys_metadata>5991bc561b95401081761f861a4bcbd8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cmn_location</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sys_scope_privilege_5991bc561b95401081761f861a4bcbd8</sys_update_name>
+        <sys_update_version display_value="sys_scope_privilege_5991bc561b95401081761f861a4bcbd8">b7a1f8961b95401081761f861a4bcbac</sys_update_version>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-11-25 17:46:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

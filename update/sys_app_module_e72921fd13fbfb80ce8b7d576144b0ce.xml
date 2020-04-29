@@ -14,7 +14,7 @@
         <mobile_title>Ask Progs</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_prole_intranet_ask_prog</name>
-        <order/>
+        <order>300</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
@@ -28,7 +28,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e72921fd13fbfb80ce8b7d576144b0ce</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Ask Prog</sys_name>
         <sys_overrides/>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
@@ -36,8 +36,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sys_app_module_e72921fd13fbfb80ce8b7d576144b0ce</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-09-10 18:59:50</sys_updated_on>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-10-28 16:24:25</sys_updated_on>
         <timeline_page/>
         <title>Ask Prog</title>
         <uncancelable>false</uncancelable>

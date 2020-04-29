@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">6b9589871bd1cc50c2fccb392a4bcb0a</sp_column>
+        <sp_widget display_value="Intranet - Departments - Find Us Image">968f06e0139040d4ce8b7d576144b09c</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-11-28 03:02:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6f9589871bd1cc50c2fccb392a4bcb0c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_instance_6f9589871bd1cc50c2fccb392a4bcb0c</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2020-01-02 19:36:26</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"department": {
+		"value": "",
+		"displayValue": ""
+	},
+	"interval": {
+		"value": "",
+		"displayValue": ""
+	},
+	"record_sys_id": {
+		"value": "966f4e0313dff780ce8b7d576144b00b",
+		"displayValue": "966f4e0313dff780ce8b7d576144b00b"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=6f9589871bd1cc50c2fccb392a4bcb0c"/>
+</record_update>

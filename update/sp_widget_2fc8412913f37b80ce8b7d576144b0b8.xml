@@ -3,12 +3,17 @@
         <category>custom</category>
         <client_script><![CDATA[function($scope) {
   /* widget controller */
+	
   var c = this;
+	
+	c.success = false;
 	
 	$scope.submit = function()
 	{
+		c.success = true;
 		c.data.submit = true;
 		c.server.update();
+		c.data = {};
 	};
 }]]></client_script>
         <controller_as>c</controller_as>
@@ -37,6 +42,8 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
 }
 
 .flip-card-front {
@@ -93,6 +100,8 @@ textarea {
 	if(!input)
 		{
 			data.submit = false;
+			//data.success = false;
+			data.text = '';
 		}
 	
 	
@@ -100,7 +109,11 @@ textarea {
 		{
 			var gr = new GlideRecord('x_prole_intranet_ask_prog');
 			gr.initialize();
+			gr.u_question = input.text
+			gr.u_requested_by = gs.getUserID();
 			gr.insert();
+			data.success = false;
+			data.text = '';
 		}
 
 })();]]></script>
@@ -110,15 +123,15 @@ textarea {
         <sys_created_on>2019-09-09 21:51:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2fc8412913f37b80ce8b7d576144b0b8</sys_id>
-        <sys_mod_count>278</sys_mod_count>
+        <sys_mod_count>323</sys_mod_count>
         <sys_name>Intranet - Ask Prog</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_2fc8412913f37b80ce8b7d576144b0b8</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-04 15:49:05</sys_updated_on>
+        <sys_updated_by>joseph.day</sys_updated_by>
+        <sys_updated_on>2020-04-28 23:59:05</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <form>
   <div class="panel panel-default">
@@ -128,7 +141,7 @@ textarea {
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="askprogfinal.jpg" alt="Avatar" style="height:203px;">
+      <img src="progchat.jpg" alt="Avatar" style="height:203px;">
     </div>
     <div class="flip-card-back">
       <form class="form-horizontal">
@@ -136,21 +149,27 @@ textarea {
 
 <!-- Text input-->
 <div class="form-group" id="text_area">  
-  <textarea class="form-control" rows="5" placeholder="How can we help?"></textarea>
+  <textarea class="form-control" ng-model="c.data.text" rows="5" placeholder="How can we help?"></textarea>
 </div>
 
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="singlebutton"></label>
   <div class="col-md-4">
-    <button id="singlebutton" name="singlebutton" class="btn btn-success">Submit</button>
+    <button id="singlebutton" name="singlebutton" ng-click="submit()" class="btn btn-success">Submit</button>
   </div>
 </div>
-
+  <br>
+<div ng-if="c.success" id="successMessage" class="alert alert-success" role="alert" data-dismiss="alert" >Thanks for your input!
+  <!---<button type="button" class="close" aria-hidden="true">&times;</button>
+  --->
+</div>
 </fieldset>
 </form>
     </div>
   </div>
-</div>]]></template>
+</div>
+    
+]]></template>
     </sp_widget>
 </record_update>

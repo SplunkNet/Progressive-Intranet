@@ -3,11 +3,13 @@
         <category>custom</category>
         <client_script><![CDATA[function ($rootScope, spModal, $scope, snRecordWatcher, spUtil, $location, $uibModal, cabrillo, $timeout, $window, $http) {
 	var c = this;
-	
+	c.user_email = "https://progleasing-my.sharepoint.com/Person.aspx?accountname=i%3A0%23%2Ef%7Cmembership%7C" + $scope.user.email;
+	console.log(c.user_email);
 	c.phone = true;
 	c.email = true;
 	c.users = [];
-	console.log($scope.widget_parameters.api_encoded_query_string);
+	
+	
 	
 	$http.get($scope.widget_parameters.api_encoded_query_string).then(function(response){
 		for(var i = 0; i < response.data.result.length; i++)
@@ -85,6 +87,29 @@ form:hover {
 
 .job-title {
  font-size: 12px; 
+}
+
+.name {
+ font-size: 14.8px; 
+}
+
+#view-all:hover {
+  background-color: #bde1ef;
+  color: #0093c9;
+}
+
+#view-all {
+  font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+  background-color: white;
+  color: #0093c9;
+	letter-spacing:2px;
+  font-size: 15px;
+  font-weight: 100;
+  text-align: center;
+  list-style-position:outside;
+  border: 1px solid lightgrey;
+  height: 55px;
+  vertical-align: middle;
 }</css>
         <data_table>sp_instance_table</data_table>
         <demo_data/>
@@ -96,7 +121,7 @@ form:hover {
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>Intranet - My Team</name>
-        <option_schema>[{"hint":"/api/now/table/sys_user?sysparm_query=user_name%3Dryan.woodley%5EORuser_name%3Dcurt","name":"api_encoded_query_string","section":"other","default_value":"user_name=ryan.woodley^ORuser_name=curt^ORuser_name=blake.wakefield^ORuser_name=ben.hawksworth^ORuser_name=michelle.parker^ORuser_name=brian.garner^ORuser_name=marvin.fentress","label":"API Encoded Query String","type":"string"}]</option_schema>
+        <option_schema>[{"hint":"/api/now/table/sys_user?sysparm_query=user_name%3Dryan.woodley%5EORuser_name%3Dcurt","name":"api_encoded_query_string","section":"other","default_value":"/api/now/table/sys_user?sysparm_query=user_name%3Dryan.woodley%5EORuser_name%3Dcurt%5EORuser_name%3Dblake.wakefield%5EORuser_name%3Dben.hawksworth%5EORuser_name%3Dmichelle.parker%5EORuser_name%3Dbrian.garner%5EORuser_name%3Dmarvin.fentress","label":"API Encoded Query String","type":"string"}]</option_schema>
         <public>false</public>
         <roles/>
         <script/>
@@ -106,7 +131,7 @@ form:hover {
         <sys_created_on>2019-10-21 23:06:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>febc21cf136cc4d0ce8b7d576144b004</sys_id>
-        <sys_mod_count>143</sys_mod_count>
+        <sys_mod_count>282</sys_mod_count>
         <sys_name>Intranet - My Team</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -114,12 +139,12 @@ form:hover {
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_febc21cf136cc4d0ce8b7d576144b004</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-28 21:15:54</sys_updated_on>
+        <sys_updated_on>2019-11-12 21:44:21</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <form>
   <div class="panel panel-default">
     <div id="table-summary" class="panel-heading">
-    <b>ORG CHART</b></div>
+    <b>PROG PEOPLE</b></div>
     
     <ul class="list-group">
       
@@ -148,8 +173,11 @@ form:hover {
         <fa name="phone" size="1"></fa></a>
         </div> -->
         </div>
+      </li> 
+      <a href="{{c.user_email}}" target="_blank"><li class="list-group-item" id="view-all">
+      	VIEW MY ORG
       </li>
-      
+      </a>
     </ul>
   </div>
   <!-- debugging code -- <pre>{{c.data.records | json}}</pre> -->

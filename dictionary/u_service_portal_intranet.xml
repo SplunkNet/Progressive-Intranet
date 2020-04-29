@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Service Portal Intranet" max_length="40" name="u_service_portal_intranet" type="collection">
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Popular Content" max_length="1024" name="u_popluar_content" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" label="Portal Page" max_length="40" name="u_portal_page" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Department Subtext" max_length="100" name="x_prole_intranet_department_subtext" type="string"/>
         <element label="find us" max_length="65536" name="x_prole_intranet_find_us" type="html"/>
         <element attributes="edge_encryption_enabled=true" label="Name" max_length="100" name="x_prole_intranet_name" type="string"/>

@@ -31,7 +31,7 @@ body {&#13;
         <sys_updated_on>2019-10-01 14:33:17</sys_updated_on>
         <title>Legal</title>
     </sp_page>
-    <sys_translated_text action="delete_multiple" query="documentkey=635734281394c490d9ff30ded144b079"/>
+    <sys_translated_text action="DELETE" query="documentkey=635734281394c490d9ff30ded144b079"/>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
         <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
@@ -64,7 +64,7 @@ body {&#13;
         <update_guid_history>2767b428b694c490f79e09937c379184:-29053863,2b573428bd94c4903aaf8924e6d9987a:-1137890852</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 10-17-2019 10:24:26">2b4a2b2513e48890ce8b7d576144b0c4</sys_audit_delete>
+        <sys_audit_delete display_value="">2b4a2b2513e48890ce8b7d576144b0c4</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>zachary.nicholson</sys_created_by>
         <sys_created_on>2019-10-17 16:24:26</sys_created_on>

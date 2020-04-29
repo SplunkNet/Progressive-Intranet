@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>u_active</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>david.derby</sys_created_by>
+        <sys_created_on>2020-04-10 19:54:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b6327e921304d0d0d9ff30ded144b09a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_active</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sys_ui_policy_action_b6327e921304d0d0d9ff30ded144b09a</sys_update_name>
+        <sys_updated_by>david.derby</sys_updated_by>
+        <sys_updated_on>2020-04-10 19:54:55</sys_updated_on>
+        <table>x_prole_intranet_announcements</table>
+        <ui_policy display_value="Active checkbox is read only unless you are intranet admin role">27f136921304d0d0d9ff30ded144b0bf</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>19bdb3e34f289e4094ac220f0310c748</instance_id>
+        <instance_name>devprogleasing</instance_name>
+        <name>sys_ui_policy_action_b6327e921304d0d0d9ff30ded144b09a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>true</disabled><field>u_active</field><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>david.derby</sys_created_by><sys_created_on>2020-04-10 19:54:55</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>b6327e921304d0d0d9ff30ded144b09a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_active</sys_name><sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope><sys_update_name>sys_ui_policy_action_b6327e921304d0d0d9ff30ded144b09a</sys_update_name><sys_updated_by>david.derby</sys_updated_by><sys_updated_on>2020-04-10 19:54:55</sys_updated_on><table>x_prole_intranet_announcements</table><ui_policy display_value="Active checkbox is read only unless you are intranet admin role">27f136921304d0d0d9ff30ded144b0bf</ui_policy><visible>ignore</visible></sys_ui_policy_action></record_update>]]></payload>
+        <payload_hash>-15871439</payload_hash>
+        <record_name>u_active</record_name>
+        <reverted_from/>
+        <source>abeda65613c0d0d0d9ff30ded144b089</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>david.derby</sys_created_by>
+        <sys_created_on>2020-04-10 19:54:55</sys_created_on>
+        <sys_id>3a42fe921304d0d0d9ff30ded144b035</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17165a8d4e50000001</sys_recorded_at>
+        <sys_updated_by>david.derby</sys_updated_by>
+        <sys_updated_on>2020-04-10 19:54:55</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>3242fe921204d0d0846ce9dd6358e435</update_guid>
+        <update_guid_history>3242fe921204d0d0846ce9dd6358e435:-15871439</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>david.derby</sys_created_by>
+        <sys_created_on>2020-04-10 20:58:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>010dc12184174a1a80189bd9ad965ce1</sys_id>
+        <sys_metadata>b6327e921304d0d0d9ff30ded144b09a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_active</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent display_value="Active checkbox is read only unless you are intranet admin role">27f136921304d0d0d9ff30ded144b0bf</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_b6327e921304d0d0d9ff30ded144b09a</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_b6327e921304d0d0d9ff30ded144b09a">3a42fe921304d0d0d9ff30ded144b035</sys_update_version>
+        <sys_updated_by>david.derby</sys_updated_by>
+        <sys_updated_on>2020-04-10 20:58:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

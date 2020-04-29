@@ -4,13 +4,13 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>zachary.nicholson</sys_created_by>
-            <sys_created_on>2019-08-27 19:25:52</sys_created_on>
-            <sys_id>44ca6d911327bf80d9ff30ded144b0b1</sys_id>
+            <sys_created_on>2020-01-03 15:18:05</sys_created_on>
+            <sys_id>0027c9f21bc6c4105b3cb8cc1d4bcbff</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_announcements" sys_domain="global" view="Default view">ac6aa5511327bf80d9ff30ded144b03c</sys_ui_section>
             <sys_updated_by>zachary.nicholson</sys_updated_by>
-            <sys_updated_on>2019-08-27 19:25:52</sys_updated_on>
+            <sys_updated_on>2020-01-03 15:18:05</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>u_requested_by</element>
             <position>1</position>
             <sys_created_by>zachary.nicholson</sys_created_by>
-            <sys_created_on>2019-08-27 19:25:52</sys_created_on>
-            <sys_id>c8ca6d911327bf80d9ff30ded144b0b1</sys_id>
+            <sys_created_on>2020-01-03 15:18:05</sys_created_on>
+            <sys_id>8827c9f21bc6c4105b3cb8cc1d4bcbff</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_announcements" sys_domain="global" view="Default view">ac6aa5511327bf80d9ff30ded144b03c</sys_ui_section>
             <sys_updated_by>zachary.nicholson</sys_updated_by>
-            <sys_updated_on>2019-08-27 19:25:52</sys_updated_on>
+            <sys_updated_on>2020-01-03 15:18:05</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,27 +32,69 @@
             <element>u_heading</element>
             <position>2</position>
             <sys_created_by>zachary.nicholson</sys_created_by>
-            <sys_created_on>2019-08-27 19:25:52</sys_created_on>
-            <sys_id>40ca6d911327bf80d9ff30ded144b0b2</sys_id>
+            <sys_created_on>2020-01-03 15:18:05</sys_created_on>
+            <sys_id>00270df21bc6c4105b3cb8cc1d4bcb00</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_announcements" sys_domain="global" view="Default view">ac6aa5511327bf80d9ff30ded144b03c</sys_ui_section>
             <sys_updated_by>zachary.nicholson</sys_updated_by>
-            <sys_updated_on>2019-08-27 19:25:52</sys_updated_on>
+            <sys_updated_on>2020-01-03 15:18:05</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_description</element>
+            <element>u_location</element>
             <position>3</position>
             <sys_created_by>zachary.nicholson</sys_created_by>
-            <sys_created_on>2019-08-27 19:25:52</sys_created_on>
-            <sys_id>c4ca6d911327bf80d9ff30ded144b0b2</sys_id>
+            <sys_created_on>2020-01-03 15:18:05</sys_created_on>
+            <sys_id>84270df21bc6c4105b3cb8cc1d4bcb00</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_announcements" sys_domain="global" view="Default view">ac6aa5511327bf80d9ff30ded144b03c</sys_ui_section>
             <sys_updated_by>zachary.nicholson</sys_updated_by>
-            <sys_updated_on>2019-08-27 19:25:52</sys_updated_on>
+            <sys_updated_on>2020-01-03 15:18:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_department</element>
+            <position>4</position>
+            <sys_created_by>zachary.nicholson</sys_created_by>
+            <sys_created_on>2020-01-03 15:18:05</sys_created_on>
+            <sys_id>0c270df21bc6c4105b3cb8cc1d4bcb00</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_announcements" sys_domain="global" view="Default view">ac6aa5511327bf80d9ff30ded144b03c</sys_ui_section>
+            <sys_updated_by>zachary.nicholson</sys_updated_by>
+            <sys_updated_on>2020-01-03 15:18:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_content</element>
+            <position>5</position>
+            <sys_created_by>zachary.nicholson</sys_created_by>
+            <sys_created_on>2020-01-03 15:18:05</sys_created_on>
+            <sys_id>80270df21bc6c4105b3cb8cc1d4bcb01</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_announcements" sys_domain="global" view="Default view">ac6aa5511327bf80d9ff30ded144b03c</sys_ui_section>
+            <sys_updated_by>zachary.nicholson</sys_updated_by>
+            <sys_updated_on>2020-01-03 15:18:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_active</element>
+            <position>6</position>
+            <sys_created_by>zachary.nicholson</sys_created_by>
+            <sys_created_on>2020-01-03 15:18:05</sys_created_on>
+            <sys_id>0c270df21bc6c4105b3cb8cc1d4bcb96</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_prole_intranet_announcements" sys_domain="global" view="Default view">ac6aa5511327bf80d9ff30ded144b03c</sys_ui_section>
+            <sys_updated_by>zachary.nicholson</sys_updated_by>
+            <sys_updated_on>2020-01-03 15:18:05</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

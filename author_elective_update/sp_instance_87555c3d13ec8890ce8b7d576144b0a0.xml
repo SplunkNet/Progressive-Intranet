@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="3">0945507d13ec8890ce8b7d576144b0f9</sp_column>
+        <sp_widget display_value="Intranet - Departments - Org Chart">1defb52413dc00d4ce8b7d576144b0cf</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-10-17 19:32:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>87555c3d13ec8890ce8b7d576144b0a0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_instance_87555c3d13ec8890ce8b7d576144b0a0</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-11-07 17:50:34</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"api_encoded_query_string": {
+		"value": "/api/now/table/sys_user?sysparm_query=name%3DJeffrey%20Thomsen",
+		"displayValue": "/api/now/table/sys_user?sysparm_query=name%3DJeffrey%20Thomsen"
+	},
+	"api_encoded_query_string_members": {
+		"value": "/api/now/table/sys_user?sysparm_query=name%3DBrian%20Kurzhals%5EORname%3DTyler%20Robinson%5EORname%3DLotovale%20Lagitao%5EORname%3DWilliam%20Hendricks",
+		"displayValue": "/api/now/table/sys_user?sysparm_query=name%3DBrian%20Kurzhals%5EORname%3DTyler%20Robinson%5EORname%3DLotovale%20Lagitao%5EORname%3DWilliam%20Hendricks"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=87555c3d13ec8890ce8b7d576144b0a0"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>15adf7eb6f6456804c327b2f5d3ee479</instance_id>
+        <instance_name>progleasing</instance_name>
+        <name>sp_instance_87555c3d13ec8890ce8b7d576144b0a0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="3"&gt;0945507d13ec8890ce8b7d576144b0f9&lt;/sp_column&gt;&lt;sp_widget display_value="Intranet - Departments - Org Chart"&gt;1defb52413dc00d4ce8b7d576144b0cf&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;zachary.nicholson&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-10-17 19:32:32&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;87555c3d13ec8890ce8b7d576144b0a0&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Progressive Intranet" source="x_prole_intranet"&gt;5db0a1d91363bf80d9ff30ded144b0b4&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Progressive Intranet"&gt;5db0a1d91363bf80d9ff30ded144b0b4&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_87555c3d13ec8890ce8b7d576144b0a0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;zachary.nicholson&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-11-07 17:50:34&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"api_encoded_query_string": {
+		"value": "/api/now/table/sys_user?sysparm_query=name%3DJeffrey%20Thomsen",
+		"displayValue": "/api/now/table/sys_user?sysparm_query=name%3DJeffrey%20Thomsen"
+	},
+	"api_encoded_query_string_members": {
+		"value": "/api/now/table/sys_user?sysparm_query=name%3DBrian%20Kurzhals%5EORname%3DTyler%20Robinson%5EORname%3DLotovale%20Lagitao%5EORname%3DWilliam%20Hendricks",
+		"displayValue": "/api/now/table/sys_user?sysparm_query=name%3DBrian%20Kurzhals%5EORname%3DTyler%20Robinson%5EORname%3DLotovale%20Lagitao%5EORname%3DWilliam%20Hendricks"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=87555c3d13ec8890ce8b7d576144b0a0"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1495321762</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>f6b2fe97132040508242335fd144b094</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-11-07 17:50:34</sys_created_on>
+        <sys_id>166704e013494050b24730ded144b0ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e46fd49f20000001</sys_recorded_at>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-11-07 17:50:34</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>da6704e02c49405056aa50595f2204b9</update_guid>
+        <update_guid_history>da6704e02c49405056aa50595f2204b9:-1495321762,906500e489094050ecac9dcb02f39b8c:-744598552,48534ca892c54050802166e26c432a18:1287798406,7b434ca8ccc5405047d87b4a24c9a016:1132457735</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">cb6fb0ac130d8050b24730ded144b0a8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-11-07 21:55:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>788cfaa3aeb644deb34b4ac76f588789</sys_id>
+        <sys_metadata>87555c3d13ec8890ce8b7d576144b0a0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sp_instance_87555c3d13ec8890ce8b7d576144b0a0</sys_update_name>
+        <sys_update_version display_value="sp_instance_87555c3d13ec8890ce8b7d576144b0a0">166704e013494050b24730ded144b0ba</sys_update_version>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-11-07 21:55:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

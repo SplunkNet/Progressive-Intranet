@@ -26,7 +26,7 @@
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>New Email Event</name>
+        <name>New Event</name>
         <no_attachment_v2>false</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
@@ -53,7 +53,20 @@
         <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
         <sc_ic_item_staging/>
         <sc_ic_version/>
-        <script/>
+        <script><![CDATA[producer.portal_redirect = "prognation?id=form&table=x_prole_intranet_emails&sys_id=" + current.getValue('sys_id');
+
+var location = '';
+if (producer.utah.toString() === 'true' && producer.arizona.toString() === 'true') {
+    location = 'Utah' + ',' + 'Arizona';
+} else {
+    if (producer.utah.toString() === 'true') {
+        location = 'Utah';
+    }
+    if (producer.arizona.toString() === 'true') {
+        location = 'Arizona';
+    }
+}
+current.u_location = location;]]></script>
         <short_description>Create a new email event on the intranet homepage</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
@@ -62,15 +75,15 @@
         <sys_created_on>2019-08-30 15:25:35</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a300189e13a33bc0d9ff30ded144b001</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>New Email Event</sys_name>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>New Event</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sc_cat_item_producer_a300189e13a33bc0d9ff30ded144b001</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-08-30 15:36:33</sys_updated_on>
+        <sys_updated_by>david.derby</sys_updated_by>
+        <sys_updated_on>2020-04-13 16:27:34</sys_updated_on>
         <table_name>x_prole_intranet_emails</table_name>
         <template/>
         <type>item</type>

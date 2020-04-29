@@ -14,13 +14,18 @@ img:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, .50);
 }
 
+img:active {
+  transform: translateY(3px); 
+}
+
 .text-center {
   font-family: 'Montserrat', Impact, Charcoal, sans-serif;
- 	background-color: #54CEC3; 
+ 	background-color: var(--color); 
  	color: #4A4F54;
   letter-spacing: 2px;
   font-size: 20px;
   font-weight: 100;
+  padding: 10px;
 }
 
 .row {
@@ -40,7 +45,7 @@ img:hover {
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>Intranet - Quick Links</name>
-        <option_schema/>
+        <option_schema>[{"hint":"#000","name":"bgcolor","section":"Presentation","default_value":"#54CEC3","label":"Background Color","type":"string"},{"hint":"QUICK LINKS","name":"title","section":"Presentation","default_value":"QUICK LINKS","label":"Title","type":"string"},{"name":"leaders_lounge","section":"Data","default_value":"yes","label":"Leaders Lounge","type":"choice","choices":[{"label":"yes","value":"yes"},{"label":"no","value":"no"}]}]</option_schema>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
@@ -50,39 +55,63 @@ img:hover {
         <sys_created_on>2019-09-10 21:33:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>452e463113733f80ce8b7d576144b0e4</sys_id>
-        <sys_mod_count>95</sys_mod_count>
+        <sys_mod_count>153</sys_mod_count>
         <sys_name>Intranet - Quick Links</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_452e463113733f80ce8b7d576144b0e4</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-28 21:18:48</sys_updated_on>
+        <sys_updated_by>joseph.day</sys_updated_by>
+        <sys_updated_on>2020-04-28 23:58:33</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
-<div class="text-center">
-        <div class="col-md-12 title">QUICK LINKS</div>
-        <div class="row">
-      		<div class="col-md-2" id="tile">
-            	<a href="https://progleasing.okta.com/home/adp/0oa9n03zgOK9bqRr1356/aln17xch9l1z7jaUw0g8?fromHome=true" target="_blank"><img src="ADPLogo.png" alt="ADP Link"></a>
-        	</div>
-          <div class="col-md-2">
-            	<a href="https://zoom.us" target="_blank"><img src="ZoomLogo2.png" alt="Zoom Link"></a>
-        	</div>
-          <div class="col-md-2">
-            	<a href="https://progleasing.okta.com/home/slack/0oa9mmx1tm7g48wUs356/19411?fromHome=true" target="_blank"><img src="SlackLogo.png" alt="Slack Link"></a>
-        	</div>
-        	<div class="col-md-2">
-          		<a href="https://progleasing.okta.com/home/progleasing_standout_2/0oaanw9f0HXvoTRpo356/alnanxl9bxsbq0kF8356?fromHome=true" target="_blank"><img src="StandOutLogo.png" alt="Stand Out Link"></a>
-        	</div>
-          <div class="col-md-2">
-          		<a href="https://progleasing.okta.com/home/progleasing_developmeproduction_1/0oa12szk33ddWicem357/aln12t3xdc2rHGTCS357?fromHome=true" target="_blank"><img src="DevelopMeLogo.png" alt="Develop.Me Link"></a>
-        	</div>
-          <div class="col-md-2">
-          		<a href="https://progleasing.okta.com/home/servicenow_ud/0oa9lck63qiF1DFfM356/aln1all8x9odDrJND0g8?fromHome=true" target="_blank"><img src="ServiceNowLogo.png" alt="ServiceNow Link"></a>
-        	</div>
-      	</div>
-    </div>]]></template>
+<div class="text-center" ng-if="c.options.leaders_lounge === 'no'" style="--color: {{c.options.bgcolor}} " >
+  <div class="col-md-12 title">{{c.options.title}}</div>
+  <div class="row">
+    <div class="col-md-2" id="tile">
+      <a href="https://progleasing.okta.com/home/adp/0oa9n03zgOK9bqRr1356/aln17xch9l1z7jaUw0g8?fromHome=true" target="_blank"><img src="ADPLogo.png" alt="ADP Link"></a>
+    </div>
+    <div class="col-md-2">
+      <a href="https://progleasing.sharepoint.com/sites/IT/Security/SitePages/Home.aspx" target="_blank"><img src="prog-security-logo-01-White.png" alt="Prog Security"></a>
+    </div>
+    <div class="col-md-2">
+      <a href="https://progleasing.okta.com/home/progleasing_brainier_1/0oa1xw6ft48OHeabT357/aln1xw90weyCVT4eS357?fromHome=true" target="_blank"><img src="ProgU.png" alt="Develop.Me Link"></a>
+    </div>
+    <div class="col-md-2">
+      <a href="/pl_landing" target="_blank"><img src="SubmitTicket.png" alt="ServiceNow Link"></a>
+    </div>
+    <div class="col-md-2">
+      <a href="https://progleasing.okta.com/home/slack/0oa9mmx1tm7g48wUs356/19411?fromHome=true" target="_blank"><img src="SlackLogo.png" alt="Slack Link"></a>
+    </div>
+    <div class="col-md-2">
+      <a href="https://zoom.us" target="_blank"><img src="ZoomLogo2.png" alt="Zoom Link"></a>
+    </div>
+  </div>
+</div>
+
+<div class="text-center" ng-if="c.options.leaders_lounge === 'yes'" style="--color: {{c.options.bgcolor}} " >
+  <div class="col-md-12 title">{{c.options.title}}</div>
+  <div class="row">
+    <div class="col-md-2" id="tile">
+      <a href="https://progleasing.okta.com/home/adp/0oa9n03zgOK9bqRr1356/aln17xch9l1z7jaUw0g8?fromHome=true" target="_blank"><img src="ADPLogo.png" alt="ADP Link"></a>
+    </div>
+    <div class="col-md-2">
+      <a href="https://www.concur.com/" target="_blank"><img src="Concure.png" alt="Concure Link"></a>
+    </div>
+    <div class="col-md-2">
+      <a href="https://users.franklincovey.com/Account/LogOn" target="_blank"><img src="Franklin.png" alt="Franklin Link"></a>
+    </div>
+    <div class="col-md-2">
+      <a href="https://progleasing.okta.com/home/progleasing_brainier_1/0oa1xw6ft48OHeabT357/aln1xw90weyCVT4eS357?fromHome=true" target="_blank"><img src="ProgU.png" alt="Develop.Me Link"></a>
+    </div>
+    <div class="col-md-2">
+      <a href="https://progleasing.okta.com/home/servicenow_ud/0oa9lck63qiF1DFfM356/aln1all8x9odDrJND0g8?fromHome=true" target="_blank"><img src="SubmitTicket.png" alt="ServiceNow Link"></a>
+    </div>
+    <div class="col-md-2">
+      <a href="https://progleasing.okta.com/home/progleasing_standout_2/0oaanw9f0HXvoTRpo356/alnanxl9bxsbq0kF8356?fromHome=true" target="_blank"><img src="StandOutLogo.png" alt="Standout"></a>
+    </div>
+  </div>
+</div>]]></template>
     </sp_widget>
 </record_update>

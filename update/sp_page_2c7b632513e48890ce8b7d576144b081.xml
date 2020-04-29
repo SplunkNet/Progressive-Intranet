@@ -28,7 +28,7 @@ body {
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_page_2c7b632513e48890ce8b7d576144b081</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-30 13:11:26</sys_updated_on>
+        <sys_updated_on>2019-10-22 23:08:22</sys_updated_on>
         <title>Finance</title>
     </sp_page>
     <sys_translated_text action="delete_multiple" query="documentkey=2c7b632513e48890ce8b7d576144b081"/>

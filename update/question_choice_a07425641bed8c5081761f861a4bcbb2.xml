@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <misc>0</misc>
+        <order>900</order>
+        <question display_value="Department">53ada2b513b00c10b24730ded144b044</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-12-02 21:08:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a07425641bed8c5081761f861a4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Talent &amp; Culture</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>question_choice_a07425641bed8c5081761f861a4bcbb2</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-12-02 21:08:42</sys_updated_on>
+        <text>Talent &amp; Culture</text>
+        <value>tc</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=a07425641bed8c5081761f861a4bcbb2"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>misc</field>
+        <id>a07425641bed8c5081761f861a4bcbb2</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-12-02 21:08:42</sys_created_on>
+        <sys_id>8084a1641bed8c5081761f861a4bcb66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-12-02 21:08:42</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_misc</field>
+        <id>a07425641bed8c5081761f861a4bcbb2</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-12-02 21:08:42</sys_created_on>
+        <sys_id>8084a1641bed8c5081761f861a4bcb65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-12-02 21:08:42</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

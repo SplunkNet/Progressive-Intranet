@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Leader Lounge - Container 2</name>
+        <order>2</order>
+        <sp_page display_value="prognation_leader_lounge">8abdc8b71be14010c2fccb392a4bcb7b</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-12-12 17:26:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>049114ff1b254010c2fccb392a4bcb26</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leader Lounge - Container 2</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_container_049114ff1b254010c2fccb392a4bcb26</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-12-12 17:26:34</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>15adf7eb6f6456804c327b2f5d3ee479</instance_id>
+        <instance_name>progleasing</instance_name>
+        <name>sp_container_049114ff1b254010c2fccb392a4bcb26</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>Leader Lounge - Container 2</name><order>2</order><sp_page display_value="prognation_leader_lounge">8abdc8b71be14010c2fccb392a4bcb7b</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>derek.young</sys_created_by><sys_created_on>2019-12-12 17:26:34</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>049114ff1b254010c2fccb392a4bcb26</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Leader Lounge - Container 2</sys_name><sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope><sys_update_name>sp_container_049114ff1b254010c2fccb392a4bcb26</sys_update_name><sys_updated_by>derek.young</sys_updated_by><sys_updated_on>2019-12-12 17:26:34</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-1659134948</payload_hash>
+        <record_name>Leader Lounge - Container 2</record_name>
+        <reverted_from/>
+        <source>f6b2fe97132040508242335fd144b094</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-12-12 17:26:34</sys_created_on>
+        <sys_id>889114ff1b254010c2fccb392a4bcb27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16efb25e4c70000001</sys_recorded_at>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-12-12 17:26:34</sys_updated_on>
+        <type>Container</type>
+        <update_guid>809114ff722540105df95768b9e49c27</update_guid>
+        <update_guid_history>809114ff722540105df95768b9e49c27:-1659134948</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">0191d8331b654010c2fccb392a4bcbfc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-12-12 17:26:38</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>10769f65317f4e3a8a1cb9a4f3b22024</sys_id>
+        <sys_metadata>049114ff1b254010c2fccb392a4bcb26</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leader Lounge - Container 2</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sp_container_049114ff1b254010c2fccb392a4bcb26</sys_update_name>
+        <sys_update_version display_value="sp_container_049114ff1b254010c2fccb392a4bcb26">889114ff1b254010c2fccb392a4bcb27</sys_update_version>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-12-12 17:26:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

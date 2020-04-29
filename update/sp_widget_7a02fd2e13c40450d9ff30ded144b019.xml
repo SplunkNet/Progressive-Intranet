@@ -52,7 +52,7 @@
 	
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>li {
+        <css>autoli {
  color: black;
   background-color: white;
   border-style: solid;
@@ -60,9 +60,9 @@
 }
 
 .list-group{
-    max-height: 300px;
+    max-height: 328px;
     margin-bottom: 10px;
-    overflow:scroll;
+    overflow:auto;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -105,6 +105,8 @@ form:hover {
 
 a {
   color: black; 
+  display:block;
+  width: 100%;
 }
 
 #li-heading {
@@ -216,7 +218,7 @@ body {font-family: Arial;}
         <sys_created_on>2019-09-25 13:41:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7a02fd2e13c40450d9ff30ded144b019</sys_id>
-        <sys_mod_count>125</sys_mod_count>
+        <sys_mod_count>164</sys_mod_count>
         <sys_name>Intranet - Hot Jobs</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -224,7 +226,7 @@ body {font-family: Arial;}
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_7a02fd2e13c40450d9ff30ded144b019</sys_update_name>
         <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2019-10-28 21:14:18</sys_updated_on>
+        <sys_updated_on>2019-11-11 22:24:26</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <form>
   <div class="panel panel-default">
@@ -232,18 +234,21 @@ body {font-family: Arial;}
       <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>HOT JOBS</b>
     </div>
     <div class="tab">
-  <button class="tablinks active" onclick="openCity(event, 'Utah')">Utah</button>
-  <button class="tablinks" onclick="openCity(event, 'Arizona')">Arizona</button>
-  <button class="tablinks" onclick="openCity(event, 'Remote')">Remote</button>
+  <button class="tablinks active btn btn-outline-primary" onclick="openCity(event, 'Utah')">Utah</button>
+  <button class="tablinks btn btn-outline-primary" onclick="openCity(event, 'Arizona')">Arizona</button>
+  <button class="tablinks btn btn-outline-primary" onclick="openCity(event, 'Remote')">Remote</button>
 </div>
 
 <div id="Utah" class="tabcontent" style="display:block" >
    <div class="card-body">
            <ul class="list-group">
-            <li class="list-group-item list-group-item-action" id="li-heading"
-              ng-repeat="s in c.data.utah" >
-                <a href="{{s.agValue}}" target="_blank">{{s.agName}}</a> 
-             </li>
+              
+            <a ng-repeat="t in c.data.utah" href="{{t.agValue}}" target="_blank">
+              <li class="list-group-item" id="li-heading"
+              >{{t.agName}}
+                </li>
+              
+             </a>
            </ul>
           </div>
 </div>
@@ -251,10 +256,13 @@ body {font-family: Arial;}
 <div id="Arizona" class="tabcontent">
   <div class="card-body">
            <ul class="list-group">
-            <li class="list-group-item" id="li-heading"
-              ng-repeat="s in c.data.az">
-                <a href="{{s.agValue}}" target="_blank">{{s.agName}}</a>
-            </li>
+             
+         <a ng-repeat="t in c.data.az" href="{{t.agValue}}" target="_blank">
+              <li class="list-group-item" id="li-heading"
+              >{{t.agName}}
+                </li>
+             </a>
+               
            </ul>
           </div>
 </div>
@@ -262,10 +270,13 @@ body {font-family: Arial;}
 <div id="Remote" class="tabcontent">
   <div class="card-body">
            <ul class="list-group">
-            <li class="list-group-item" id="li-heading"
-              ng-repeat="s in c.data.nation">
-               <a href="{{s.agValue}}" target="_blank">{{s.agName}}</a>
-            </li>
+             
+              <a ng-repeat="t in c.data.nation" href="{{t.agValue}}" target="_blank">
+              <li class="list-group-item" id="li-heading"
+              >{{t.agName}}
+                </li>
+             </a>
+            
            </ul>
           </div>
 </div>

@@ -35,7 +35,7 @@
 	}
 }]]></widget_parameters>
     </sp_instance>
-    <sys_translated_text action="delete_multiple" query="documentkey=aea6e13a13b337c0ce8b7d576144b0fc"/>
+    <sys_translated_text action="DELETE" query="documentkey=aea6e13a13b337c0ce8b7d576144b0fc"/>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
         <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
@@ -67,7 +67,7 @@
         <update_guid_history>7d138d4aaa8c0c10c329a8c408803b74:2048514313,595205c2eb8c0c109eb0ceba9c2161a3:-1127416248,f7db3c095280c010504b689cf407baa2:-1479150505,fadbf089ec80c0108bd3fbd4940ec333:-1728491455,5edbb089fa80c01091cf8f1052688e78:481353794,65db3c09e080c01025188d4e88c52f79:1003940684,59b4fc45fc00c0106f98c835be1cca7a:2122977419,0f176d7a29b337c0aaad1f0b1124c0c3:-479297541,eaf6e97afeb337c08169aede4cb564f1:-2122259029,ebe62d7aa4b337c0c9b8eddeff99fc5d:-2006171701,e2a6e13ad8b337c054667d1a2ce954fe:-706713379</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 09-23-2019 14:59:31">cf13494a138c0c10d9ff30ded144b0ff</sys_audit_delete>
+        <sys_audit_delete display_value="">cf13494a138c0c10d9ff30ded144b0ff</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>zachary.nicholson</sys_created_by>
         <sys_created_on>2019-09-23 20:59:31</sys_created_on>

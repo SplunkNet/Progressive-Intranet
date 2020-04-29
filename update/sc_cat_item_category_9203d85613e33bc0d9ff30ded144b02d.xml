@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
     <sc_cat_item_category action="INSERT_OR_UPDATE">
-        <sc_cat_item display_value="New Email Event">a300189e13a33bc0d9ff30ded144b001</sc_cat_item>
+        <sc_cat_item display_value="New Event">a300189e13a33bc0d9ff30ded144b001</sc_cat_item>
         <sc_category display_value="Intranet">e1e290d613e33bc0d9ff30ded144b0ff</sc_category>
         <sys_class_name>sc_cat_item_category</sys_class_name>
         <sys_created_by>zachary.nicholson</sys_created_by>

@@ -5,6 +5,7 @@
 	$scope.errorMessages = [];
 	$scope.attachmentHandler = new nowAttachmentHandler(setAttachments, appendError);
 	$scope.data.action = "";
+	console.log($scope.data)
 	
 	if($scope.options.shared.sys_id){
 		$scope.data.sys_id = $scope.options.shared.sys_id;
@@ -147,6 +148,7 @@
 	data.canWrite = gr.canWrite();
 	data.canAttach = gs.hasRole(gs.getProperty("glide.attachment.role"));
 	data.canRead = gr.canRead();
+	
 
 	function _getActualTable(table, id) {
 		if (!table)
@@ -161,6 +163,7 @@
 		}
 		return table;
 	}
+	
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -168,7 +171,7 @@
         <sys_created_on>2019-10-15 22:19:57</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b778a60513e44090d9ff30ded144b004</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>Intranet attachment clone</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -176,7 +179,7 @@
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_b778a60513e44090d9ff30ded144b004</sys_update_name>
         <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2019-10-15 23:15:57</sys_updated_on>
+        <sys_updated_on>2019-11-04 21:45:33</sys_updated_on>
         <template><![CDATA[<div ng-if="data.canRead" class="panel panel-{{options.color}} b">
   <div class="panel-heading padder-b-none">
     <h2 class="h4 sp-attachments-header panel-title pull-left">

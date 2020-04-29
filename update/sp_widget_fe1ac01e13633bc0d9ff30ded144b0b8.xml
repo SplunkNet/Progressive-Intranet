@@ -8,28 +8,28 @@
 	c.selectAg = function(record){
 		//console.log(record)
 
-		var widgetInput = {
-			table: c.data.table,
-			view: 'sp',
-			sys_id: record.agSys_id
 
-		};
 
+	c.selectAg = function(record){
+		
 		//Set a property on the data object to identify the selected object
 		c.data.selectedAg = record.agValue;
-
-
 		spModal.open({
-			size: "lg",
-			title: record.agValue,
-			widget: 'widget-form',
-			shared: c.data,
-			widgetInput: widgetInput
-			
-		}).then(function(){
-			spUtil.update($scope);	
-
-		});
+				view: 'sp',
+				size: "lg",
+				sys_id: record.agSys_id,
+				table: c.data.table,
+				title: record.agValue,
+				widget: 'intranet_announcements_modal',
+				shared: record
+			});
+		
+		//Send the data object to the server script
+		c.server.update();
+	}
+	
+		
+		
 
 		//Send the data object to the server script
 
@@ -68,10 +68,27 @@
 
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>li {
- color: black;
+        <css>ul {
+  color: black;
   background-color: white;
+  //padding: 10px;
+  display: block;
+  overflow:auto;
+  height:205px
+  
 }
+
+li {
+  color: black;
+  background-color: white;
+  padding: 10px;
+  display: block;
+  overflow:auto;
+  
+}
+
+
+
 
 #table-summary {
   text-align: center;
@@ -82,6 +99,7 @@
   font-size: 20px;
   font-weight: 100;
   left: 50%;
+  overflow: auto;
 }
 
 #li-heading:hover {
@@ -90,7 +108,8 @@
 }
 
 #li-heading .date{
- 	float:right 
+ 	float:right
+    
 }
 
 #li-heading .icon{
@@ -98,7 +117,7 @@
 }
 
 #li-heading .subject {
- display: inline-block;
+ 
  margin: 0 0 0 2%;
 }
 
@@ -132,7 +151,7 @@ form:hover {
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>Intranet - Events</name>
-        <option_schema/>
+        <option_schema>[{"name":"department","section":"Data","default_value":"facilities","label":"Deparment","type":"choice","choices":[{"label":"facilities","value":"facilities"},{"label":"finance","value":"finance"},{"label":"legal","value":"legal"},{"label":"technology","value":"technology"},{"label":"main","value":"main"},{"label":"marketing","value":"marketing"},{"label":"tc","value":"tc"},{"label":"leaders","value":"leaders"}]},{"name":"title","section":"Presentation","default_value":"WHAT'S HAPPENING","label":"Title","type":"string"}]</option_schema>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function(spModal) {
@@ -141,25 +160,47 @@ form:hover {
 	
 	var c = this;
 	
+	var location;
+	var user = gs.getUserID();
+	
 	if(!input){
 		data.summary = [];
 		data.table = 'x_prole_intranet_emails';
+		data.department = options.department;
 		data.groupBy = 'u_subject';
 		data.date = 'u_event_date';
 		data.sys_id = '';
 		
+		//get user data
+		var gr_user = new GlideRecord('sys_user');
+		gr_user.addQuery('sys_id', user);
+		gr_user.query();
+		while(gr_user.next())
+			{
+				location = gr_user.location.state.getDisplayValue();
+			}
+		
 		var ga = new GlideRecord(data.table);
+		//var gt = new GlideTime();
+		
 		//ga.addQuery('active' , 'true');
+		ga.addEncodedQuery('u_event_date>=javascript:gs.beginningOfToday()')
+		ga.addQuery('u_department' , data.department);
+		ga.addQuery('u_location', location);
+		ga.setLimit(5);
 		ga.orderByDesc(data.date);
 		
 		ga.query();
+		
+		
 
 		while(ga.next())
 		{
 			data.summary.push({
 				agName:ga[data.groupBy].getDisplayValue() || 'None',
 				agDate:ga[data.date].getDisplayValue() || 'None',
-				agSys_id: ga.sys_id.getDisplayValue()
+				agSys_id: ga.sys_id.getDisplayValue(),
+				agContent: ga.u_content.getDisplayValue()
 			});
 		}
 	}
@@ -171,7 +212,7 @@ form:hover {
         <sys_created_on>2019-08-30 14:57:33</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fe1ac01e13633bc0d9ff30ded144b0b8</sys_id>
-        <sys_mod_count>129</sys_mod_count>
+        <sys_mod_count>201</sys_mod_count>
         <sys_name>Intranet - Events</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -179,18 +220,20 @@ form:hover {
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_fe1ac01e13633bc0d9ff30ded144b0b8</sys_update_name>
         <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2019-10-09 21:31:00</sys_updated_on>
+        <sys_updated_on>2020-04-09 00:56:47</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 <form>
   <div class="panel panel-default">
     <div id="table-summary" class="panel-heading">
-      <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>EVENTS</b></div>
+      <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>{{options.title}}</b></div>
     
     <ul class="list-group"> 
       <li class="list-group-item" id="li-heading"
-      	ng-repeat="s in c.data.summary"
-          ng-click="c.selectAg(s)">
-        <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span><span class="subject">{{ s.agName }}</span><span class="date">{{ s.agDate }}</span>
+      	ng-repeat="s in c.data.summary | orderBy : reverse : 's.agDate'" ng-click="c.selectAg(s)">
+        
+        <span class="icon"><i class="material-icons">event_note</i></span><span class="subject">{{ s.agName }}  </span><span class="date">{{ s.agDate }}</span>
       </li>
     </ul>
   </div>

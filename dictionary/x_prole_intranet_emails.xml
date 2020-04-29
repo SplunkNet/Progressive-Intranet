@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Emails" max_length="40" name="x_prole_intranet_emails" type="collection">
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Content" max_length="65536" name="u_content" type="html"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Department" max_length="40" name="u_department" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Facilities" sequence="0" value="facilities"/>
+                <element inactive_on_update="false" label="Finance" sequence="1" value="finance"/>
+                <element inactive_on_update="false" label="Compliance &amp; Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Technology" sequence="3" value="technology"/>
+                <element inactive_on_update="false" label="Main" sequence="4" value="main"/>
+                <element inactive_on_update="false" label="Marketing" sequence="5" value="marketing"/>
+                <element inactive_on_update="false" label="Operations" sequence="6" value="operations"/>
+                <element inactive_on_update="false" label="Talent &amp; Culture" sequence="7" value="tc"/>
+                <element inactive_on_update="false" label="Leaders" sequence="8" value="leaders"/>
+            </choice>
+        </element>
         <element attributes="edge_encryption_enabled=true" label="Event Date" max_length="40" name="u_event_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Location" max_length="40" name="u_location" type="glide_list">
+            <choice>
+                <element inactive_on_update="false" label="Utah" sequence="0" value="Utah"/>
+                <element inactive_on_update="false" label="Arizona" sequence="1" value="Arizona"/>
+            </choice>
+        </element>
         <element attributes="encode_utf8=false" label="Requested By" max_length="32" name="u_requested_by" read_only="true" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Subject" max_length="40" name="u_subject" type="string"/>
         <index name="index">

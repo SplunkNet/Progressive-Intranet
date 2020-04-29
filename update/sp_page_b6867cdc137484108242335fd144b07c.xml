@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css/>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>intranet_facilities</id>
+        <internal>false</internal>
+        <public>false</public>
+        <roles/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2019-10-25 16:22:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b6867cdc137484108242335fd144b07c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>intranet_facilities</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_page_b6867cdc137484108242335fd144b07c</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-10-25 16:22:20</sys_updated_on>
+        <title>Facilities</title>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=b6867cdc137484108242335fd144b07c"/>
+</record_update>

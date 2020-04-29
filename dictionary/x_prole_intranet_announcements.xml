@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Announcements" max_length="40" name="x_prole_intranet_announcements" type="collection">
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Description" max_length="40" name="u_description" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Heading" max_length="40" name="u_heading" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Active" max_length="40" name="u_active" type="boolean"/>
+        <element label="Content" max_length="65536" name="u_content" type="html"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Department" max_length="40" name="u_department" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Facilities" sequence="0" value="facilities"/>
+                <element inactive_on_update="false" label="Finance" sequence="1" value="finance"/>
+                <element inactive_on_update="false" label="Marketing" sequence="2" value="marketing"/>
+                <element inactive_on_update="false" label="Operations" sequence="3" value="operations"/>
+                <element inactive_on_update="false" label="Product" sequence="4" value="product"/>
+                <element inactive_on_update="false" label="Sales" sequence="5" value="sales"/>
+                <element inactive_on_update="false" label="Technology" sequence="6" value="technology"/>
+                <element inactive_on_update="false" label="Main" sequence="7" value="main"/>
+                <element inactive_on_update="false" label="Talent &amp; Culture" sequence="8" value="tc"/>
+                <element inactive_on_update="false" label="Leader" sequence="9" value="leader"/>
+                <element inactive_on_update="false" label="Compliance &amp; Legal" sequence="10" value="Legal"/>
+                <element inactive_on_update="false" label="Managers Meetings" sequence="11" value="managers meetings"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="40" name="u_description" type="html"/>
+        <element attributes="edge_encryption_enabled=true" label="Heading" max_length="50" name="u_heading" type="string"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Location" max_length="1024" name="u_location" type="glide_list"/>
         <element attributes="encode_utf8=false" label="Requested By" max_length="32" name="u_requested_by" read_only="true" reference="sys_user" type="reference"/>
         <index name="index">
             <element name="u_requested_by"/>

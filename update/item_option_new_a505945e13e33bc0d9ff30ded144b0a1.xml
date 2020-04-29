@@ -2,7 +2,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="New Email Event">a300189e13a33bc0d9ff30ded144b001</cat_item>
+        <cat_item display_value="New Event">a300189e13a33bc0d9ff30ded144b001</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
@@ -20,7 +20,7 @@
         <example_text/>
         <field>u_event_date</field>
         <global>false</global>
-        <help_tag>More information</help_tag>
+        <help_tag/>
         <help_text/>
         <include_none>false</include_none>
         <instructions/>
@@ -32,7 +32,7 @@
         <lookup_unique>false</lookup_unique>
         <lookup_value/>
         <macro/>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
@@ -60,15 +60,15 @@
         <sys_created_on>2019-08-30 15:45:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a505945e13e33bc0d9ff30ded144b0a1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Event Start Date</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>item_option_new_a505945e13e33bc0d9ff30ded144b0a1</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-08-30 15:45:53</sys_updated_on>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2019-11-04 22:51:53</sys_updated_on>
         <table/>
         <tooltip/>
         <type>10</type>

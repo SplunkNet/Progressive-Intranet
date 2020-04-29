@@ -5,56 +5,10 @@
   /* widget controller */
   var c = this;
 	
-	c.selectAg = function(record){
-		
-		//Set a property on the data object to identify the selected object
-		c.data.selectedAg = record.agValue;
-		spModal.open({
-				size: "lg",
-				title: record.agValue,
-				widget: 'iv2_attachment_clone',
-				shared: c.data
-			});
-		
-		//Send the data object to the server script
-		c.server.update();
-	}
-	
-	c.sortOrder=false;
-	
-	c.changeSortCol=function(key){
-		
-		if(key == c.orderCol)
-			c.sortOrder = !c.sortOrder;
-		else
-			c.sortOrder = false;
-		
-		c.orderCol = key;
-	}
-	
-	c.updatedFromServer = false;
-	
-	//Record watch functionality
-	//a flag to indicate if a live update has been triggered by the record watcher
-	spUtil.recordWatch($scope, c.data.table, '', function(updateObj)
-	{
-		spUtil.update($scope);
-		c.updatedFromServer = true;
-		if (!c.updatedRegs){
-			c.updatedRegs = {};
-		}
-	
-	c.updateRegs[updateObj.data.sys_id] = true;
-	$timeout(function(){
-					 c.updatedRegs[updateObj.data.sys_id] = false;
-					 }, 6000);
-	});
-	
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>li {
  color: black;
-  background-color: white;
 }
 
 #table-summary {
@@ -65,6 +19,15 @@
 	letter-spacing:2px;
   font-size: 20px;
   font-weight: 100;
+  
+}
+
+ul {
+   max-height: 405px;
+    margin-bottom: 10px;
+ 	 overflow:auto;
+    -webkit-overflow-scrolling: touch;
+  
 }
 
 #li-heading:hover {
@@ -78,11 +41,10 @@ form {
   animation-name: fadeIn;
   animation-duration: 1s;
  
+ 
 }
 
-.panel {
-  height: 318px;
-}
+
 
 form:hover {
  	transform: translateY(-3px); 
@@ -107,36 +69,51 @@ form:hover {
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>Intranet - Popular Content</name>
-        <option_schema/>
+        <option_schema>[{"name":"leaders_lounge","section":"Data","default_value":"false","label":"Leaders Lounge","type":"boolean"},{"name":"title","section":"Presentation","default_value":"Popular Content","label":"Title","type":"string"}]</option_schema>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function(spModal) {
+        <script><![CDATA[(function() {
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
-	
-	var c = this;
+
 	
 	if(!input){
+		
+		
 		data.summary = [];
-		data.table = 'x_prole_intranet_announcements';
-		data.groupBy = 'u_heading';
-		data.fields = 'u_description';
-		var ga = new GlideAggregate(data.table);
-		ga.setGroup(true);
-		ga.groupBy(data.groupBy);
-		ga.addAggregate('COUNT');
-		ga.query();
+		data.leaders_lounge = options.leaders_lounge;
+		data.url_test = "www.google.com";
+		
+		if(data.leaders_lounge == 'true'){
+			var ll = new GlideRecord('kb_knowledge');
+			ll.addEncodedQuery('sys_class_name!=^active=true^kb_knowledge_base=7f4ff8eddf403100b5157a0d3df2631e^can_read_user_criteria=7213507e1319e704836075e36144b078');
+			ll.query();
+			
+			while(ll.next()){
+				data.summary.push({
+					name: ll.short_description.getDisplayValue(),
+					url: "https://progleasing.service-now.com/kb_view.do?sys_kb_id=" + ll.sys_id.toString()
+				})
+			}
+		}
+		else{
+		
+		var gr = new GlideRecord('x_prole_intranet_popular_content');
+		gr.addQuery('u_active', true);
+		gr.query();
+		
 
-		while(ga.next())
+		while(gr.next())
 		{
-			data.summary.push({
-				agName:ga[data.groupBy].getDisplayValue() || 'None',
-				agValue:ga[data.groupBy].toString(),
-				agCount:ga.getAggregate('COUNT')
+				data.summary.push({
+				name:gr.u_name.getDisplayValue() || 'None',
+				url:gr.u_url.toString()
 			});
 		}
+		console.log(data.summary);
 	}
-
+	}
+	
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -144,7 +121,7 @@ form:hover {
         <sys_created_on>2019-09-23 20:12:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1b58b0ca13c80c10d9ff30ded144b0ec</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>73</sys_mod_count>
         <sys_name>Intranet - Popular Content</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -152,19 +129,24 @@ form:hover {
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_1b58b0ca13c80c10d9ff30ded144b0ec</sys_update_name>
         <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2019-10-18 17:02:03</sys_updated_on>
+        <sys_updated_on>2020-02-08 01:40:31</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <form>
   <div class="panel panel-default">
     <div id="table-summary" class="panel-heading">
-      <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>POPULAR CONTENT</b></div>
+      <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>{{options.title}}</b></div>
+    <table>
+      
     
     <ul class="list-group">
-      <li class="list-group-item" id="li-heading"
-      	ng-repeat="s in c.data.summary"
-          ng-click="c.selectAg(s)">{{ s.agName }}
+      
+      <a ng-repeat="s in c.data.summary" href={{s.url}} target="_blank">
+      <li class="list-group-item" id="li-heading">        
+        {{ s.name }}
       </li>
+        </a>
     </ul>
+      </table>
   </div>
   <!-- debugging code -- <pre>{{c.data.records | json}}</pre> -->
 </form>]]></template>

@@ -21,7 +21,7 @@
         <list_price>0</list_price>
         <location/>
         <mandatory_attachment>false</mandatory_attachment>
-        <meta/>
+        <meta>new, announcement, announce, ann</meta>
         <mobile_hide_price>false</mobile_hide_price>
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
@@ -53,7 +53,21 @@
         <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
         <sc_ic_item_staging/>
         <sc_ic_version/>
-        <script/>
+        <script><![CDATA[producer.portal_redirect = "prognation?id=form&table=x_prole_intranet_announcements&sys_id=" + current.getValue('sys_id');
+
+
+var location = '';
+if (producer.utah.toString() === 'true' && producer.arizona.toString() === 'true') {
+    location = 'Utah' + ',' + 'Arizona';
+} else {
+    if (producer.utah.toString() === 'true') {
+        location = 'Utah';
+    }
+    if (producer.arizona.toString() === 'true') {
+        location = 'Arizona';
+    }
+}
+current.u_location = location;]]></script>
         <short_description>Update the announcement widget on the intranet home page.</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
@@ -62,15 +76,15 @@
         <sys_created_on>2019-08-27 19:27:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5efa29d11327bf80d9ff30ded144b0d8</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>New Announcement</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sc_cat_item_producer_5efa29d11327bf80d9ff30ded144b0d8</sys_update_name>
-        <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-08-30 15:38:54</sys_updated_on>
+        <sys_updated_by>david.derby</sys_updated_by>
+        <sys_updated_on>2020-04-13 16:26:24</sys_updated_on>
         <table_name>x_prole_intranet_announcements</table_name>
         <template/>
         <type>item</type>

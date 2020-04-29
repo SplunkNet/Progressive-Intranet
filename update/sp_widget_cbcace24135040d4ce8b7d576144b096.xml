@@ -6,13 +6,14 @@
   var c = this;
 	c.formatted_content = $sce.trustAsHtml(c.data.content)
 	//console.log($document)
-	console.log(spModal)
+	//console.log(spModal)
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>#find_us{
-   height: 461px;
-   background-color: #81878e; 
-   padding: 50px 10px;
+   height: 411px;
+   background-color: white; 
+   padding: 10px;
+  overflow: auto;
   
 }
 
@@ -23,30 +24,42 @@ p{
   //height: 100%;
 
 
-  color: white;
+  color: black;
+}
+
+#table-summary {
+  text-align: center;
+  font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+  background-color: white;
+  color: #0093c9;
+  overflow: auto;
+	letter-spacing:2px;
+  font-size: 20px;
+  font-weight: 100;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
         <docs/>
         <field_list/>
-        <has_preview>false</has_preview>
+        <has_preview>true</has_preview>
         <id>intranet_-_departments_-_find_us</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>Intranet - Departments - Find Us</name>
-        <option_schema/>
+        <option_schema>[{"name":"content_page","section":"Data","default_value":"909f4ee0139040d4ce8b7d576144b024","label":"Content Page","type":"string"}]</option_schema>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
+	var content_page = options.content_page;
 	var content = '';
 	var gr = new GlideRecord('u_service_portal_intranet');
 	
-	gr.get('909f4ee0139040d4ce8b7d576144b024');
+	gr.get(content_page);
 	
-	content = gr.x_prole_intranet_find_us.getDisplayValue();
+	content = gr.x_prole_intranet_what_we_do.getDisplayValue();
 	
 data.content = content
 //console.log(data);
@@ -58,7 +71,7 @@ data.content = content
         <sys_created_on>2019-10-01 20:37:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>cbcace24135040d4ce8b7d576144b096</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>68</sys_mod_count>
         <sys_name>Intranet - Departments - Find Us</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -66,8 +79,12 @@ data.content = content
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_cbcace24135040d4ce8b7d576144b096</sys_update_name>
         <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2019-10-14 23:01:04</sys_updated_on>
-        <template><![CDATA[<div id="find_us">
+        <sys_updated_on>2019-11-23 00:05:18</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+    <div id="table-summary" class="panel-heading">
+      <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>WHAT WE DO</b></div>
+
+<div id="find_us">
   
 
 <div ng-bind-html="c.formatted_content"></div>

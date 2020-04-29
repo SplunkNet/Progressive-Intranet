@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table">
+    <sys_db_view_table action="DELETE">
+        <active>true</active>
+        <left_join>false</left_join>
+        <order>100</order>
+        <sys_class_name>sys_db_view_table</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-12-11 18:12:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1a32135f1b694810c2fccb392a4bcb09</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>x_prole_software_c_software_change_request_table</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sys_db_view_table_1a32135f1b694810c2fccb392a4bcb09</sys_update_name>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-12-11 18:17:21</sys_updated_on>
+        <table>x_prole_software_c_software_change_request_table</table>
+        <variable_prefix>software</variable_prefix>
+        <view display_value="x_prole_intranet_change_tickets">cdffcbdf1b294810c2fccb392a4bcb36</view>
+        <where_clause/>
+    </sys_db_view_table>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>15adf7eb6f6456804c327b2f5d3ee479</instance_id>
+        <instance_name>progleasing</instance_name>
+        <name>sys_db_view_table_1a32135f1b694810c2fccb392a4bcb09</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table"><sys_db_view_table action="INSERT_OR_UPDATE"><active>true</active><left_join>false</left_join><order>100</order><sys_class_name>sys_db_view_table</sys_class_name><sys_created_by>zachary.nicholson</sys_created_by><sys_created_on>2019-12-11 18:12:07</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>1a32135f1b694810c2fccb392a4bcb09</sys_id><sys_mod_count>6</sys_mod_count><sys_name>x_prole_software_c_software_change_request_table</sys_name><sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope><sys_update_name>sys_db_view_table_1a32135f1b694810c2fccb392a4bcb09</sys_update_name><sys_updated_by>zachary.nicholson</sys_updated_by><sys_updated_on>2019-12-11 18:17:21</sys_updated_on><table>x_prole_software_c_software_change_request_table</table><variable_prefix>software</variable_prefix><view display_value="x_prole_intranet_change_tickets">cdffcbdf1b294810c2fccb392a4bcb36</view><where_clause/></sys_db_view_table></record_update>]]></payload>
+        <payload_hash>-1240460697</payload_hash>
+        <record_name>x_prole_software_c_software_change_request_table</record_name>
+        <reverted_from/>
+        <source>f6b2fe97132040508242335fd144b094</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-12-11 18:17:21</sys_created_on>
+        <sys_id>ca939b971ba94810c2fccb392a4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16ef62e05750000001</sys_recorded_at>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-12-11 18:17:21</sys_updated_on>
+        <type>View Table</type>
+        <update_guid>82939b97faa94810b16f5a7af63085e5</update_guid>
+        <update_guid_history>82939b97faa94810b16f5a7af63085e5:-1240460697,99839b576aa94810a67bb824718337e8:786641158,f80393539aa94810fdb7f8765401bbf3:-1255483385,f5e21b13a9a948104b634c90b7f1feaf:997359368,7ca2d3df236948108deb2dfa6df6c1d6:-1044765175,8a729b9f3a69481015198656a3ae8b5a:993405251,d162939f7b69481024bacba473d50569:-751355994</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>zachary.nicholson</sys_created_by>
+        <sys_created_on>2019-12-11 18:19:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_db_view_table">sys_db_view_table</sys_db_object>
+        <sys_id>113fa831355d45aca019a6493f575590</sys_id>
+        <sys_metadata>1a32135f1b694810c2fccb392a4bcb09</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_prole_software_c_software_change_request_table</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sys_db_view_table_1a32135f1b694810c2fccb392a4bcb09</sys_update_name>
+        <sys_update_version display_value="sys_db_view_table_1a32135f1b694810c2fccb392a4bcb09">ca939b971ba94810c2fccb392a4bcbe5</sys_update_version>
+        <sys_updated_by>zachary.nicholson</sys_updated_by>
+        <sys_updated_on>2019-12-11 18:19:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

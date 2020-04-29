@@ -24,7 +24,7 @@
         <sys_created_on>2019-10-22 15:38:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3aafc95f13ec48d0ce8b7d576144b003</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -32,14 +32,14 @@
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_instance_table_3aafc95f13ec48d0ce8b7d576144b003</sys_update_name>
         <sys_updated_by>zachary.nicholson</sys_updated_by>
-        <sys_updated_on>2019-10-22 17:21:29</sys_updated_on>
+        <sys_updated_on>2019-11-12 21:40:12</sys_updated_on>
         <table>sys_user</table>
         <title/>
         <url/>
         <widget_parameters><![CDATA[{
 	"api_encoded_query_string": {
-		"value": "/api/now/table/sys_user?sysparm_query=user_name%3Dryan.woodley%5EORuser_name%3Dcurt%5EORuser_name%3Dblake.wakefield%5EORuser_name%3Dben.hawksworth%5EORuser_name%3Dmichelle.parker%5EORuser_name%3Dbrian.garner%5EORuser_name%3Dmarvin.fentress",
-		"displayValue": "/api/now/table/sys_user?sysparm_query=user_name%3Dryan.woodley%5EORuser_name%3Dcurt%5EORuser_name%3Dblake.wakefield%5EORuser_name%3Dben.hawksworth%5EORuser_name%3Dmichelle.parker%5EORuser_name%3Dbrian.garner%5EORuser_name%3Dmarvin.fentress"
+		"value": "https://progleasing.service-now.com/api/now/table/sys_user?sysparm_query=nameSTARTSWITHRyan%20Woodley%5EORnameSTARTSWITHBlake%20Wakefield%5EORnameSTARTSWITHCurtis%20Doman%5EORnameSTARTSWITHMarvin%20Fentress%5EORnameSTARTSWITHBen%20Hawksworth%5EORnameSTARTSWITHMichelle%20Parker%5E",
+		"displayValue": "https://progleasing.service-now.com/api/now/table/sys_user?sysparm_query=nameSTARTSWITHRyan%20Woodley%5EORnameSTARTSWITHBlake%20Wakefield%5EORnameSTARTSWITHCurtis%20Doman%5EORnameSTARTSWITHMarvin%20Fentress%5EORnameSTARTSWITHBen%20Hawksworth%5EORnameSTARTSWITHMichelle%20Parker%5E"
 	}
 }]]></widget_parameters>
     </sp_instance_table>

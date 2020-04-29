@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, spModal) {
+  /* widget controller */
+  var c = this;
+
+  $scope.myInterval = c.options.interval;
+  $scope.noWrapSlides = false;
+  $scope.active = 0;	
+	
+	c.changeSlide = function(){
+		
+		
+		
+	}
+	
+
+//Edit Content Button
+
+c.editContent = function(){
+		
+	var widgetInput = {
+			table: $scope.data.table,
+			sys_id: c.data.sys_id
+		};
+	
+	
+		spModal.open({
+			size: "lg",
+			title: "Edit",
+			widget: 'intranet_attachment_clone',
+			shared: c.data,
+			widgetInput: widgetInput
+				
+		
+			}).then(function(){
+				//console.log($scope);
+			c.server.update();
+			
+		});
+
+		
+	}
+
+	
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.find-us {
+
+  //background-position: center;
+  background-repeat: no-repeat;
+  //background-size: cover;
+  //position: center;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>intranet_-_departments_carousel</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Intranet - Departments Carousel</name>
+        <option_schema>[{"name":"department","section":"Data","label":"Department","type":"string"},{"hint":"Milliseconds","name":"interval","section":"Behavior","default_value":"10000","label":"Interval","type":"string"},{"name":"record_sys_id","section":"Data","default_value":"c31f994113280090d9ff30ded144b0c1","label":"Record sys id","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	var image = [];
+	var nonactive = [];
+  data.sys_id = options.record_sys_id    // || options.record_id || $sp.getParameter("sys_id");
+	data.table =  'u_service_portal_intranet'
+	data.image = '';
+	data.att_count = '' ;
+	data.inAdminGroup = gs.getUser().isMemberOf('Intranet Admins')
+		
+	var grdb = new GlideRecord('sys_attachment');
+	
+	
+	grdb.addQuery('table_sys_id' , data.sys_id);
+	grdb.orderBy('sys_created_on');
+	grdb.setLimit(5)
+	grdb.query();
+data.att_count = grdb.getRowCount() 
+	
+while (grdb.next()){
+		//console.log('found')
+		image.push('sys_attachment.do?sys_id='+ grdb.sys_id);
+	}
+		
+	
+	
+	data.image = image;
+	//console.log(data)
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2020-01-04 03:18:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0dfbaffe1b864810881332231b4bcb98</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Intranet - Departments Carousel</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_widget_0dfbaffe1b864810881332231b4bcb98</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-01-04 03:54:56</sys_updated_on>
+        <template><![CDATA[
+
+
+<div  class='find-us'>
+  
+  <div style="height: 505px">
+    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" lazy>
+      <div uib-slide ng-repeat="slide in data.image" >
+        <img ng-src="{{slide}}" style="width: auto; height: 461px ; margin: auto">
+        <div class="carousel-caption">
+          
+         <!--
+          <h4>Slide {{slide.id}}</h4>
+          <p>{{slide.text}}</p>
+          -->
+        </div>
+      </div>
+    </div>
+    <div ng-if="data.inAdminGroup">
+           <button type="button" class="btn btn-primary"  ng-click="c.editContent()" >Edit</button>
+
+    </div>
+
+</div>
+  
+  <!---  The controls
+  <div class="row">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
+      <button type="button" class="btn btn-info" ng-click="randomize()">Randomize slides</button>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="noWrapSlides">
+          Disable Slide Looping
+        </label>
+      </div>
+    </div>
+    <div class="col-md-6">
+      Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
+      <br />Enter a negative number or 0 to stop the interval.
+    </div>
+  </div>
+---->
+ 
+  
+</div>
+
+
+
+]]></template>
+    </sp_widget>
+</record_update>
