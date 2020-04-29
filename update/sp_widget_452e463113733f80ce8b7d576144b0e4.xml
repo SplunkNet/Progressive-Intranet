@@ -55,7 +55,7 @@ img:active {
         <sys_created_on>2019-09-10 21:33:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>452e463113733f80ce8b7d576144b0e4</sys_id>
-        <sys_mod_count>153</sys_mod_count>
+        <sys_mod_count>154</sys_mod_count>
         <sys_name>Intranet - Quick Links</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -63,7 +63,7 @@ img:active {
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_452e463113733f80ce8b7d576144b0e4</sys_update_name>
         <sys_updated_by>joseph.day</sys_updated_by>
-        <sys_updated_on>2020-04-28 23:58:33</sys_updated_on>
+        <sys_updated_on>2020-04-29 16:13:21</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
 <div class="text-center" ng-if="c.options.leaders_lounge === 'no'" style="--color: {{c.options.bgcolor}} " >
@@ -79,10 +79,10 @@ img:active {
       <a href="https://progleasing.okta.com/home/progleasing_brainier_1/0oa1xw6ft48OHeabT357/aln1xw90weyCVT4eS357?fromHome=true" target="_blank"><img src="ProgU.png" alt="Develop.Me Link"></a>
     </div>
     <div class="col-md-2">
-      <a href="/pl_landing" target="_blank"><img src="SubmitTicket.png" alt="ServiceNow Link"></a>
+      <a href="https://progleasing.okta.com/home/slack/0oa9mmx1tm7g48wUs356/19411?fromHome=true" target="_blank"><img src="SlackLogo.png" alt="Slack Link"></a>
     </div>
     <div class="col-md-2">
-      <a href="https://progleasing.okta.com/home/slack/0oa9mmx1tm7g48wUs356/19411?fromHome=true" target="_blank"><img src="SlackLogo.png" alt="Slack Link"></a>
+      <a href="https://progleasing.okta.com/home/progleasing_standout_2/0oaanw9f0HXvoTRpo356/alnanxl9bxsbq0kF8356?fromHome=true" target="_blank"><img src="StandOutLogo.png" alt="Stand Out Link"></a>
     </div>
     <div class="col-md-2">
       <a href="https://zoom.us" target="_blank"><img src="ZoomLogo2.png" alt="Zoom Link"></a>
