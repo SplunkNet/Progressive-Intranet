@@ -17,6 +17,7 @@
                 <element inactive_on_update="false" label="Leader" sequence="9" value="leader"/>
                 <element inactive_on_update="false" label="Compliance &amp; Legal" sequence="10" value="Legal"/>
                 <element inactive_on_update="false" label="Managers Meetings" sequence="11" value="managers meetings"/>
+                <element inactive_on_update="false" label="Jewelry" sequence="12" value="Jewelry"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" label="Description" max_length="40" name="u_description" type="html"/>

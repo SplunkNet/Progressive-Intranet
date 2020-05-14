@@ -2,14 +2,36 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[function($scope) {
-  /* widget controller */
-	
-  var c = this;
-	
+	/* widget controller */
+
+	var c = this;
+
 	c.success = false;
+
+	var button = document.getElementById('singlebutton');
+	var text = document.getElementById('text_area');
+	var card = document.getElementsByClassName('flip-card');
+
+
+	var isHover = false;
+
+	text.onclick = function() {
+		console.log(isHover)
+		if (!isHover) {
+			card[0].classList.add('stay-flipped');
+			console.log('hover is disabled')
+		}
+		isHover = !isHover;
+
+	};
+
 	
+
 	$scope.submit = function()
 	{
+		if (isHover){
+			card[0].classList.remove('stay-flipped');
+		}
 		c.success = true;
 		c.data.submit = true;
 		c.server.update();
@@ -24,6 +46,11 @@
   perspective: 1000px;
 }
 
+.flip-card:hover .flip-card-inner,
+.flip-card.stay-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -31,10 +58,6 @@
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
 }
 
 .flip-card-front, .flip-card-back {
@@ -79,6 +102,18 @@ img {
 
 textarea {
  resize: none; 
+}
+
+
+
+#tooltip {
+    width: 200px;
+    height: 200px;
+    background: blue;
+}
+#tooltip:hover,
+#tooltip.hover {
+    background: red;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -123,53 +158,57 @@ textarea {
         <sys_created_on>2019-09-09 21:51:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2fc8412913f37b80ce8b7d576144b0b8</sys_id>
-        <sys_mod_count>323</sys_mod_count>
+        <sys_mod_count>458</sys_mod_count>
         <sys_name>Intranet - Ask Prog</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_2fc8412913f37b80ce8b7d576144b0b8</sys_update_name>
-        <sys_updated_by>joseph.day</sys_updated_by>
-        <sys_updated_on>2020-04-28 23:59:05</sys_updated_on>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-05-14 17:05:02</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <form>
-  <div class="panel panel-default">
-    <div id="table-summary" class="panel-heading">
-      <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>QUESTIONS? FEEDBACK?</b></div>
-    
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="progchat.jpg" alt="Avatar" style="height:203px;">
-    </div>
-    <div class="flip-card-back">
-      <form class="form-horizontal">
-<fieldset>
 
-<!-- Text input-->
-<div class="form-group" id="text_area">  
-  <textarea class="form-control" ng-model="c.data.text" rows="5" placeholder="How can we help?"></textarea>
-</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="singlebutton"></label>
-  <div class="col-md-4">
-    <button id="singlebutton" name="singlebutton" ng-click="submit()" class="btn btn-success">Submit</button>
-  </div>
-</div>
-  <br>
-<div ng-if="c.success" id="successMessage" class="alert alert-success" role="alert" data-dismiss="alert" >Thanks for your input!
-  <!---<button type="button" class="close" aria-hidden="true">&times;</button>
-  --->
-</div>
-</fieldset>
 </form>
+<div class="panel panel-default">
+  <div id="table-summary" class="panel-heading">
+    <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>QUESTIONS? FEEDBACK?</b></div>
+
+  <div class="flip-card" id="prog-chat" >
+    <div class="flip-card-inner" id="prog-chat-inner">
+      <div class="flip-card-front">
+        <img src="progchat.jpg" alt="Avatar" style="height:203px;">
+      </div>
+      <div class="flip-card-back">
+        <form class="form-horizontal">
+          <fieldset>
+
+            <!-- Text input-->
+            <div class="form-group" id="text_area" >  
+              <textarea class="form-control" ng-model="c.data.text" rows="5" placeholder="How can we help?"></textarea>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="singlebutton"></label>
+              <div class="col-md-4">
+                <button id="singlebutton" name="singlebutton" ng-click="submit()" class="btn btn-success">Submit</button>
+              </div>
+            </div>
+            <br>
+            <div ng-if="c.success" id="successMessage" class="alert alert-success" role="alert" data-dismiss="alert" >Thanks for your input!
+              <button type="button" class="close" aria-hidden="true">&times;</button>
+
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </div>
   </div>
-</div>
-    
+
+
+
 ]]></template>
     </sp_widget>
 </record_update>

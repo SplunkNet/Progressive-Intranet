@@ -228,6 +228,25 @@
             <sys_updated_on>2020-02-07 22:47:17</sys_updated_on>
             <value>managers meetings</value>
         </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Jewelry</label>
+            <language>en</language>
+            <name>x_prole_intranet_announcements</name>
+            <sequence>12</sequence>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2020-05-13 03:18:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2cca857013bc9090ce8b7d576144b042</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2020-05-13 03:18:47</sys_updated_on>
+            <value>Jewelry</value>
+        </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>u_department</element>
             <name>x_prole_intranet_announcements</name>

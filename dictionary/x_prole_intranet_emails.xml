@@ -13,6 +13,7 @@
                 <element inactive_on_update="false" label="Operations" sequence="6" value="operations"/>
                 <element inactive_on_update="false" label="Talent &amp; Culture" sequence="7" value="tc"/>
                 <element inactive_on_update="false" label="Leaders" sequence="8" value="leaders"/>
+                <element inactive_on_update="false" label="Jewelry" sequence="9" value="Jewelry"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" label="Event Date" max_length="40" name="u_event_date" type="glide_date"/>

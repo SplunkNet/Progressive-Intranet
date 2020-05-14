@@ -114,7 +114,7 @@ form:hover {
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>Intranet - Departments - Announcements</name>
-        <option_schema>[{"name":"department","section":"Data","default_value":"Main","label":"Department","type":"choice","choices":[{"label":"Facilities","value":"Facilities"},{"label":"Finance","value":"Finance"},{"label":"Marketing","value":"Marketing"},{"label":"Operations","value":"Operations"},{"label":"Product","value":"Product"},{"label":"Sales","value":"Sales"},{"label":"Technology","value":"Technology"},{"label":"Main","value":"Main"},{"label":"TC","value":"TC"},{"label":"Leader","value":"Leader"},{"label":"Legal","value":"Legal"},{"label":"Managers Meetings","value":"Managers Meetings"}]},{"hint":"how many items will be returned","name":"limit","section":"Data","default_value":"5","label":"Max returns","type":"integer"},{"name":"title","section":"Presentation","default_value":"important info","label":"Title","type":"string"}]</option_schema>
+        <option_schema>[{"name":"department","section":"Data","default_value":"Main","label":"Department","type":"choice","choices":[{"label":"Facilities","value":"Facilities"},{"label":"Finance","value":"Finance"},{"label":"Marketing","value":"Marketing"},{"label":"Operations","value":"Operations"},{"label":"Product","value":"Product"},{"label":"Sales","value":"Sales"},{"label":"Technology","value":"Technology"},{"label":"Main","value":"Main"},{"label":"TC","value":"TC"},{"label":"Leader","value":"Leader"},{"label":"Legal","value":"Legal"},{"label":"Managers Meetings","value":"Managers Meetings"},{"label":"Jewelry","value":"Jewelry"}]},{"hint":"how many items will be returned","name":"limit","section":"Data","default_value":"5","label":"Max returns","type":"integer"},{"name":"title","section":"Presentation","default_value":"important info","label":"Title","type":"string"}]</option_schema>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function(spModal) {
@@ -143,7 +143,9 @@ form:hover {
 				//console.log(location);
 			}		
 		
-		
+			if(location == 'AZ'){ //AZ conversion
+			location = 'Arizona';
+		}
 		
 		var ga = new GlideRecord(data.table);
 		
@@ -179,7 +181,7 @@ form:hover {
         <sys_created_on>2019-10-01 19:46:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>631ff5e013dc00d4ce8b7d576144b052</sys_id>
-        <sys_mod_count>71</sys_mod_count>
+        <sys_mod_count>74</sys_mod_count>
         <sys_name>Intranet - Departments - Announcements</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -187,7 +189,7 @@ form:hover {
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_631ff5e013dc00d4ce8b7d576144b052</sys_update_name>
         <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2020-02-20 18:18:30</sys_updated_on>
+        <sys_updated_on>2020-05-13 03:19:18</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">

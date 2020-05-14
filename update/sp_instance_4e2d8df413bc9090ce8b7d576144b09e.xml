@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="3">b1844d30137c9090ce8b7d576144b0db</sp_column>
+        <sp_widget display_value="Group Members">9482786813098050b24730ded144b020</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2020-05-13 03:29:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4e2d8df413bc9090ce8b7d576144b09e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_instance_4e2d8df413bc9090ce8b7d576144b09e</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-05-13 09:28:09</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"group_name": {
+		"value": "583cc17413bc9090ce8b7d576144b07e",
+		"displayValue": "583cc17413bc9090ce8b7d576144b07e"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=4e2d8df413bc9090ce8b7d576144b09e"/>
+</record_update>

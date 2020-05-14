@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">b1560d74137c9090ce8b7d576144b0ce</sp_column>
+        <sp_widget display_value="Intranet - Departments Carousel">0dfbaffe1b864810881332231b4bcb98</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2020-05-13 02:59:38</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dc660534137c9090ce8b7d576144b073</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_instance_dc660534137c9090ce8b7d576144b073</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-05-13 02:59:54</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"department": {
+		"value": "Jewlery",
+		"displayValue": "Jewlery"
+	},
+	"interval": {
+		"value": "",
+		"displayValue": ""
+	},
+	"record_sys_id": {
+		"value": "2ca58134137c9090ce8b7d576144b048",
+		"displayValue": "2ca58134137c9090ce8b7d576144b048"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=dc660534137c9090ce8b7d576144b073"/>
+</record_update>
