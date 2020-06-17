@@ -5,6 +5,9 @@
         <element label="Content" max_length="65536" name="u_content" type="html"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Department" max_length="40" name="u_department" type="string">
             <choice>
+                <element inactive_on_update="false" label="COVID-19 RTW Additional Info &amp; Resources" value="COVID-19 RTW Additional Info Resources"/>
+                <element inactive_on_update="false" label="COVID-19 RTW Guides &amp; Resources" value="COVID-19 RTW Guides Resources"/>
+                <element inactive_on_update="false" label="COVID-19 RTW Required Training" value="COVID-19 RTW Required Training"/>
                 <element inactive_on_update="false" label="Facilities" sequence="0" value="facilities"/>
                 <element inactive_on_update="false" label="Finance" sequence="1" value="finance"/>
                 <element inactive_on_update="false" label="Marketing" sequence="2" value="marketing"/>

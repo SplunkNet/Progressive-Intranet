@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
     <sp_column action="INSERT_OR_UPDATE">
         <class_name/>
-        <order>1</order>
-        <size>12</size>
+        <order>2</order>
+        <size>6</size>
         <size_lg/>
         <size_sm/>
         <size_xs/>
-        <sp_row display_value="1">f9f2017c133c9090ce8b7d576144b03e</sp_row>
+        <sp_row display_value="1">b12a48f513115c10ce8b7d576144b004</sp_row>
         <sys_class_name>sp_column</sys_class_name>
-        <sys_created_by>derek.young</sys_created_by>
-        <sys_created_on>2020-05-13 02:44:43</sys_created_on>
+        <sys_created_by>joseph.day</sys_created_by>
+        <sys_created_on>2020-06-09 21:41:49</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>f9f2017c133c9090ce8b7d576144b041</sys_id>
+        <sys_id>3d2a883d13115c10ce8b7d576144b08e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>1</sys_name>
+        <sys_name>2</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
-        <sys_update_name>sp_column_f9f2017c133c9090ce8b7d576144b041</sys_update_name>
-        <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2020-05-13 02:44:43</sys_updated_on>
+        <sys_update_name>sp_column_3d2a883d13115c10ce8b7d576144b08e</sys_update_name>
+        <sys_updated_by>joseph.day</sys_updated_by>
+        <sys_updated_on>2020-06-09 21:41:49</sys_updated_on>
     </sp_column>
 </record_update>

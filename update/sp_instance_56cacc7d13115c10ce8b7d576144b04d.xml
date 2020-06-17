@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">b61a083d13115c10ce8b7d576144b0f3</sp_column>
+        <sp_widget display_value="Intranet - Departments - Announcements">631ff5e013dc00d4ce8b7d576144b052</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>joseph.day</sys_created_by>
+        <sys_created_on>2020-06-09 21:44:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>56cacc7d13115c10ce8b7d576144b04d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>guides &amp; resources</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_instance_56cacc7d13115c10ce8b7d576144b04d</sys_update_name>
+        <sys_updated_by>joseph.day</sys_updated_by>
+        <sys_updated_on>2020-06-10 19:44:45</sys_updated_on>
+        <title>guides &amp; resources</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"department": {
+		"value": "COVID-19 RTW Guides Resources",
+		"displayValue": "COVID-19 RTW Guides Resources"
+	},
+	"limit": {
+		"value": 10,
+		"displayValue": "10"
+	},
+	"title": {
+		"value": "guides & resources",
+		"displayValue": "guides & resources"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=56cacc7d13115c10ce8b7d576144b04d"/>
+</record_update>

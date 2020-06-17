@@ -5,6 +5,9 @@
         <element attributes="edge_encryption_enabled=true" label="Department Subtext" max_length="100" name="x_prole_intranet_department_subtext" type="string"/>
         <element label="find us" max_length="65536" name="x_prole_intranet_find_us" type="html"/>
         <element attributes="edge_encryption_enabled=true" label="Name" max_length="100" name="x_prole_intranet_name" type="string"/>
+        <element label="tabbed_content_1" max_length="65536" name="x_prole_intranet_tabbed_content_1" type="html"/>
+        <element label="tabbed_content_2" max_length="65536" name="x_prole_intranet_tabbed_content_2" type="html"/>
+        <element label="tabbed_content_3" max_length="65536" name="x_prole_intranet_tabbed_content_3" type="html"/>
         <element label="what we do" max_length="65536" name="x_prole_intranet_what_we_do" type="html"/>
     </element>
 </database>

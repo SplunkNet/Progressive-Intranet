@@ -5,6 +5,63 @@
             <element>u_department</element>
             <hint/>
             <inactive>false</inactive>
+            <label>COVID-19 RTW Additional Info &amp; Resources</label>
+            <language>en</language>
+            <name>x_prole_intranet_announcements</name>
+            <sequence/>
+            <sys_created_by>joseph.day</sys_created_by>
+            <sys_created_on>2020-06-10 19:50:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c93a388613951050ce8b7d576144b086</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>joseph.day</sys_updated_by>
+            <sys_updated_on>2020-06-10 19:50:59</sys_updated_on>
+            <value>COVID-19 RTW Additional Info Resources</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>COVID-19 RTW Guides &amp; Resources</label>
+            <language>en</language>
+            <name>x_prole_intranet_announcements</name>
+            <sequence/>
+            <sys_created_by>joseph.day</sys_created_by>
+            <sys_created_on>2020-06-10 19:50:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e45a70c213951050ce8b7d576144b0d5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>joseph.day</sys_updated_by>
+            <sys_updated_on>2020-06-10 19:51:06</sys_updated_on>
+            <value>COVID-19 RTW Guides Resources</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>COVID-19 RTW Required Training</label>
+            <language>en</language>
+            <name>x_prole_intranet_announcements</name>
+            <sequence/>
+            <sys_created_by>joseph.day</sys_created_by>
+            <sys_created_on>2020-06-10 19:50:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7d5a388613951050ce8b7d576144b088</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>joseph.day</sys_updated_by>
+            <sys_updated_on>2020-06-10 19:51:12</sys_updated_on>
+            <value>COVID-19 RTW Required Training</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_department</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>Facilities</label>
             <language>en</language>
             <name>x_prole_intranet_announcements</name>

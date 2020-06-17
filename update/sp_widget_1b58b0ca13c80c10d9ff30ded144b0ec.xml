@@ -69,50 +69,48 @@ form:hover {
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>Intranet - Popular Content</name>
-        <option_schema>[{"name":"leaders_lounge","section":"Data","default_value":"false","label":"Leaders Lounge","type":"boolean"},{"name":"title","section":"Presentation","default_value":"Popular Content","label":"Title","type":"string"}]</option_schema>
+        <option_schema>[{"name":"title","section":"Presentation","default_value":"Popular Content","label":"Title","type":"string"},{"name":"department","section":"Data","default_value":"Main","label":"Department","type":"choice","choices":[{"label":"Main","value":"Main"},{"label":"COVID-19 Return to Work Resources","value":"COVID-19 Return to Work Resources"}]},{"hint":"This option ignores the choice above and instead pulls in content based on the KB and query below.","name":"use_content_from_kb","section":"Data","default_value":"false","label":"Use content from KB","type":"boolean"},{"displayValue":"Knowledge Base","name":"knowledge_base","section":"Data","label":"Knowledge Base","type":"reference","value":"kb_knowledge_base","ed":{"reference":"kb_knowledge_base"}},{"hint":"Encoded query to filter results from the KB","name":"kb_query","section":"Data","default_value":"workflow_state=published","label":"KB Query","type":"string"}]</option_schema>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
-	/* populate the 'data' object */
-	/* e.g., data.table = $sp.getValue('table'); */
 
-	
-	if(!input){
+	data.links = [];
+	data.use_content_from_kb = options.use_content_from_kb;
+
+	if (data.use_content_from_kb == 'true') {
+		var baseURL = 'https://' + gs.getProperty('instance_name') + '.service-now.com';
+		var kb = options.knowledge_base;
+		var encodedQuery = options.kb_query;
 		
-		
-		data.summary = [];
-		data.leaders_lounge = options.leaders_lounge;
-		data.url_test = "www.google.com";
-		
-		if(data.leaders_lounge == 'true'){
-			var ll = new GlideRecord('kb_knowledge');
-			ll.addEncodedQuery('sys_class_name!=^active=true^kb_knowledge_base=7f4ff8eddf403100b5157a0d3df2631e^can_read_user_criteria=7213507e1319e704836075e36144b078');
-			ll.query();
-			
-			while(ll.next()){
-				data.summary.push({
-					name: ll.short_description.getDisplayValue(),
-					url: "https://progleasing.service-now.com/kb_view.do?sys_kb_id=" + ll.sys_id.toString()
-				})
-			}
+		var knowledgeGR = new GlideRecord('kb_knowledge');
+		knowledgeGR.addQuery('kb_knowledge_base', kb);
+		knowledgeGR.addEncodedQuery(encodedQuery);
+		knowledgeGR.query();
+
+		while (knowledgeGR.next()) {
+			data.links.push({
+				name: knowledgeGR.getDisplayValue('short_description'),
+				url: baseURL + '/kb_view.do?sys_kb_id=' + knowledgeGR.sys_id.toString(),
+			})
 		}
-		else{
+	} else {
+		var department = options.department;
 		
-		var gr = new GlideRecord('x_prole_intranet_popular_content');
-		gr.addQuery('u_active', true);
-		gr.query();
-		
+		var contentGR = new GlideRecord('x_prole_intranet_popular_content');
+		contentGR.addQuery('department', department);
+		contentGR.addQuery('u_active', true);
+		contentGR.query();
 
-		while(gr.next())
-		{
-				data.summary.push({
-				name:gr.u_name.getDisplayValue() || 'None',
-				url:gr.u_url.toString()
+		while (contentGR.next()) {
+			data.links.push({
+				name: contentGR.getDisplayValue('u_name') || 'None',
+				url: contentGR.getValue('u_url'),
 			});
 		}
-		console.log(data.summary);
 	}
-	}
+
+	
+	// sys_class_name!=^active=true^kb_knowledge_base=7f4ff8eddf403100b5157a0d3df2631e^can_read_user_criteria=7213507e1319e704836075e36144b078
 	
 })();]]></script>
         <servicenow>false</servicenow>
@@ -121,34 +119,31 @@ form:hover {
         <sys_created_on>2019-09-23 20:12:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1b58b0ca13c80c10d9ff30ded144b0ec</sys_id>
-        <sys_mod_count>73</sys_mod_count>
+        <sys_mod_count>83</sys_mod_count>
         <sys_name>Intranet - Popular Content</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_1b58b0ca13c80c10d9ff30ded144b0ec</sys_update_name>
-        <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2020-02-08 01:40:31</sys_updated_on>
+        <sys_updated_by>joseph.day</sys_updated_by>
+        <sys_updated_on>2020-06-10 19:13:17</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <form>
   <div class="panel panel-default">
     <div id="table-summary" class="panel-heading">
-      <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>{{options.title}}</b></div>
+      <b>{{options.title}}</b>
+    </div>
     <table>
-      
-    
-    <ul class="list-group">
-      
-      <a ng-repeat="s in c.data.summary" href={{s.url}} target="_blank">
-      <li class="list-group-item" id="li-heading">        
-        {{ s.name }}
-      </li>
+      <ul class="list-group">
+        <a ng-repeat="link in c.data.links" href={{link.url}} target="_blank">
+          <li class="list-group-item" id="li-heading">
+            {{link.name}}
+          </li>
         </a>
-    </ul>
-      </table>
+      </ul>
+    </table>
   </div>
-  <!-- debugging code -- <pre>{{c.data.records | json}}</pre> -->
 </form>]]></template>
     </sp_widget>
 </record_update>

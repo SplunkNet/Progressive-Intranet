@@ -28,21 +28,21 @@
         <sys_created_on>2019-09-23 22:28:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>157759c213044c10d9ff30ded144b0ba</sys_id>
-        <sys_mod_count>67</sys_mod_count>
+        <sys_mod_count>68</sys_mod_count>
         <sys_name>Intranet - DraperHomeCarousel</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_157759c213044c10d9ff30ded144b0ba</sys_update_name>
-        <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2019-11-12 23:13:02</sys_updated_on>
+        <sys_updated_by>joseph.day</sys_updated_by>
+        <sys_updated_on>2020-06-10 21:54:40</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div id="myCarousel" class="carousel slide"  data-ride="carousel" data-interval="5000">
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="vision_values_mission.jpg" style="width:100%;">
+        <a href="http://joeyday.com"><img src="vision_values_mission.jpg" style="width:100%;"></a>
       </div>
       
       <div class="item">

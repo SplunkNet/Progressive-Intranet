@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="3">e1ecfaea13bc1810ce8b7d576144b091</sp_column>
+        <sp_widget display_value="Copy of Virtual Agent Service Portal Hov">70f0baaa2ff01410dea7857cf699b6e0</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2020-06-01 04:10:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>79dccffe138594d0ce8b7d576144b06a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_instance_79dccffe138594d0ce8b7d576144b06a</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-06-01 04:11:25</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"button_color": {
+		"value": "",
+		"displayValue": ""
+	},
+	"va_url_params": {
+		"value": "$chat_support.do?queueID=319973d613c976006bda75c36144b0ae",
+		"displayValue": "$chat_support.do?queueID=319973d613c976006bda75c36144b0ae"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=79dccffe138594d0ce8b7d576144b06a"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>19bdb3e34f289e4094ac220f0310c748</instance_id>
+        <instance_name>devprogleasing</instance_name>
+        <name>sp_instance_79dccffe138594d0ce8b7d576144b06a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;2&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="3"&gt;e1ecfaea13bc1810ce8b7d576144b091&lt;/sp_column&gt;&lt;sp_widget display_value="Copy of Virtual Agent Service Portal Hov"&gt;70f0baaa2ff01410dea7857cf699b6e0&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;derek.young&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-06-01 04:10:39&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;79dccffe138594d0ce8b7d576144b06a&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Progressive Intranet" source="x_prole_intranet"&gt;5db0a1d91363bf80d9ff30ded144b0b4&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Progressive Intranet"&gt;5db0a1d91363bf80d9ff30ded144b0b4&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_79dccffe138594d0ce8b7d576144b06a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;derek.young&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-06-01 04:11:25&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"button_color": {
+		"value": "",
+		"displayValue": ""
+	},
+	"va_url_params": {
+		"value": "$chat_support.do?queueID=319973d613c976006bda75c36144b0ae",
+		"displayValue": "$chat_support.do?queueID=319973d613c976006bda75c36144b0ae"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=79dccffe138594d0ce8b7d576144b06a"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2020591741</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>f68bcbfe138594d0ce8b7d576144b095</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2020-06-01 04:11:25</sys_created_on>
+        <sys_id>700d4ff213c594d0ce8b7d576144b00a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1726e13b6530000001</sys_recorded_at>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-06-01 04:11:25</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>b40d4ff2e6c594d038eb6f681ac15b09</update_guid>
+        <update_guid_history>b40d4ff2e6c594d038eb6f681ac15b09:2020591741,31dc43f22ac594d02df5169dafa054db:-1172498474</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 05/31/2020 22:14:00">369d8fb213c594d0ce8b7d576144b033</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2020-06-01 04:14:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>0d2a73ced6994a54a00e89cf7884ee90</sys_id>
+        <sys_metadata>79dccffe138594d0ce8b7d576144b06a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sp_instance_79dccffe138594d0ce8b7d576144b06a</sys_update_name>
+        <sys_update_version display_value="sp_instance_79dccffe138594d0ce8b7d576144b06a">700d4ff213c594d0ce8b7d576144b00a</sys_update_version>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-06-01 04:14:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Popular Content" max_length="40" name="x_prole_intranet_popular_content" type="collection">
+        <element choice="3" default="Main" label="Department" mandatory="true" max_length="40" name="department" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="COVID-19 Return to Work Resources" value="COVID-19 Return to Work Resources"/>
+                <element inactive_on_update="false" label="Main" value="Main"/>
+            </choice>
+        </element>
         <element label="Active" max_length="40" name="u_active" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="Name" max_length="40" name="u_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="URL" max_length="1024" name="u_url" type="url"/>

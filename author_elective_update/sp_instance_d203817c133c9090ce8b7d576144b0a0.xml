@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">abe4bb0513d1d410ce8b7d576144b0c8</sp_column>
+        <sp_widget display_value="Intranet - Departments - Hero Image">e2f0b564139cc490d9ff30ded144b030</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2020-05-13 02:45:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d203817c133c9090ce8b7d576144b0a0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_instance_d203817c133c9090ce8b7d576144b0a0</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-06-08 06:52:11</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"department": {
+		"value": "Jewelry Channel",
+		"displayValue": "Jewelry Channel"
+	},
+	"record_sys_id": {
+		"value": "94450df0137c9090ce8b7d576144b02d",
+		"displayValue": "94450df0137c9090ce8b7d576144b02d"
+	},
+	"subtext": {
+		"value": "",
+		"displayValue": ""
+	},
+	"submit_ticket_button": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"button_link": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=d203817c133c9090ce8b7d576144b0a0"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</application>
+        <file_path/>
+        <instance_id>19bdb3e34f289e4094ac220f0310c748</instance_id>
+        <instance_name>devprogleasing</instance_name>
+        <name>sp_instance_d203817c133c9090ce8b7d576144b0a0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;abe4bb0513d1d410ce8b7d576144b0c8&lt;/sp_column&gt;&lt;sp_widget display_value="Intranet - Departments - Hero Image"&gt;e2f0b564139cc490d9ff30ded144b030&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;derek.young&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-05-13 02:45:02&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;d203817c133c9090ce8b7d576144b0a0&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Progressive Intranet" source="x_prole_intranet"&gt;5db0a1d91363bf80d9ff30ded144b0b4&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Progressive Intranet"&gt;5db0a1d91363bf80d9ff30ded144b0b4&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_d203817c133c9090ce8b7d576144b0a0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;derek.young&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-06-08 06:52:11&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"department": {
+		"value": "Jewelry Channel",
+		"displayValue": "Jewelry Channel"
+	},
+	"record_sys_id": {
+		"value": "94450df0137c9090ce8b7d576144b02d",
+		"displayValue": "94450df0137c9090ce8b7d576144b02d"
+	},
+	"subtext": {
+		"value": "",
+		"displayValue": ""
+	},
+	"submit_ticket_button": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"button_link": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=d203817c133c9090ce8b7d576144b0a0"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>814712250</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>f6b2fe97132040508242335fd144b094</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2020-06-08 06:52:11</sys_created_on>
+        <sys_id>5cf4730513d1d410ce8b7d576144b09c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17292b36b810000001</sys_recorded_at>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-06-08 06:52:11</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>54f4730587d1d410f90d80cd7a8ac09c</update_guid>
+        <update_guid_history>54f4730587d1d410f90d80cd7a8ac09c:814712250,06854534e27c90903545b1b0eb3ab9fb:165491995,d603817c5b3c9090575a72fb805709a2:1411389533</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 06/08/2020 00:52:42">c015b34513d1d410ce8b7d576144b013</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2020-06-08 06:52:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>25fa18119c684ef99128185349949591</sys_id>
+        <sys_metadata>d203817c133c9090ce8b7d576144b0a0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_scope_delete display_value="">087182cba0fc4e5691fa009155da6e19</sys_scope_delete>
+        <sys_update_name>sp_instance_d203817c133c9090ce8b7d576144b0a0</sys_update_name>
+        <sys_update_version display_value="sp_instance_d203817c133c9090ce8b7d576144b0a0">5cf4730513d1d410ce8b7d576144b09c</sys_update_version>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-06-08 06:52:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -17,15 +17,15 @@
         <sys_created_on>2019-12-12 17:42:45</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>454518b71ba54010c2fccb392a4bcb27</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>RECOMMENDED RESOURCES</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_instance_454518b71ba54010c2fccb392a4bcb27</sys_update_name>
-        <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2020-02-08 01:42:01</sys_updated_on>
+        <sys_updated_by>joseph.day</sys_updated_by>
+        <sys_updated_on>2020-06-10 17:49:46</sys_updated_on>
         <title>RECOMMENDED RESOURCES</title>
         <url/>
         <widget_parameters><![CDATA[{
@@ -36,6 +36,22 @@
 	"title": {
 		"value": "RECOMMENDED RESOURCES",
 		"displayValue": "RECOMMENDED RESOURCES"
+	},
+	"department": {
+		"value": "",
+		"displayValue": ""
+	},
+	"use_content_from_kb": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"knowledge_base": {
+		"value": "7f4ff8eddf403100b5157a0d3df2631e",
+		"displayValue": "Human Resources General Knowledge - Legacy"
+	},
+	"kb_query": {
+		"value": "active=true^can_read_user_criteria=7213507e1319e704836075e36144b078",
+		"displayValue": "active=true^can_read_user_criteria=7213507e1319e704836075e36144b078"
 	}
 }]]></widget_parameters>
     </sp_instance>

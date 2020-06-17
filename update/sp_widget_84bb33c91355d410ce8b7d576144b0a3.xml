@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope , $sce) {
+  /* widget controller */
+  var c = this;
+	c.formatted_content = $sce.trustAsHtml(c.data.content)
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>li {
+ color: black;
+  background-color: white;
+}
+
+.list-group{
+ overflow:auto;
+  height:205px;
+}
+
+.content {
+  text-align: var(--textAlign);
+  font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+  background-color: white;
+  overflow:auto;
+  height:var(--size);
+ 
+}
+
+.main{
+  height:var(--size);
+   
+}
+
+#table-summary {
+  text-align: center;
+  font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+  background-color: white;
+  color: #0093c9;
+  
+ 	
+	letter-spacing:2px;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+form {
+  //margin: 0;
+  //padding: 20 0 0 0;
+  //background-color: white;
+	
+  
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+#li-heading:hover {
+  background-color: #bde1ef;
+  color: black;
+}
+
+form:hover {
+ 	transform: translateY(-3px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .50);
+}
+
+@keyframes fadeIn{
+  0% {
+   opacity: 0;
+  }
+ 100% {
+   opacity: 1;
+  }
+}
+
+
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>free-form_content</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Free-form content</name>
+        <option_schema>[{"name":"content_page","section":"Data","default_value":"909f4ee0139040d4ce8b7d576144b024","label":"Content Page","type":"string"},{"name":"window_height","section":"Presentation","default_value":"461","label":"window height","type":"string"},{"name":"title","section":"Presentation","default_value":"Title","label":"Title","type":"string"},{"name":"text_align","section":"Presentation","default_value":"left","label":"Text Align","type":"choice","choices":[{"label":"left","value":"left"},{"label":"center","value":"center"},{"label":"right","value":"right"}]}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	var content_page = options.content_page;
+	var content = '';
+	var size = options.window_height + 'px';
+	var gr = new GlideRecord('u_service_portal_intranet');
+	data.title = options.title;
+	
+	gr.get(content_page);
+	
+	content = gr.x_prole_intranet_what_we_do.getDisplayValue();
+	
+data.content = content
+data.window_size = size;
+
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2020-06-08 07:21:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>84bb33c91355d410ce8b7d576144b0a3</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>Free-form content</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_widget_84bb33c91355d410ce8b7d576144b0a3</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-06-08 08:03:01</sys_updated_on>
+        <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+
+<div class="main" style="--size: {{c.data.window_size}}">
+<form>
+  <div class="panel panel-default">
+    <div id="table-summary" class="panel-heading">
+       <span class="fa fa-bolt"  ng-show="c.updatedFromServer"></span><b>{{c.data.title}}</b></div>
+    
+    <div class="content" ng-bind-html="c.formatted_content" style="--textAlign: {{c.data.options.text_align}}"></div>
+   
+  <!-- debugging code -- <pre>{{c.data.records | json}}</pre> -->
+  </div>
+</form>
+</div>
+
+]]></template>
+    </sp_widget>
+</record_update>

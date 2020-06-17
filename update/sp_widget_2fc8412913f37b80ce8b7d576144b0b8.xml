@@ -29,6 +29,12 @@
 
 	$scope.submit = function()
 	{
+		if(c.data.text == ""){
+			g_form.addErrorMessage('Please fillout the form')
+			
+			
+		}else{
+		
 		if (isHover){
 			card[0].classList.remove('stay-flipped');
 		}
@@ -36,6 +42,7 @@
 		c.data.submit = true;
 		c.server.update();
 		c.data = {};
+		}
 	};
 }]]></client_script>
         <controller_as>c</controller_as>
@@ -158,7 +165,7 @@ textarea {
         <sys_created_on>2019-09-09 21:51:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2fc8412913f37b80ce8b7d576144b0b8</sys_id>
-        <sys_mod_count>458</sys_mod_count>
+        <sys_mod_count>472</sys_mod_count>
         <sys_name>Intranet - Ask Prog</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -166,7 +173,7 @@ textarea {
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_2fc8412913f37b80ce8b7d576144b0b8</sys_update_name>
         <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2020-05-14 17:05:02</sys_updated_on>
+        <sys_updated_on>2020-05-14 17:47:34</sys_updated_on>
         <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <form>
 
@@ -186,7 +193,7 @@ textarea {
 
             <!-- Text input-->
             <div class="form-group" id="text_area" >  
-              <textarea class="form-control" ng-model="c.data.text" rows="5" placeholder="How can we help?"></textarea>
+              <textarea class="form-control" ng-model="c.data.text" rows="5" placeholder="How can we help?" ></textarea>
             </div>
 
             <!-- Button -->

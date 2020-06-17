@@ -39,7 +39,7 @@
 		
 	}
 
-	
+	1
 	
 	
 	
@@ -48,72 +48,73 @@
 }]]></client_script>
         <controller_as>c</controller_as>
         <css>section {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: var(--bg);
-    background-attachment: fixed;
-  	background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-  	padding: 0px 0px 20px 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: var(--bg);
+  //background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //overflow-x:hidden;
+  height: 500px;
+  padding: 0px 0px 20px 0px;
 }
 
 section .box {
-    position: relative;
-    max-width: 600px;
-    padding: 50px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.5);
-    overflow: hidden;
-    color: white;
+  position: relative;
+  max-width: 600px;
+  padding: 50px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  overflow: hidden;
+  color: white;
 }
 
 section .box:before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-  	background: rgba(74,79,84,.7);
-    //background-image: var(--bg);
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: rgba(74,79,84,.7);
+  //background-image: var(--bg);
   background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-     -webkit-filter: blur(15px);
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-filter: blur(15px);
   -moz-filter: blur(15px);
   -o-filter: blur(15px);
   -ms-filter: blur(15px);
   filter: blur(15px);
 }
 section .box h1 {
-    text-align: center;
-    position: relative;
-    margin: 0 0 20px;
-    padding: 0;
-    text-transform: uppercase;
-    font-size: 48px;
+  text-align: center;
+  position: relative;
+  margin: 0 0 20px;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 48px;
 }
 
 section .box h2 {
-    text-align: center;
-    position: relative;
-    margin: 0 0 20px;
-    padding: 0;
-    text-transform: uppercase;
-    font-size: 20px;
+  text-align: center;
+  position: relative;
+  margin: 0 0 20px;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
 section .box button {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    padding: 10px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 section .box button:hover {
- 	transform: translateY(-3px); 
+  transform: translateY(-3px); 
   box-shadow: 0 10px 20px rgba(0, 0, 0, .50); 
 }</css>
         <data_table>sp_instance</data_table>
@@ -186,7 +187,7 @@ if (grdb.next()){
         <sys_created_on>2019-10-01 18:44:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e2f0b564139cc490d9ff30ded144b030</sys_id>
-        <sys_mod_count>223</sys_mod_count>
+        <sys_mod_count>239</sys_mod_count>
         <sys_name>Intranet - Departments - Hero Image</sys_name>
         <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
         <sys_policy/>
@@ -194,7 +195,7 @@ if (grdb.next()){
         <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
         <sys_update_name>sp_widget_e2f0b564139cc490d9ff30ded144b030</sys_update_name>
         <sys_updated_by>derek.young</sys_updated_by>
-        <sys_updated_on>2020-05-13 09:25:05</sys_updated_on>
+        <sys_updated_on>2020-06-09 22:34:50</sys_updated_on>
         <template><![CDATA[<section style=" --bg: url({{c.data.image2}})">
 	<div class="box">
    	<h1>{{c.data.department}}</h1>

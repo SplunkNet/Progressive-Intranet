@@ -3,42 +3,84 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>x_prole_intranet_name</element>
             <position>0</position>
-            <sys_created_by>zachary.nicholson</sys_created_by>
-            <sys_created_on>2019-12-02 16:09:52</sys_created_on>
-            <sys_id>3610e0681b290c5081761f861a4bcbbd</sys_id>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2020-06-08 04:04:07</sys_created_on>
+            <sys_id>a27ecb4d131d9410ce8b7d576144b083</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="u_service_portal_intranet" sys_domain="global" view="Default view">4bc9381c13b484108242335fd144b052</sys_ui_section>
-            <sys_updated_by>zachary.nicholson</sys_updated_by>
-            <sys_updated_on>2019-12-02 16:09:52</sys_updated_on>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2020-06-08 04:04:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_hero_image</element>
             <position>1</position>
-            <sys_created_by>zachary.nicholson</sys_created_by>
-            <sys_created_on>2019-12-02 16:09:52</sys_created_on>
-            <sys_id>be10e0681b290c5081761f861a4bcbbd</sys_id>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2020-06-08 04:04:08</sys_created_on>
+            <sys_id>ae7ecb4d131d9410ce8b7d576144b083</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="u_service_portal_intranet" sys_domain="global" view="Default view">4bc9381c13b484108242335fd144b052</sys_ui_section>
-            <sys_updated_by>zachary.nicholson</sys_updated_by>
-            <sys_updated_on>2019-12-02 16:09:52</sys_updated_on>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2020-06-08 04:04:08</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>x_prole_intranet_what_we_do</element>
             <position>2</position>
-            <sys_created_by>zachary.nicholson</sys_created_by>
-            <sys_created_on>2019-12-02 16:09:52</sys_created_on>
-            <sys_id>3610e0681b290c5081761f861a4bcbbe</sys_id>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2020-06-08 04:04:08</sys_created_on>
+            <sys_id>267ecb4d131d9410ce8b7d576144b084</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="u_service_portal_intranet" sys_domain="global" view="Default view">4bc9381c13b484108242335fd144b052</sys_ui_section>
-            <sys_updated_by>zachary.nicholson</sys_updated_by>
-            <sys_updated_on>2019-12-02 16:09:52</sys_updated_on>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2020-06-08 04:04:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_prole_intranet_tabbed_content_1</element>
+            <position>3</position>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2020-06-08 04:04:08</sys_created_on>
+            <sys_id>aa7ecb4d131d9410ce8b7d576144b084</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_service_portal_intranet" sys_domain="global" view="Default view">4bc9381c13b484108242335fd144b052</sys_ui_section>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2020-06-08 04:04:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_prole_intranet_tabbed_content_2</element>
+            <position>4</position>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2020-06-08 04:04:08</sys_created_on>
+            <sys_id>227ecb4d131d9410ce8b7d576144b085</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_service_portal_intranet" sys_domain="global" view="Default view">4bc9381c13b484108242335fd144b052</sys_ui_section>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2020-06-08 04:04:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_prole_intranet_tabbed_content_3</element>
+            <position>5</position>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2020-06-08 04:04:08</sys_created_on>
+            <sys_id>a67ecb4d131d9410ce8b7d576144b085</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_service_portal_intranet" sys_domain="global" view="Default view">4bc9381c13b484108242335fd144b052</sys_ui_section>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2020-06-08 04:04:08</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
