@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Jewelry Channel Resources" language="en" table="x_prole_intranet_jewelry_channel_resources">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Jewelry Channel Resources</label>
+            <language>en</language>
+            <name>x_prole_intranet_jewelry_channel_resources</name>
+            <plural>Jewelry Channel Resources</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>derek.young</sys_created_by>
+            <sys_created_on>2020-06-20 01:40:52</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>34c02c0113a1dc90ce8b7d576144b0a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Jewelry Channel Resources</sys_name>
+            <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+            <sys_update_name>sys_documentation_x_prole_intranet_jewelry_channel_resources__en</sys_update_name>
+            <sys_updated_by>derek.young</sys_updated_by>
+            <sys_updated_on>2020-06-20 01:40:52</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

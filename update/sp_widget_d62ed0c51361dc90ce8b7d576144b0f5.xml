@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function(spUtil,$scope,$timeout, spModal, $sce) {
+  /* widget controller */
+  var c = this;
+	
+	c.formatted_content_1 = $sce.trustAsHtml(c.data.tabbed_content_1);
+	c.formatted_content_2 = $sce.trustAsHtml(c.data.tabbed_content_2);
+	c.formatted_content_3 = $sce.trustAsHtml(c.data.tabbed_content_3);
+
+	
+	c.selectAg = function(record){
+		
+		//Set a property on the data object to identify the selected object
+		c.data.selectedAg = record.agValue;
+		spModal.open({
+				size: "lg",
+				title: record.agName,
+				widget: 'iv2_attachment_clone',
+				shared: c.data
+			});
+		
+		//Send the data object to the server script
+		c.server.update();
+	}
+	
+	c.sortOrder=false;
+	
+	c.changeSortCol=function(key){
+		
+		if(key == c.orderCol)
+			c.sortOrder = !c.sortOrder;
+		else
+			c.sortOrder = false;
+		
+		c.orderCol = key;
+	}
+	
+	c.updatedFromServer = false;
+	
+	//Record watch functionality
+	//a flag to indicate if a live update has been triggered by the record watcher
+	spUtil.recordWatch($scope, c.data.table, '', function(updateObj)
+	{
+		spUtil.update($scope);
+		c.updatedFromServer = true;
+		if (!c.updatedRegs){
+			c.updatedRegs = {};
+		}
+	
+	c.updateRegs[updateObj.data.sys_id] = true;
+	$timeout(function(){
+					 c.updatedRegs[updateObj.data.sys_id] = false;
+					 }, 6000);
+	});
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>autoli {
+ color: black;
+  background-color: white;
+  border-style: solid;
+  
+}
+
+.list-group{
+    max-height: 328px;
+    margin-bottom: 10px;
+    overflow:auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+#table-summary {
+  text-align: center;
+  font-family: 'Montserrat', Impact, Charcoal, sans-serif;
+  background-color: white;
+  color: #0093c9;
+	letter-spacing:2px;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+#li-heading:hover {
+  background-color: #bde1ef;
+  color: black;
+}
+
+form {
+  //margin: 0;
+  //padding: 20 0 0 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+form:hover {
+ 	transform: translateY(-3px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .50);
+}
+
+@keyframes fadeIn{
+  0% {
+   opacity: 0;
+  }
+ 100% {
+   opacity: 1;
+  }
+}
+
+a {
+  color: black; 
+  display:block;
+  width: 100%;
+}
+
+#li-heading {
+ padding: 16px; 
+}
+
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent3tcwt {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>3_tabbed_content_with_table</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>3 tabbed content with table</name>
+        <option_schema>[{"name":"title","section":"Presentation","default_value":"Content","label":"Title","type":"string"},{"hint":"tab1,tab2,tab3","name":"three_labels","section":"Presentation","default_value":"tab1,tab2,tab3","label":"3 labels","type":"string"},{"name":"table","section":"Data","default_value":"x_prole_intranet_jewelry_channel_resources","label":"Table","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	var tabs = options.three_labels;
+	var table = options.table;
+	var splittabs = tabs.split(',');
+	var tableQuery = options.query;
+	data.signet =  [];
+	data.premium = [];
+	data.smb = [];
+	var attSysID = '';
+	var att = new GlideRecord('sys_attachment');
+	
+	data.tab1 = splittabs[0];
+	data.tab2 = splittabs[1];
+	data.tab3 = splittabs[2];
+
+	if(!input){
+
+		var content_page = options.content_page;
+		var content1 = '';
+		var content2 = '';
+		var content3 = '';
+		var gr = new GlideRecord(table);
+		gr.addEncodedQuery(tableQuery);
+		gr.query();
+		data.count = gr.getRowCount();
+		while (gr.next()){
+			att.initialize();
+			att.addQuery('table_sys_id',gr.sys_id)
+			att.query()
+			if(att.next()){
+				attSysID = att.sys_id;
+			}
+			
+			if(gr.category == 'Signet'){
+					data.signet.push({
+					jrTitle: gr.title.getDisplayValue(),
+					jrAttachment: "sys_attachment.do?sys_id=" + attSysID
+				}
+				);
+			}
+				if(gr.category == 'Premium'){
+				data.premium.push({
+					jrTitle: gr.title.getDisplayValue(),
+					jrAttachment: "sys_attachment.do?sys_id=" + attSysID
+				}
+				
+				);
+			}
+			
+				if(gr.category == 'SMB'){
+					data.smb.push({
+					jrTitle: gr.title.getDisplayValue(),
+					jrAttachment: "sys_attachment.do?sys_id=" + attSysID
+				}
+				
+				);
+			}
+		}
+
+	}
+	console.log(data);
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>derek.young</sys_created_by>
+        <sys_created_on>2020-06-20 01:29:29</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d62ed0c51361dc90ce8b7d576144b0f5</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>3 tabbed content with table</sys_name>
+        <sys_package display_value="Progressive Intranet" source="x_prole_intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Progressive Intranet">5db0a1d91363bf80d9ff30ded144b0b4</sys_scope>
+        <sys_update_name>sp_widget_d62ed0c51361dc90ce8b7d576144b0f5</sys_update_name>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-06-20 03:41:04</sys_updated_on>
+        <template><![CDATA[<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<form>
+  <div class="panel panel-default">
+    <div id="table-summary" class="panel-heading">
+      <span class="fa fa-bolt" ng-show="c.updatedFromServer"></span><b>{{c.options.title}}</b>
+    </div>
+    <div class="tab">
+      <button class="3tcwtlinks active btn btn-outline-primary" onclick="open3tcwt(event, '3tcwt-tab1')">{{c.data.tab1}}</button>
+      <button class="3tcwtlinks  btn btn-outline-primary" onclick="open3tcwt(event, '3tcwt-tab2')">{{c.data.tab2}}</button>
+      <button class="3tcwtlinks  btn btn-outline-primary" onclick="open3tcwt(event, '3tcwt-tab3')">{{c.data.tab3}}</button>
+    </div>
+
+    <div id="3tcwt-tab1" class="tabcontent3tcwt" style="display:block" >
+      <div class="card-body">
+        <ul class="list-group">
+
+          <a ng-repeat="t in c.data.signet" href="{{t.jrAttachment}}" target="_blank">
+            <li class="list-group-item" id="li-heading"
+                >{{t.jrTitle}}
+            </li>
+
+          </a>
+        </ul>
+      </div>
+    </div>
+
+    <div id="3tcwt-tab2" class="tabcontent3tcwt">
+      <div class="card-body">
+        <ul class="list-group">
+
+          <a ng-repeat="t in c.data.premium" href="{{t.jrAttachment}}" target="_blank">
+            <li class="list-group-item" id="li-heading"
+                >{{t.jrTitle}}
+            </li>
+          </a>
+
+        </ul>
+      </div>
+    </div>
+
+    <div id="3tcwt-tab3" class="tabcontent3tcwt">
+      <div class="card-body">
+        <ul class="list-group">
+
+          <a ng-repeat="t in c.data.smb" href="{{t.jrAttachment}}" target="_blank">
+            <li class="list-group-item" id="li-heading"
+                >{{t.jrTitle}}
+            </li>
+          </a>
+
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function open3tcwt(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent3tcwt");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("3tcwtlinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </div>
+</form>]]></template>
+    </sp_widget>
+</record_update>

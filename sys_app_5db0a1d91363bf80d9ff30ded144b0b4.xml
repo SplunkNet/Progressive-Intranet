@@ -18,21 +18,21 @@
         <scoped_administration>false</scoped_administration>
         <short_description/>
         <source>x_prole_intranet</source>
-        <store_correlation_id>REPOAPP0000244196</store_correlation_id>
+        <store_correlation_id>REPOAPP0000244671</store_correlation_id>
         <store_url/>
         <sys_class_name>sys_app</sys_class_name>
         <sys_code/>
         <sys_created_by>zachary.nicholson</sys_created_by>
         <sys_created_on>2019-10-22 22:45:05</sys_created_on>
         <sys_id>5db0a1d91363bf80d9ff30ded144b0b4</sys_id>
-        <sys_mod_count>26</sys_mod_count>
-        <sys_updated_by>joseph.day</sys_updated_by>
-        <sys_updated_on>2020-06-19 15:32:27</sys_updated_on>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_updated_by>derek.young</sys_updated_by>
+        <sys_updated_on>2020-06-20 03:43:02</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.13</version>
+        <version>1.0.14</version>
     </sys_app>
 </record_update>
